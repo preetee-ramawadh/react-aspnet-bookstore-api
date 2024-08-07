@@ -1,0 +1,57 @@
+2024-08-07 12:30:18.856 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-07 12:30:19.648 +05:30 [DBG] Hosting starting
+2024-08-07 12:30:21.118 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-07 12:30:21.135 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-07 12:30:21.136 +05:30 [DBG] Loaded hosting startup assembly Bookstore.API
+2024-08-07 12:30:21.137 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-07 12:30:21.137 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-07 12:30:21.139 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-07 12:30:21.140 +05:30 [INF] Hosting environment: Development
+2024-08-07 12:30:21.142 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-07 12:30:21.144 +05:30 [DBG] Hosting started
+2024-08-07 12:30:21.708 +05:30 [DBG] Connection id "0HN5MLQDCE869" received FIN.
+2024-08-07 12:30:21.747 +05:30 [DBG] Connection id "0HN5MLQDCE869" accepted.
+2024-08-07 12:30:21.751 +05:30 [DBG] Connection id "0HN5MLQDCE869" started.
+2024-08-07 12:30:21.794 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-07 12:30:21.936 +05:30 [DBG] Connection id "0HN5MLQDCE869" stopped.
+2024-08-07 12:30:22.004 +05:30 [DBG] Connection id "0HN5MLQDCE869" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-07 12:30:25.047 +05:30 [DBG] Connection id "0HN5MLQDCE86A" accepted.
+2024-08-07 12:30:26.341 +05:30 [DBG] Connection id "0HN5MLQDCE86A" started.
+2024-08-07 12:30:26.444 +05:30 [DBG] Connection 0HN5MLQDCE86A established using the following protocol: "Tls13"
+2024-08-07 12:30:26.754 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-07 12:30:26.845 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-07 12:30:27.137 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-07 12:30:27.151 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-07 12:30:27.162 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 418.8023ms
+2024-08-07 12:30:27.246 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.css - null null
+2024-08-07 12:30:27.246 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/swagger-ui.css - null null
+2024-08-07 12:30:27.246 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-07 12:30:27.262 +05:30 [INF] The file /swagger-ui.css was not modified
+2024-08-07 12:30:27.264 +05:30 [INF] The file /index.css was not modified
+2024-08-07 12:30:27.267 +05:30 [DBG] Handled. Status code: 304 File: /swagger-ui.css
+2024-08-07 12:30:27.272 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/swagger-ui.css - 304 null text/css 25.6552ms
+2024-08-07 12:30:27.305 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/swagger-ui-bundle.js - null null
+2024-08-07 12:30:27.303 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/swagger-ui-standalone-preset.js - null null
+2024-08-07 12:30:27.306 +05:30 [DBG] Handled. Status code: 304 File: /index.css
+2024-08-07 12:30:27.314 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.css - 304 null text/css 67.6439ms
+2024-08-07 12:30:27.318 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-07 12:30:27.309 +05:30 [INF] The file /swagger-ui-bundle.js was not modified
+2024-08-07 12:30:27.324 +05:30 [DBG] Handled. Status code: 304 File: /swagger-ui-bundle.js
+2024-08-07 12:30:27.327 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/swagger-ui-bundle.js - 304 null text/javascript 22.0921ms
+2024-08-07 12:30:27.312 +05:30 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2024-08-07 12:30:27.376 +05:30 [DBG] Handled. Status code: 304 File: /swagger-ui-standalone-preset.js
+2024-08-07 12:30:27.378 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/swagger-ui-standalone-preset.js - 304 null text/javascript 74.4319ms
+2024-08-07 12:30:27.323 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 5.725ms
+2024-08-07 12:30:27.372 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 126.3768ms
+2024-08-07 12:30:28.218 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-07 12:30:28.703 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 484.4946ms
+2024-08-07 12:30:32.567 +05:30 [DBG] Connection id "0HN5MLQDCE86A" received FIN.
+2024-08-07 12:30:32.577 +05:30 [DBG] The connection queue processing loop for 0HN5MLQDCE86A completed.
+2024-08-07 12:30:32.582 +05:30 [DBG] Connection id "0HN5MLQDCE86A" is closed. The last processed stream ID was 15.
+2024-08-07 12:30:32.584 +05:30 [DBG] Connection id "0HN5MLQDCE86A" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-07 12:30:32.597 +05:30 [DBG] Connection id "0HN5MLQDCE86A" stopped.

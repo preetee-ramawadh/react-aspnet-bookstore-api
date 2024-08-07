@@ -1,0 +1,1284 @@
+2024-08-06 11:48:15.551 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-06 11:48:15.858 +05:30 [DBG] Hosting starting
+2024-08-06 11:48:16.497 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-06 11:48:16.575 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-06 11:48:16.576 +05:30 [DBG] Loaded hosting startup assembly Bookstore.API
+2024-08-06 11:48:16.577 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-06 11:48:16.579 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-06 11:48:16.588 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-06 11:48:16.595 +05:30 [INF] Hosting environment: Development
+2024-08-06 11:48:16.600 +05:30 [INF] Content root path: D:\Users\preetee\source\repos\Bookstore\Bookstore.API
+2024-08-06 11:48:16.602 +05:30 [DBG] Hosting started
+2024-08-06 11:48:16.734 +05:30 [DBG] Connection id "0HN5LRU7LPNUJ" accepted.
+2024-08-06 11:48:16.763 +05:30 [DBG] Connection id "0HN5LRU7LPNUK" accepted.
+2024-08-06 11:48:16.860 +05:30 [DBG] Connection id "0HN5LRU7LPNUK" received FIN.
+2024-08-06 11:48:16.860 +05:30 [DBG] Connection id "0HN5LRU7LPNUJ" received FIN.
+2024-08-06 11:48:16.863 +05:30 [DBG] Connection id "0HN5LRU7LPNUJ" started.
+2024-08-06 11:48:16.868 +05:30 [DBG] Connection id "0HN5LRU7LPNUK" started.
+2024-08-06 11:48:17.175 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 11:48:19.062 +05:30 [DBG] Connection id "0HN5LRU7LPNUL" accepted.
+2024-08-06 11:48:17.529 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 11:48:19.498 +05:30 [DBG] Connection id "0HN5LRU7LPNUK" stopped.
+2024-08-06 11:48:19.498 +05:30 [DBG] Connection id "0HN5LRU7LPNUJ" stopped.
+2024-08-06 11:48:19.508 +05:30 [DBG] Connection id "0HN5LRU7LPNUL" started.
+2024-08-06 11:48:19.513 +05:30 [DBG] Connection id "0HN5LRU7LPNUK" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 11:48:19.542 +05:30 [DBG] Connection id "0HN5LRU7LPNUJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 11:48:19.665 +05:30 [DBG] Connection 0HN5LRU7LPNUL established using the following protocol: "Tls13"
+2024-08-06 11:48:19.827 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 11:48:20.056 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-06 11:48:20.262 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 11:48:20.267 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 11:48:20.289 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 11:48:20.292 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 11:48:20.298 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 478.58ms
+2024-08-06 11:48:20.524 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 11:48:20.527 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 11:48:20.527 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 11:48:20.583 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 56.1817ms
+2024-08-06 11:48:20.681 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 157.7187ms
+2024-08-06 11:48:20.786 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 258.6743ms
+2024-08-06 11:48:20.988 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 11:48:21.520 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 532.968ms
+2024-08-06 11:48:25.285 +05:30 [DBG] Connection id "0HN5LRU7LPNUL" received FIN.
+2024-08-06 11:48:25.299 +05:30 [DBG] The connection queue processing loop for 0HN5LRU7LPNUL completed.
+2024-08-06 11:48:25.306 +05:30 [DBG] Connection id "0HN5LRU7LPNUL" is closed. The last processed stream ID was 9.
+2024-08-06 11:48:25.316 +05:30 [DBG] Connection id "0HN5LRU7LPNUL" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 11:48:25.326 +05:30 [DBG] Connection id "0HN5LRU7LPNUL" stopped.
+2024-08-06 12:42:13.923 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-06 12:42:14.148 +05:30 [DBG] Hosting starting
+2024-08-06 12:42:14.546 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-06 12:42:14.550 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-06 12:42:14.551 +05:30 [DBG] Loaded hosting startup assembly Bookstore.API
+2024-08-06 12:42:14.554 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-06 12:42:14.556 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-06 12:42:14.559 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-06 12:42:14.561 +05:30 [INF] Hosting environment: Development
+2024-08-06 12:42:14.563 +05:30 [INF] Content root path: D:\Users\preetee\source\repos\Bookstore\Bookstore.API
+2024-08-06 12:42:14.565 +05:30 [DBG] Hosting started
+2024-08-06 12:42:14.674 +05:30 [DBG] Connection id "0HN5LSSCL6MRQ" received FIN.
+2024-08-06 12:42:14.692 +05:30 [DBG] Connection id "0HN5LSSCL6MRQ" accepted.
+2024-08-06 12:42:14.775 +05:30 [DBG] Connection id "0HN5LSSCL6MRQ" started.
+2024-08-06 12:42:14.827 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 12:42:16.623 +05:30 [DBG] Connection id "0HN5LSSCL6MRR" accepted.
+2024-08-06 12:42:17.789 +05:30 [DBG] Connection id "0HN5LSSCL6MRR" started.
+2024-08-06 12:42:17.964 +05:30 [DBG] Connection id "0HN5LSSCL6MRQ" stopped.
+2024-08-06 12:42:18.108 +05:30 [DBG] Connection 0HN5LSSCL6MRR established using the following protocol: "Tls13"
+2024-08-06 12:42:18.119 +05:30 [DBG] Connection id "0HN5LSSCL6MRQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 12:42:18.271 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 12:42:18.593 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-06 12:42:18.808 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 12:42:18.830 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 12:42:18.859 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 12:42:18.922 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 12:42:19.177 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 12:42:19.177 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 12:42:19.191 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 12.477ms
+2024-08-06 12:42:19.191 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 942.0723ms
+2024-08-06 12:42:19.200 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 12:42:19.240 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 62.7617ms
+2024-08-06 12:42:19.458 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 258.4046ms
+2024-08-06 12:42:19.682 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 12:42:20.193 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 511.2043ms
+2024-08-06 12:42:22.337 +05:30 [DBG] Connection id "0HN5LSSCL6MRR" received FIN.
+2024-08-06 12:42:22.345 +05:30 [DBG] The connection queue processing loop for 0HN5LSSCL6MRR completed.
+2024-08-06 12:42:22.350 +05:30 [DBG] Connection id "0HN5LSSCL6MRR" is closed. The last processed stream ID was 9.
+2024-08-06 12:42:22.353 +05:30 [DBG] Connection id "0HN5LSSCL6MRR" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 12:42:22.378 +05:30 [DBG] Connection id "0HN5LSSCL6MRR" stopped.
+2024-08-06 14:04:31.973 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-06 14:04:32.106 +05:30 [DBG] Hosting starting
+2024-08-06 14:04:32.248 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-06 14:04:32.251 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-06 14:04:32.254 +05:30 [DBG] Loaded hosting startup assembly Bookstore.API
+2024-08-06 14:04:32.255 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-06 14:04:32.257 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-06 14:04:32.259 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-06 14:04:32.260 +05:30 [INF] Hosting environment: Development
+2024-08-06 14:04:32.264 +05:30 [INF] Content root path: D:\Users\preetee\source\repos\Bookstore\Bookstore.API
+2024-08-06 14:04:32.268 +05:30 [DBG] Hosting started
+2024-08-06 14:04:32.450 +05:30 [DBG] Connection id "0HN5LUAC7G04H" accepted.
+2024-08-06 14:04:32.451 +05:30 [DBG] Connection id "0HN5LUAC7G04I" accepted.
+2024-08-06 14:04:32.487 +05:30 [DBG] Connection id "0HN5LUAC7G04H" started.
+2024-08-06 14:04:32.472 +05:30 [DBG] Connection id "0HN5LUAC7G04H" received FIN.
+2024-08-06 14:04:32.453 +05:30 [DBG] Connection id "0HN5LUAC7G04I" received FIN.
+2024-08-06 14:04:32.513 +05:30 [DBG] Connection id "0HN5LUAC7G04I" started.
+2024-08-06 14:04:32.525 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 14:04:32.532 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 14:04:32.571 +05:30 [DBG] Connection id "0HN5LUAC7G04I" stopped.
+2024-08-06 14:04:32.572 +05:30 [DBG] Connection id "0HN5LUAC7G04H" stopped.
+2024-08-06 14:04:32.582 +05:30 [DBG] Connection id "0HN5LUAC7G04I" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 14:04:32.582 +05:30 [DBG] Connection id "0HN5LUAC7G04H" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 14:04:33.579 +05:30 [DBG] Connection id "0HN5LUAC7G04J" accepted.
+2024-08-06 14:04:34.313 +05:30 [DBG] Connection id "0HN5LUAC7G04J" started.
+2024-08-06 14:04:34.390 +05:30 [DBG] Connection 0HN5LUAC7G04J established using the following protocol: "Tls13"
+2024-08-06 14:04:34.514 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 14:04:34.665 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-06 14:04:34.805 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 14:04:34.817 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 14:04:34.858 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 14:04:34.949 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 14:04:34.979 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 14:04:35.015 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 65.4476ms
+2024-08-06 14:04:34.949 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 14:04:34.964 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 14:04:35.063 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 552.1078ms
+2024-08-06 14:04:35.061 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 112.1106ms
+2024-08-06 14:04:35.141 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 162.0211ms
+2024-08-06 14:04:35.261 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 14:04:35.589 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 328.4391ms
+2024-08-06 14:04:39.457 +05:30 [DBG] Connection id "0HN5LUAC7G04J" received FIN.
+2024-08-06 14:04:39.481 +05:30 [DBG] Connection id "0HN5LUAC7G04J" is closed. The last processed stream ID was 9.
+2024-08-06 14:04:39.482 +05:30 [DBG] The connection queue processing loop for 0HN5LUAC7G04J completed.
+2024-08-06 14:04:39.495 +05:30 [DBG] Connection id "0HN5LUAC7G04J" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 14:04:39.503 +05:30 [DBG] Connection id "0HN5LUAC7G04J" stopped.
+2024-08-06 14:09:41.947 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-06 14:09:42.060 +05:30 [DBG] Hosting starting
+2024-08-06 14:09:42.224 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-06 14:09:42.230 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-06 14:09:42.235 +05:30 [DBG] Loaded hosting startup assembly Bookstore.API
+2024-08-06 14:09:42.237 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-06 14:09:42.239 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-06 14:09:42.244 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-06 14:09:42.246 +05:30 [INF] Hosting environment: Development
+2024-08-06 14:09:42.251 +05:30 [INF] Content root path: D:\Users\preetee\source\repos\Bookstore\Bookstore.API
+2024-08-06 14:09:42.254 +05:30 [DBG] Hosting started
+2024-08-06 14:09:42.472 +05:30 [DBG] Connection id "0HN5LUD8K3M6B" accepted.
+2024-08-06 14:09:42.472 +05:30 [DBG] Connection id "0HN5LUD8K3M6C" accepted.
+2024-08-06 14:09:42.477 +05:30 [DBG] Connection id "0HN5LUD8K3M6B" started.
+2024-08-06 14:09:42.477 +05:30 [DBG] Connection id "0HN5LUD8K3M6C" started.
+2024-08-06 14:09:42.489 +05:30 [DBG] Connection id "0HN5LUD8K3M6C" received FIN.
+2024-08-06 14:09:42.494 +05:30 [DBG] Connection id "0HN5LUD8K3M6B" received FIN.
+2024-08-06 14:09:42.505 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 14:09:42.522 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 14:09:42.574 +05:30 [DBG] Connection id "0HN5LUD8K3M6B" stopped.
+2024-08-06 14:09:42.594 +05:30 [DBG] Connection id "0HN5LUD8K3M6B" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 14:09:42.574 +05:30 [DBG] Connection id "0HN5LUD8K3M6C" stopped.
+2024-08-06 14:09:42.614 +05:30 [DBG] Connection id "0HN5LUD8K3M6C" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 14:09:43.926 +05:30 [DBG] Connection id "0HN5LUD8K3M6D" accepted.
+2024-08-06 14:09:43.977 +05:30 [DBG] Connection id "0HN5LUD8K3M6D" started.
+2024-08-06 14:09:44.063 +05:30 [DBG] Connection 0HN5LUD8K3M6D established using the following protocol: "Tls13"
+2024-08-06 14:09:44.171 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 14:09:44.311 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-06 14:09:44.446 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 14:09:44.449 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 14:09:44.496 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 14:09:44.499 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 14:09:44.525 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 14:09:44.577 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 14:09:44.539 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 14:09:44.613 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 73.9528ms
+2024-08-06 14:09:44.605 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 78.2091ms
+2024-08-06 14:09:44.618 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 448.5847ms
+2024-08-06 14:09:44.711 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 133.7065ms
+2024-08-06 14:09:44.861 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 14:09:45.218 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 356.7475ms
+2024-08-06 14:09:50.367 +05:30 [DBG] Connection id "0HN5LUD8K3M6D" received FIN.
+2024-08-06 14:09:50.375 +05:30 [DBG] The connection queue processing loop for 0HN5LUD8K3M6D completed.
+2024-08-06 14:09:50.381 +05:30 [DBG] Connection id "0HN5LUD8K3M6D" is closed. The last processed stream ID was 9.
+2024-08-06 14:09:50.386 +05:30 [DBG] Connection id "0HN5LUD8K3M6D" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 14:09:50.390 +05:30 [DBG] Connection id "0HN5LUD8K3M6D" stopped.
+2024-08-06 14:33:11.181 +05:30 [DBG] Connection id "0HN5LUD8K3M6E" accepted.
+2024-08-06 14:33:11.226 +05:30 [DBG] Connection id "0HN5LUD8K3M6E" started.
+2024-08-06 14:33:11.438 +05:30 [DBG] Connection 0HN5LUD8K3M6E established using the following protocol: "Tls13"
+2024-08-06 14:33:11.448 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/books - null null
+2024-08-06 14:33:11.462 +05:30 [DBG] The request path  does not match the path filter
+2024-08-06 14:33:11.512 +05:30 [DBG] 1 candidate(s) found for the request path '/api/books'
+2024-08-06 14:33:11.536 +05:30 [DBG] Endpoint 'Bookstore.API.Controllers.BooksController.getAuthors (Bookstore.API)' with route pattern 'api/books' is valid for the request path '/api/books'
+2024-08-06 14:33:11.540 +05:30 [DBG] Request matched endpoint 'Bookstore.API.Controllers.BooksController.getAuthors (Bookstore.API)'
+2024-08-06 14:33:11.552 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.BooksController.getAuthors (Bookstore.API)'
+2024-08-06 14:33:11.586 +05:30 [INF] Route matched with {action = "getAuthors", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Bookstore.API.Models.AuthorsDto]] getAuthors() on controller Bookstore.API.Controllers.BooksController (Bookstore.API).
+2024-08-06 14:33:11.600 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-06 14:33:11.603 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-06 14:33:11.606 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-06 14:33:11.615 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-06 14:33:11.618 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-06 14:33:11.625 +05:30 [DBG] Executing controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 14:33:11.630 +05:30 [DBG] Executed controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 14:33:11.636 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2024-08-06 14:33:11.667 +05:30 [DBG] No information found on request to perform content negotiation.
+2024-08-06 14:33:11.670 +05:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-06 14:33:11.672 +05:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-06 14:33:11.675 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-06 14:33:11.679 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Bookstore.API.Models.BooksDto, Bookstore.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 14:33:11.888 +05:30 [INF] Executed action Bookstore.API.Controllers.BooksController.getAuthors (Bookstore.API) in 260.4712ms
+2024-08-06 14:33:11.893 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.BooksController.getAuthors (Bookstore.API)'
+2024-08-06 14:33:11.903 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/books - 200 332 application/json; charset=utf-8 455.0769ms
+2024-08-06 14:35:23.510 +05:30 [DBG] Connection id "0HN5LUD8K3M6E" is closing.
+2024-08-06 14:35:23.512 +05:30 [DBG] Connection id "0HN5LUD8K3M6E" is closed. The last processed stream ID was 1.
+2024-08-06 14:35:23.516 +05:30 [DBG] The connection queue processing loop for 0HN5LUD8K3M6E completed.
+2024-08-06 14:35:23.516 +05:30 [DBG] Connection id "0HN5LUD8K3M6E" received FIN.
+2024-08-06 14:35:23.519 +05:30 [DBG] Connection id "0HN5LUD8K3M6E" stopped.
+2024-08-06 14:35:23.522 +05:30 [DBG] Connection id "0HN5LUD8K3M6E" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 14:55:51.746 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-06 14:55:52.038 +05:30 [DBG] Hosting starting
+2024-08-06 14:55:52.280 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-06 14:55:52.295 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-06 14:55:52.300 +05:30 [DBG] Loaded hosting startup assembly Bookstore.API
+2024-08-06 14:55:52.303 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-06 14:55:52.306 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-06 14:55:52.308 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-06 14:55:52.325 +05:30 [INF] Hosting environment: Development
+2024-08-06 14:55:52.338 +05:30 [INF] Content root path: D:\Users\preetee\source\repos\Bookstore\Bookstore.API
+2024-08-06 14:55:52.349 +05:30 [DBG] Hosting started
+2024-08-06 14:55:52.576 +05:30 [DBG] Connection id "0HN5LV725SGP1" accepted.
+2024-08-06 14:55:52.576 +05:30 [DBG] Connection id "0HN5LV725SGP0" accepted.
+2024-08-06 14:55:52.581 +05:30 [DBG] Connection id "0HN5LV725SGP1" received FIN.
+2024-08-06 14:55:52.584 +05:30 [DBG] Connection id "0HN5LV725SGP0" received FIN.
+2024-08-06 14:55:52.587 +05:30 [DBG] Connection id "0HN5LV725SGP1" started.
+2024-08-06 14:55:52.588 +05:30 [DBG] Connection id "0HN5LV725SGP0" started.
+2024-08-06 14:55:52.613 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 14:55:52.613 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 14:55:52.614 +05:30 [DBG] Connection id "0HN5LV725SGP2" accepted.
+2024-08-06 14:55:52.641 +05:30 [DBG] Connection id "0HN5LV725SGP0" stopped.
+2024-08-06 14:55:52.641 +05:30 [DBG] Connection id "0HN5LV725SGP2" started.
+2024-08-06 14:55:52.642 +05:30 [DBG] Connection id "0HN5LV725SGP1" stopped.
+2024-08-06 14:55:52.670 +05:30 [DBG] Connection id "0HN5LV725SGP1" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 14:55:52.652 +05:30 [DBG] Connection id "0HN5LV725SGP0" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 14:55:52.695 +05:30 [DBG] Connection 0HN5LV725SGP2 established using the following protocol: "Tls13"
+2024-08-06 14:55:52.741 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 14:55:52.813 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-06 14:55:52.890 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 14:55:52.894 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 14:55:52.904 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 14:55:52.908 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 14:55:52.913 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 172.6506ms
+2024-08-06 14:55:52.946 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 14:55:52.956 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 10.6434ms
+2024-08-06 14:55:52.970 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 14:55:52.991 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 20.9377ms
+2024-08-06 14:55:53.005 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 14:55:53.059 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.2621ms
+2024-08-06 14:55:53.641 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 14:55:53.831 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 189.1087ms
+2024-08-06 14:56:03.441 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 14:56:03.473 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 14:56:03.475 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 14:56:03.476 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 14:56:03.483 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 14:56:03.565 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 14:56:03.574 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 14:56:03.575 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 14:56:03.583 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 141.0526ms
+2024-08-06 14:56:03.594 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 29.3147ms
+2024-08-06 14:56:03.608 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 32.4311ms
+2024-08-06 14:56:03.646 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 71.1621ms
+2024-08-06 14:56:03.815 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 14:56:03.922 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 107.355ms
+2024-08-06 14:56:23.642 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/books/1 - null null
+2024-08-06 14:56:23.651 +05:30 [DBG] The request path  does not match the path filter
+2024-08-06 14:56:23.682 +05:30 [DBG] 1 candidate(s) found for the request path '/api/books/1'
+2024-08-06 14:56:23.713 +05:30 [DBG] Endpoint 'Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API)' with route pattern 'api/books/{id}' is valid for the request path '/api/books/1'
+2024-08-06 14:56:23.719 +05:30 [DBG] Request matched endpoint 'Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API)'
+2024-08-06 14:56:23.725 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API)'
+2024-08-06 14:56:23.761 +05:30 [INF] Route matched with {action = "getBooksById", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.BooksDto] getBooksById(Int32) on controller Bookstore.API.Controllers.BooksController (Bookstore.API).
+2024-08-06 14:56:23.767 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-06 14:56:23.771 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-06 14:56:23.775 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-06 14:56:23.793 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-06 14:56:23.796 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-06 14:56:23.802 +05:30 [DBG] Executing controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 14:56:23.806 +05:30 [DBG] Executed controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 14:56:23.814 +05:30 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-08-06 14:56:23.831 +05:30 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-08-06 14:56:23.835 +05:30 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-08-06 14:56:23.838 +05:30 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-08-06 14:56:23.842 +05:30 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-08-06 14:56:23.846 +05:30 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-08-06 14:56:23.852 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2024-08-06 14:56:23.880 +05:30 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2024-08-06 14:56:23.884 +05:30 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2024-08-06 14:56:23.887 +05:30 [WRN] No output formatter was found for content types '["text/plain"]' to write the response.
+2024-08-06 14:56:23.898 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2024-08-06 14:56:23.920 +05:30 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]' and explicitly specified content types '["application/problem+json","application/problem+xml"]'. The content types in the accept header must be a subset of the explicitly set content types.
+2024-08-06 14:56:23.927 +05:30 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2024-08-06 14:56:23.934 +05:30 [INF] Executed action Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API) in 129.9521ms
+2024-08-06 14:56:23.940 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API)'
+2024-08-06 14:56:23.945 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/books/1 - 406 0 null 302.9542ms
+2024-08-06 14:56:36.786 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/books/1 - null null
+2024-08-06 14:56:36.796 +05:30 [DBG] The request path  does not match the path filter
+2024-08-06 14:56:36.800 +05:30 [DBG] 1 candidate(s) found for the request path '/api/books/1'
+2024-08-06 14:56:36.802 +05:30 [DBG] Endpoint 'Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API)' with route pattern 'api/books/{id}' is valid for the request path '/api/books/1'
+2024-08-06 14:56:36.806 +05:30 [DBG] Request matched endpoint 'Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API)'
+2024-08-06 14:56:36.809 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API)'
+2024-08-06 14:56:36.811 +05:30 [INF] Route matched with {action = "getBooksById", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.BooksDto] getBooksById(Int32) on controller Bookstore.API.Controllers.BooksController (Bookstore.API).
+2024-08-06 14:56:36.836 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-06 14:56:36.840 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-06 14:56:36.843 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-06 14:56:36.849 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-06 14:56:36.851 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-06 14:56:36.870 +05:30 [DBG] Executing controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 14:56:36.873 +05:30 [DBG] Executed controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 14:56:36.876 +05:30 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-08-06 14:56:36.880 +05:30 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-08-06 14:56:36.883 +05:30 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-08-06 14:56:36.885 +05:30 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-08-06 14:56:36.888 +05:30 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-08-06 14:56:36.891 +05:30 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-08-06 14:56:36.893 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2024-08-06 14:56:36.927 +05:30 [DBG] No information found on request to perform content negotiation.
+2024-08-06 14:56:36.930 +05:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-06 14:56:36.932 +05:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-06 14:56:36.935 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-06 14:56:36.950 +05:30 [INF] Executing OkObjectResult, writing value of type 'Bookstore.API.Models.BooksDto'.
+2024-08-06 14:56:37.053 +05:30 [INF] Executed action Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API) in 182.5434ms
+2024-08-06 14:56:37.115 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API)'
+2024-08-06 14:56:37.121 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/books/1 - 200 164 application/json; charset=utf-8 335.7402ms
+2024-08-06 14:56:44.629 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/books/2 - null null
+2024-08-06 14:56:44.647 +05:30 [DBG] The request path  does not match the path filter
+2024-08-06 14:56:44.651 +05:30 [DBG] 1 candidate(s) found for the request path '/api/books/2'
+2024-08-06 14:56:44.675 +05:30 [DBG] Endpoint 'Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API)' with route pattern 'api/books/{id}' is valid for the request path '/api/books/2'
+2024-08-06 14:56:44.683 +05:30 [DBG] Request matched endpoint 'Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API)'
+2024-08-06 14:56:44.687 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API)'
+2024-08-06 14:56:44.712 +05:30 [INF] Route matched with {action = "getBooksById", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.BooksDto] getBooksById(Int32) on controller Bookstore.API.Controllers.BooksController (Bookstore.API).
+2024-08-06 14:56:44.718 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-06 14:56:44.724 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-06 14:56:44.729 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-06 14:56:44.758 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-06 14:56:44.763 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-06 14:56:44.769 +05:30 [DBG] Executing controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 14:56:44.775 +05:30 [DBG] Executed controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 14:56:44.791 +05:30 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-08-06 14:56:44.795 +05:30 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-08-06 14:56:44.799 +05:30 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-08-06 14:56:44.803 +05:30 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-08-06 14:56:44.806 +05:30 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-08-06 14:56:44.810 +05:30 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-08-06 14:56:44.814 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2024-08-06 14:56:44.827 +05:30 [DBG] No information found on request to perform content negotiation.
+2024-08-06 14:56:44.830 +05:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-06 14:56:44.836 +05:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-06 14:56:44.838 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-06 14:56:44.843 +05:30 [INF] Executing OkObjectResult, writing value of type 'Bookstore.API.Models.BooksDto'.
+2024-08-06 14:56:44.847 +05:30 [INF] Executed action Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API) in 78.0789ms
+2024-08-06 14:56:44.910 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API)'
+2024-08-06 14:56:44.914 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/books/2 - 200 165 application/json; charset=utf-8 284.5659ms
+2024-08-06 14:57:08.753 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/books/3 - null null
+2024-08-06 14:57:08.799 +05:30 [DBG] The request path  does not match the path filter
+2024-08-06 14:57:08.802 +05:30 [DBG] 1 candidate(s) found for the request path '/api/books/3'
+2024-08-06 14:57:08.807 +05:30 [DBG] Endpoint 'Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API)' with route pattern 'api/books/{id}' is valid for the request path '/api/books/3'
+2024-08-06 14:57:08.815 +05:30 [DBG] Request matched endpoint 'Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API)'
+2024-08-06 14:57:08.852 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API)'
+2024-08-06 14:57:08.908 +05:30 [INF] Route matched with {action = "getBooksById", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.BooksDto] getBooksById(Int32) on controller Bookstore.API.Controllers.BooksController (Bookstore.API).
+2024-08-06 14:57:08.916 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-06 14:57:08.924 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-06 14:57:08.974 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-06 14:57:08.987 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-06 14:57:08.992 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-06 14:57:08.998 +05:30 [DBG] Executing controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 14:57:09.001 +05:30 [DBG] Executed controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 14:57:09.004 +05:30 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-08-06 14:57:09.007 +05:30 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-08-06 14:57:09.019 +05:30 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-08-06 14:57:09.027 +05:30 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-08-06 14:57:09.031 +05:30 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-08-06 14:57:09.036 +05:30 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-08-06 14:57:09.040 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2024-08-06 14:57:09.048 +05:30 [DBG] No information found on request to perform content negotiation.
+2024-08-06 14:57:09.050 +05:30 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'.
+2024-08-06 14:57:09.062 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2024-08-06 14:57:09.066 +05:30 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-06 14:57:09.082 +05:30 [INF] Executed action Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API) in 84.2864ms
+2024-08-06 14:57:09.107 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.BooksController.getBooksById (Bookstore.API)'
+2024-08-06 14:57:09.116 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/books/3 - 404 162 application/problem+json; charset=utf-8 362.4503ms
+2024-08-06 14:59:21.354 +05:30 [DBG] Connection id "0HN5LV725SGP2" is closing.
+2024-08-06 14:59:21.361 +05:30 [DBG] Connection id "0HN5LV725SGP2" is closed. The last processed stream ID was 27.
+2024-08-06 14:59:21.365 +05:30 [DBG] Connection id "0HN5LV725SGP2" received FIN.
+2024-08-06 14:59:21.373 +05:30 [DBG] The connection queue processing loop for 0HN5LV725SGP2 completed.
+2024-08-06 14:59:21.375 +05:30 [DBG] Connection id "0HN5LV725SGP2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 14:59:21.388 +05:30 [DBG] Connection id "0HN5LV725SGP2" stopped.
+2024-08-06 15:26:33.016 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-06 15:26:33.284 +05:30 [DBG] Hosting starting
+2024-08-06 15:26:33.694 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-06 15:26:33.717 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-06 15:26:33.721 +05:30 [DBG] Loaded hosting startup assembly Bookstore.API
+2024-08-06 15:26:33.723 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-06 15:26:33.724 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-06 15:26:33.726 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-06 15:26:33.728 +05:30 [INF] Hosting environment: Development
+2024-08-06 15:26:33.736 +05:30 [INF] Content root path: D:\Users\preetee\source\repos\Bookstore\Bookstore.API
+2024-08-06 15:26:33.737 +05:30 [DBG] Hosting started
+2024-08-06 15:26:33.878 +05:30 [DBG] Connection id "0HN5LVO6TT2DM" received FIN.
+2024-08-06 15:26:34.743 +05:30 [DBG] Connection id "0HN5LVO6TT2DM" accepted.
+2024-08-06 15:26:34.812 +05:30 [DBG] Connection id "0HN5LVO6TT2DN" accepted.
+2024-08-06 15:26:34.813 +05:30 [DBG] Connection id "0HN5LVO6TT2DM" started.
+2024-08-06 15:26:34.896 +05:30 [DBG] Connection id "0HN5LVO6TT2DN" started.
+2024-08-06 15:26:34.985 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 15:26:35.223 +05:30 [DBG] Connection 0HN5LVO6TT2DN established using the following protocol: "Tls13"
+2024-08-06 15:26:35.290 +05:30 [DBG] Connection id "0HN5LVO6TT2DM" stopped.
+2024-08-06 15:26:35.301 +05:30 [DBG] Connection id "0HN5LVO6TT2DM" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 15:26:35.521 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 15:26:36.091 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-06 15:26:36.283 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 15:26:36.291 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 15:26:36.332 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 15:26:36.459 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 15:26:36.459 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 15:26:36.699 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 238.7883ms
+2024-08-06 15:26:36.700 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 15:26:36.702 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 15:26:36.741 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 1228.7778ms
+2024-08-06 15:26:36.735 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 274.9914ms
+2024-08-06 15:26:36.889 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 188.7464ms
+2024-08-06 15:26:37.101 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 15:26:37.564 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 462.6443ms
+2024-08-06 15:26:57.738 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7200/api/books - application/json-patch+json 129
+2024-08-06 15:26:57.751 +05:30 [DBG] POST requests are not supported
+2024-08-06 15:26:57.799 +05:30 [DBG] 1 candidate(s) found for the request path '/api/books'
+2024-08-06 15:26:57.808 +05:30 [DBG] Endpoint 'Bookstore.API.Controllers.BooksController.CreateBook (Bookstore.API)' with route pattern 'api/books' is valid for the request path '/api/books'
+2024-08-06 15:26:57.814 +05:30 [DBG] Request matched endpoint 'Bookstore.API.Controllers.BooksController.CreateBook (Bookstore.API)'
+2024-08-06 15:26:57.820 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.BooksController.CreateBook (Bookstore.API)'
+2024-08-06 15:26:57.838 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.BooksController.CreateBook (Bookstore.API)'
+2024-08-06 15:26:57.845 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'Bookstore.API.Controllers.BooksController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-06 15:26:57.969 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2024-08-06 15:26:57.982 +05:30 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]' and explicitly specified content types '["application/problem+json","application/problem+xml"]'. The content types in the accept header must be a subset of the explicitly set content types.
+2024-08-06 15:26:58.006 +05:30 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2024-08-06 15:26:58.012 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7200/api/books - 500 0 null 273.7954ms
+2024-08-06 15:26:58.220 +05:30 [DBG] Connection id "0HN5LVO6TT2DN", Request id "0HN5LVO6TT2DN:0000000B": started reading request body.
+2024-08-06 15:26:58.223 +05:30 [DBG] Connection id "0HN5LVO6TT2DN", Request id "0HN5LVO6TT2DN:0000000B": done reading request body.
+2024-08-06 15:30:58.115 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-06 15:30:58.309 +05:30 [DBG] Hosting starting
+2024-08-06 15:30:58.422 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-06 15:30:58.426 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-06 15:30:58.428 +05:30 [DBG] Loaded hosting startup assembly Bookstore.API
+2024-08-06 15:30:58.429 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-06 15:30:58.430 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-06 15:30:58.432 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-06 15:30:58.434 +05:30 [INF] Hosting environment: Development
+2024-08-06 15:30:58.435 +05:30 [INF] Content root path: D:\Users\preetee\source\repos\Bookstore\Bookstore.API
+2024-08-06 15:30:58.438 +05:30 [DBG] Hosting started
+2024-08-06 15:30:58.918 +05:30 [DBG] Connection id "0HN5LVQLTGRG6" accepted.
+2024-08-06 15:30:58.922 +05:30 [DBG] Connection id "0HN5LVQLTGRG6" started.
+2024-08-06 15:30:58.938 +05:30 [DBG] Connection id "0HN5LVQLTGRG6" received FIN.
+2024-08-06 15:30:58.955 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 15:30:58.988 +05:30 [DBG] Connection id "0HN5LVQLTGRG6" stopped.
+2024-08-06 15:30:59.007 +05:30 [DBG] Connection id "0HN5LVQLTGRG6" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 15:30:59.166 +05:30 [DBG] Connection id "0HN5LVQLTGRG7" accepted.
+2024-08-06 15:30:59.214 +05:30 [DBG] Connection id "0HN5LVQLTGRG7" started.
+2024-08-06 15:30:59.259 +05:30 [DBG] Connection 0HN5LVQLTGRG7 established using the following protocol: "Tls13"
+2024-08-06 15:30:59.341 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 15:30:59.479 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-06 15:30:59.611 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 15:30:59.614 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 15:30:59.667 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 15:30:59.695 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 15:30:59.733 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 15:30:59.886 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 546.7104ms
+2024-08-06 15:30:59.894 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 15:30:59.948 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 15:30:59.959 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 65.8009ms
+2024-08-06 15:30:59.972 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 276.5794ms
+2024-08-06 15:31:00.062 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 113.8816ms
+2024-08-06 15:31:00.181 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 15:31:00.605 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 423.8999ms
+2024-08-06 15:31:04.008 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/books - null null
+2024-08-06 15:31:04.026 +05:30 [DBG] The request path  does not match the path filter
+2024-08-06 15:31:04.062 +05:30 [DBG] 1 candidate(s) found for the request path '/api/books'
+2024-08-06 15:31:04.070 +05:30 [DBG] Endpoint 'Bookstore.API.Controllers.BooksController.GetBooks (Bookstore.API)' with route pattern 'api/books' is valid for the request path '/api/books'
+2024-08-06 15:31:04.079 +05:30 [DBG] Request matched endpoint 'Bookstore.API.Controllers.BooksController.GetBooks (Bookstore.API)'
+2024-08-06 15:31:04.085 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.BooksController.GetBooks (Bookstore.API)'
+2024-08-06 15:31:04.106 +05:30 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Bookstore.API.Models.BooksDto]] GetBooks() on controller Bookstore.API.Controllers.BooksController (Bookstore.API).
+2024-08-06 15:31:04.118 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-06 15:31:04.122 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-06 15:31:04.127 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-06 15:31:04.132 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-06 15:31:04.135 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-06 15:31:04.140 +05:30 [DBG] Executing controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 15:31:04.145 +05:30 [DBG] Executed controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 15:31:04.156 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2024-08-06 15:31:04.186 +05:30 [DBG] No information found on request to perform content negotiation.
+2024-08-06 15:31:04.189 +05:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-06 15:31:04.193 +05:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-06 15:31:04.196 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-06 15:31:04.203 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Bookstore.API.Models.BooksDto, Bookstore.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-06 15:31:04.378 +05:30 [INF] Executed action Bookstore.API.Controllers.BooksController.GetBooks (Bookstore.API) in 202.8322ms
+2024-08-06 15:31:04.412 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.BooksController.GetBooks (Bookstore.API)'
+2024-08-06 15:31:04.421 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/books - 200 332 application/json; charset=utf-8 412.9224ms
+2024-08-06 15:31:09.461 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/books/1 - null null
+2024-08-06 15:31:09.480 +05:30 [DBG] The request path  does not match the path filter
+2024-08-06 15:31:09.488 +05:30 [DBG] 1 candidate(s) found for the request path '/api/books/1'
+2024-08-06 15:31:09.493 +05:30 [DBG] Endpoint 'Bookstore.API.Controllers.BooksController.GetBooksById (Bookstore.API)' with route pattern 'api/books/{id}' is valid for the request path '/api/books/1'
+2024-08-06 15:31:09.499 +05:30 [DBG] Request matched endpoint 'Bookstore.API.Controllers.BooksController.GetBooksById (Bookstore.API)'
+2024-08-06 15:31:09.503 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.BooksController.GetBooksById (Bookstore.API)'
+2024-08-06 15:31:09.522 +05:30 [INF] Route matched with {action = "GetBooksById", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.BooksDto] GetBooksById(Int32) on controller Bookstore.API.Controllers.BooksController (Bookstore.API).
+2024-08-06 15:31:09.531 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-06 15:31:09.535 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-06 15:31:09.538 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-06 15:31:09.544 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-06 15:31:09.549 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-06 15:31:09.573 +05:30 [DBG] Executing controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 15:31:09.576 +05:30 [DBG] Executed controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 15:31:09.586 +05:30 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-08-06 15:31:09.620 +05:30 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-08-06 15:31:09.650 +05:30 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-08-06 15:31:09.656 +05:30 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-08-06 15:31:09.660 +05:30 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-08-06 15:31:09.667 +05:30 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-08-06 15:31:09.686 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2024-08-06 15:31:09.700 +05:30 [DBG] No information found on request to perform content negotiation.
+2024-08-06 15:31:09.704 +05:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-06 15:31:09.720 +05:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-06 15:31:09.724 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-06 15:31:09.731 +05:30 [INF] Executing OkObjectResult, writing value of type 'Bookstore.API.Models.BooksDto'.
+2024-08-06 15:31:09.738 +05:30 [INF] Executed action Bookstore.API.Controllers.BooksController.GetBooksById (Bookstore.API) in 165.1749ms
+2024-08-06 15:31:09.779 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.BooksController.GetBooksById (Bookstore.API)'
+2024-08-06 15:31:09.783 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/books/1 - 200 164 application/json; charset=utf-8 322.1478ms
+2024-08-06 15:31:16.323 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/books/2 - null null
+2024-08-06 15:31:16.350 +05:30 [DBG] The request path  does not match the path filter
+2024-08-06 15:31:16.355 +05:30 [DBG] 1 candidate(s) found for the request path '/api/books/2'
+2024-08-06 15:31:16.363 +05:30 [DBG] Endpoint 'Bookstore.API.Controllers.BooksController.GetBooksById (Bookstore.API)' with route pattern 'api/books/{id}' is valid for the request path '/api/books/2'
+2024-08-06 15:31:16.368 +05:30 [DBG] Request matched endpoint 'Bookstore.API.Controllers.BooksController.GetBooksById (Bookstore.API)'
+2024-08-06 15:31:16.371 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.BooksController.GetBooksById (Bookstore.API)'
+2024-08-06 15:31:16.374 +05:30 [INF] Route matched with {action = "GetBooksById", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.BooksDto] GetBooksById(Int32) on controller Bookstore.API.Controllers.BooksController (Bookstore.API).
+2024-08-06 15:31:16.381 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-06 15:31:16.384 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-06 15:31:16.388 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-06 15:31:16.419 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-06 15:31:16.423 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-06 15:31:16.430 +05:30 [DBG] Executing controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 15:31:16.460 +05:30 [DBG] Executed controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 15:31:16.467 +05:30 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-08-06 15:31:16.494 +05:30 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-08-06 15:31:16.499 +05:30 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-08-06 15:31:16.502 +05:30 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-08-06 15:31:16.506 +05:30 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-08-06 15:31:16.517 +05:30 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-08-06 15:31:16.523 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2024-08-06 15:31:16.534 +05:30 [DBG] No information found on request to perform content negotiation.
+2024-08-06 15:31:16.536 +05:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-06 15:31:16.539 +05:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-06 15:31:16.541 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-06 15:31:16.560 +05:30 [INF] Executing OkObjectResult, writing value of type 'Bookstore.API.Models.BooksDto'.
+2024-08-06 15:31:16.565 +05:30 [INF] Executed action Bookstore.API.Controllers.BooksController.GetBooksById (Bookstore.API) in 135.1575ms
+2024-08-06 15:31:16.648 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.BooksController.GetBooksById (Bookstore.API)'
+2024-08-06 15:31:16.652 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/books/2 - 200 165 application/json; charset=utf-8 328.6082ms
+2024-08-06 15:33:15.803 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7200/api/books - application/json-patch+json 122
+2024-08-06 15:33:15.814 +05:30 [DBG] POST requests are not supported
+2024-08-06 15:33:15.816 +05:30 [DBG] 1 candidate(s) found for the request path '/api/books'
+2024-08-06 15:33:15.819 +05:30 [DBG] Endpoint 'Bookstore.API.Controllers.BooksController.CreateBook (Bookstore.API)' with route pattern 'api/books' is valid for the request path '/api/books'
+2024-08-06 15:33:15.822 +05:30 [DBG] Request matched endpoint 'Bookstore.API.Controllers.BooksController.CreateBook (Bookstore.API)'
+2024-08-06 15:33:15.825 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.BooksController.CreateBook (Bookstore.API)'
+2024-08-06 15:33:15.832 +05:30 [INF] Route matched with {action = "CreateBook", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.BooksDto] CreateBook(Bookstore.API.Models.BooksForCreationDto) on controller Bookstore.API.Controllers.BooksController (Bookstore.API).
+2024-08-06 15:33:15.840 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-06 15:33:15.846 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-06 15:33:15.851 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-06 15:33:15.856 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-06 15:33:15.862 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-06 15:33:15.867 +05:30 [DBG] Executing controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 15:33:15.871 +05:30 [DBG] Executed controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 15:33:15.894 +05:30 [DBG] Attempting to bind parameter 'book' of type 'Bookstore.API.Models.BooksForCreationDto' ...
+2024-08-06 15:33:15.899 +05:30 [DBG] Attempting to bind parameter 'book' of type 'Bookstore.API.Models.BooksForCreationDto' using the name '' in request data ...
+2024-08-06 15:33:15.906 +05:30 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2024-08-06 15:33:15.983 +05:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2024-08-06 15:33:16.004 +05:30 [DBG] Connection id "0HN5LVQLTGRG7", Request id "0HN5LVQLTGRG7:00000011": started reading request body.
+2024-08-06 15:33:16.008 +05:30 [DBG] Connection id "0HN5LVQLTGRG7", Request id "0HN5LVQLTGRG7:00000011": done reading request body.
+2024-08-06 15:33:16.072 +05:30 [DBG] Done attempting to bind parameter 'book' of type 'Bookstore.API.Models.BooksForCreationDto'.
+2024-08-06 15:33:16.085 +05:30 [DBG] Done attempting to bind parameter 'book' of type 'Bookstore.API.Models.BooksForCreationDto'.
+2024-08-06 15:33:16.088 +05:30 [DBG] Attempting to validate the bound parameter 'book' of type 'Bookstore.API.Models.BooksForCreationDto' ...
+2024-08-06 15:33:16.098 +05:30 [DBG] Done attempting to validate the bound parameter 'book' of type 'Bookstore.API.Models.BooksForCreationDto'.
+2024-08-06 15:33:16.103 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2024-08-06 15:33:16.135 +05:30 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2024-08-06 15:33:16.140 +05:30 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2024-08-06 15:33:16.145 +05:30 [WRN] No output formatter was found for content types '["text/plain"]' to write the response.
+2024-08-06 15:33:16.149 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2024-08-06 15:33:16.171 +05:30 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]' and explicitly specified content types '["application/problem+json","application/problem+xml"]'. The content types in the accept header must be a subset of the explicitly set content types.
+2024-08-06 15:33:16.179 +05:30 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2024-08-06 15:33:16.183 +05:30 [INF] Executed action Bookstore.API.Controllers.BooksController.CreateBook (Bookstore.API) in 316.0301ms
+2024-08-06 15:33:16.187 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.BooksController.CreateBook (Bookstore.API)'
+2024-08-06 15:33:16.191 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7200/api/books - 406 0 null 387.947ms
+2024-08-06 15:35:27.795 +05:30 [DBG] Connection id "0HN5LVQLTGRG7" is closing.
+2024-08-06 15:35:27.801 +05:30 [DBG] Connection id "0HN5LVQLTGRG7" is closed. The last processed stream ID was 17.
+2024-08-06 15:35:27.805 +05:30 [DBG] Connection id "0HN5LVQLTGRG7" received FIN.
+2024-08-06 15:35:27.808 +05:30 [DBG] The connection queue processing loop for 0HN5LVQLTGRG7 completed.
+2024-08-06 15:35:27.808 +05:30 [DBG] Connection id "0HN5LVQLTGRG7" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 15:35:27.815 +05:30 [DBG] Connection id "0HN5LVQLTGRG7" stopped.
+2024-08-06 16:14:25.068 +05:30 [DBG] Connection id "0HN5LVQLTGRG8" accepted.
+2024-08-06 16:14:25.071 +05:30 [DBG] Connection id "0HN5LVQLTGRG8" started.
+2024-08-06 16:14:25.080 +05:30 [DBG] Connection 0HN5LVQLTGRG8 established using the following protocol: "Tls13"
+2024-08-06 16:14:25.085 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 16:14:25.097 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 16:14:25.100 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 16:14:25.102 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 16:14:25.112 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 16:14:25.117 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 31.5557ms
+2024-08-06 16:14:25.425 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 16:14:25.674 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 249.7178ms
+2024-08-06 16:14:25.770 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 16:14:25.778 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 7.779ms
+2024-08-06 16:14:25.823 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 16:14:25.842 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.6849ms
+2024-08-06 16:14:26.647 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 16:14:26.663 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/authors" for actions - Bookstore.API.Controllers.AuthorsController.getAuthors (Bookstore.API),Bookstore.API.Controllers.AuthorsController.GetAuthors (Bookstore.API). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-06 16:14:26.726 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 500 null application/problem+json 78.5915ms
+2024-08-06 16:14:31.749 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 16:14:31.760 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 16:14:31.793 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 16:14:31.818 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 16:14:31.960 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 16:14:32.146 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 185.3504ms
+2024-08-06 16:14:32.063 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 16:14:32.137 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 16:14:31.960 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 16:14:32.462 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 712.8574ms
+2024-08-06 16:14:32.467 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 506.4053ms
+2024-08-06 16:14:32.613 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 549.6701ms
+2024-08-06 16:14:32.715 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 16:14:32.738 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/authors" for actions - Bookstore.API.Controllers.AuthorsController.getAuthors (Bookstore.API),Bookstore.API.Controllers.AuthorsController.GetAuthors (Bookstore.API). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-06 16:14:32.789 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 500 null application/problem+json 74.0643ms
+2024-08-06 16:14:35.969 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 16:14:35.976 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 16:14:35.978 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 16:14:35.980 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 16:14:36.041 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 16:14:36.045 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 16:14:36.045 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 16:14:36.062 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 17.1858ms
+2024-08-06 16:14:36.051 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 79.171ms
+2024-08-06 16:14:36.045 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 16:14:36.063 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 17.8554ms
+2024-08-06 16:14:36.107 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 61.8872ms
+2024-08-06 16:14:36.201 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 16:14:36.231 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/authors" for actions - Bookstore.API.Controllers.AuthorsController.getAuthors (Bookstore.API),Bookstore.API.Controllers.AuthorsController.GetAuthors (Bookstore.API). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-06 16:14:36.268 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 500 null application/problem+json 66.6405ms
+2024-08-06 16:16:25.751 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-06 16:16:26.094 +05:30 [DBG] Hosting starting
+2024-08-06 16:16:26.359 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-06 16:16:26.389 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-06 16:16:26.391 +05:30 [DBG] Loaded hosting startup assembly Bookstore.API
+2024-08-06 16:16:26.393 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-06 16:16:26.395 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-06 16:16:26.397 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-06 16:16:26.400 +05:30 [INF] Hosting environment: Development
+2024-08-06 16:16:26.401 +05:30 [INF] Content root path: D:\Users\preetee\source\repos\Bookstore\Bookstore.API
+2024-08-06 16:16:26.403 +05:30 [DBG] Hosting started
+2024-08-06 16:16:26.720 +05:30 [DBG] Connection id "0HN5M0K2RS5MA" accepted.
+2024-08-06 16:16:26.720 +05:30 [DBG] Connection id "0HN5M0K2RS5M9" accepted.
+2024-08-06 16:16:26.725 +05:30 [DBG] Connection id "0HN5M0K2RS5MA" started.
+2024-08-06 16:16:26.725 +05:30 [DBG] Connection id "0HN5M0K2RS5M9" started.
+2024-08-06 16:16:26.737 +05:30 [DBG] Connection id "0HN5M0K2RS5M9" received FIN.
+2024-08-06 16:16:26.742 +05:30 [DBG] Connection id "0HN5M0K2RS5MA" received FIN.
+2024-08-06 16:16:26.757 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 16:16:26.757 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 16:16:26.780 +05:30 [DBG] Connection id "0HN5M0K2RS5MB" accepted.
+2024-08-06 16:16:26.796 +05:30 [DBG] Connection id "0HN5M0K2RS5M9" stopped.
+2024-08-06 16:16:26.799 +05:30 [DBG] Connection id "0HN5M0K2RS5MA" stopped.
+2024-08-06 16:16:26.800 +05:30 [DBG] Connection id "0HN5M0K2RS5MB" started.
+2024-08-06 16:16:26.820 +05:30 [DBG] Connection id "0HN5M0K2RS5M9" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 16:16:26.820 +05:30 [DBG] Connection id "0HN5M0K2RS5MA" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 16:16:26.856 +05:30 [DBG] Connection 0HN5M0K2RS5MB established using the following protocol: "Tls13"
+2024-08-06 16:16:26.904 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 16:16:26.978 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-06 16:16:27.066 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 16:16:27.069 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 16:16:27.079 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 16:16:27.082 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 16:16:27.089 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 185.9617ms
+2024-08-06 16:16:27.117 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 16:16:27.149 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 31.8157ms
+2024-08-06 16:16:27.160 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 16:16:27.161 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 16:16:27.233 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 71.9975ms
+2024-08-06 16:16:27.288 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 127.8815ms
+2024-08-06 16:16:27.459 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 16:16:27.709 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 250.3685ms
+2024-08-06 16:16:37.013 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 16:16:37.030 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 16:16:37.032 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 16:16:37.034 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 16:16:37.042 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 16:16:37.120 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 16:16:37.145 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 16:16:37.147 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 16:16:37.156 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 140.2299ms
+2024-08-06 16:16:37.171 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 51.2291ms
+2024-08-06 16:16:37.215 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 69.9547ms
+2024-08-06 16:16:37.279 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 131.3193ms
+2024-08-06 16:16:37.393 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 16:16:37.508 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 115.6933ms
+2024-08-06 16:18:49.519 +05:30 [DBG] Connection id "0HN5M0K2RS5MB" is closing.
+2024-08-06 16:18:49.527 +05:30 [DBG] Connection id "0HN5M0K2RS5MB" is closed. The last processed stream ID was 19.
+2024-08-06 16:18:49.530 +05:30 [DBG] Connection id "0HN5M0K2RS5MB" received FIN.
+2024-08-06 16:18:49.534 +05:30 [DBG] Connection id "0HN5M0K2RS5MB" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 16:18:49.535 +05:30 [DBG] The connection queue processing loop for 0HN5M0K2RS5MB completed.
+2024-08-06 16:18:49.547 +05:30 [DBG] Connection id "0HN5M0K2RS5MB" stopped.
+2024-08-06 16:21:41.919 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-06 16:21:42.036 +05:30 [DBG] Hosting starting
+2024-08-06 16:21:42.183 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-06 16:21:42.188 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-06 16:21:42.190 +05:30 [DBG] Loaded hosting startup assembly Bookstore.API
+2024-08-06 16:21:42.191 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-06 16:21:42.193 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-06 16:21:42.195 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-06 16:21:42.197 +05:30 [INF] Hosting environment: Development
+2024-08-06 16:21:42.198 +05:30 [INF] Content root path: D:\Users\preetee\source\repos\Bookstore\Bookstore.API
+2024-08-06 16:21:42.200 +05:30 [DBG] Hosting started
+2024-08-06 16:21:42.356 +05:30 [DBG] Connection id "0HN5M0N0U0IJ2" accepted.
+2024-08-06 16:21:42.356 +05:30 [DBG] Connection id "0HN5M0N0U0IJ3" accepted.
+2024-08-06 16:21:42.363 +05:30 [DBG] Connection id "0HN5M0N0U0IJ3" received FIN.
+2024-08-06 16:21:42.364 +05:30 [DBG] Connection id "0HN5M0N0U0IJ2" received FIN.
+2024-08-06 16:21:42.365 +05:30 [DBG] Connection id "0HN5M0N0U0IJ2" started.
+2024-08-06 16:21:42.367 +05:30 [DBG] Connection id "0HN5M0N0U0IJ3" started.
+2024-08-06 16:21:42.390 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 16:21:42.396 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 16:21:42.401 +05:30 [DBG] Connection id "0HN5M0N0U0IJ4" accepted.
+2024-08-06 16:21:42.425 +05:30 [DBG] Connection id "0HN5M0N0U0IJ2" stopped.
+2024-08-06 16:21:42.428 +05:30 [DBG] Connection id "0HN5M0N0U0IJ3" stopped.
+2024-08-06 16:21:42.430 +05:30 [DBG] Connection id "0HN5M0N0U0IJ4" started.
+2024-08-06 16:21:42.441 +05:30 [DBG] Connection id "0HN5M0N0U0IJ2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 16:21:42.441 +05:30 [DBG] Connection id "0HN5M0N0U0IJ3" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 16:21:42.478 +05:30 [DBG] Connection 0HN5M0N0U0IJ4 established using the following protocol: "Tls13"
+2024-08-06 16:21:42.541 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 16:21:42.618 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-06 16:21:42.759 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 16:21:42.763 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 16:21:42.775 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 16:21:42.779 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 16:21:42.786 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 245.8114ms
+2024-08-06 16:21:42.821 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 16:21:42.835 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 13.1038ms
+2024-08-06 16:21:42.863 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 16:21:42.866 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 16:21:42.897 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 31.7539ms
+2024-08-06 16:21:42.935 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 71.3392ms
+2024-08-06 16:21:43.421 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 16:21:43.720 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 299.1043ms
+2024-08-06 16:21:48.056 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 16:21:48.074 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 16:21:48.076 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 16:21:48.078 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 16:21:48.164 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 16:21:48.177 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 16:21:48.198 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 16:21:48.204 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 6.8676ms
+2024-08-06 16:21:48.213 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 16:21:48.223 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 46.7361ms
+2024-08-06 16:21:48.196 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 139.0385ms
+2024-08-06 16:21:48.270 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.8523ms
+2024-08-06 16:21:48.478 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 16:21:48.518 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 40.1149ms
+2024-08-06 16:24:00.565 +05:30 [DBG] Connection id "0HN5M0N0U0IJ4" is closing.
+2024-08-06 16:24:00.573 +05:30 [DBG] Connection id "0HN5M0N0U0IJ4" is closed. The last processed stream ID was 19.
+2024-08-06 16:24:00.578 +05:30 [DBG] Connection id "0HN5M0N0U0IJ4" received FIN.
+2024-08-06 16:24:00.581 +05:30 [DBG] The connection queue processing loop for 0HN5M0N0U0IJ4 completed.
+2024-08-06 16:24:00.583 +05:30 [DBG] Connection id "0HN5M0N0U0IJ4" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 16:24:00.592 +05:30 [DBG] Connection id "0HN5M0N0U0IJ4" stopped.
+2024-08-06 16:28:46.208 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-06 16:28:46.331 +05:30 [DBG] Hosting starting
+2024-08-06 16:28:46.444 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-06 16:28:46.447 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-06 16:28:46.449 +05:30 [DBG] Loaded hosting startup assembly Bookstore.API
+2024-08-06 16:28:46.450 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-06 16:28:46.452 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-06 16:28:46.454 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-06 16:28:46.456 +05:30 [INF] Hosting environment: Development
+2024-08-06 16:28:46.457 +05:30 [INF] Content root path: D:\Users\preetee\source\repos\Bookstore\Bookstore.API
+2024-08-06 16:28:46.458 +05:30 [DBG] Hosting started
+2024-08-06 16:28:46.568 +05:30 [DBG] Connection id "0HN5M0QVBJPF5" received FIN.
+2024-08-06 16:28:46.568 +05:30 [DBG] Connection id "0HN5M0QVBJPF4" received FIN.
+2024-08-06 16:28:46.579 +05:30 [DBG] Connection id "0HN5M0QVBJPF4" accepted.
+2024-08-06 16:28:46.582 +05:30 [DBG] Connection id "0HN5M0QVBJPF4" started.
+2024-08-06 16:28:46.579 +05:30 [DBG] Connection id "0HN5M0QVBJPF5" accepted.
+2024-08-06 16:28:46.597 +05:30 [DBG] Connection id "0HN5M0QVBJPF5" started.
+2024-08-06 16:28:46.599 +05:30 [DBG] Connection id "0HN5M0QVBJPF6" accepted.
+2024-08-06 16:28:46.604 +05:30 [DBG] Connection id "0HN5M0QVBJPF6" started.
+2024-08-06 16:28:46.611 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 16:28:46.617 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 16:28:46.663 +05:30 [DBG] Connection id "0HN5M0QVBJPF4" stopped.
+2024-08-06 16:28:46.670 +05:30 [DBG] Connection 0HN5M0QVBJPF6 established using the following protocol: "Tls13"
+2024-08-06 16:28:46.642 +05:30 [DBG] Connection id "0HN5M0QVBJPF5" stopped.
+2024-08-06 16:28:46.677 +05:30 [DBG] Connection id "0HN5M0QVBJPF5" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 16:28:46.671 +05:30 [DBG] Connection id "0HN5M0QVBJPF4" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 16:28:46.723 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 16:28:46.796 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-06 16:28:46.879 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 16:28:46.882 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 16:28:46.893 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 16:28:46.896 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 16:28:46.902 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 180.1933ms
+2024-08-06 16:28:46.928 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 16:28:46.942 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 13.0703ms
+2024-08-06 16:28:46.961 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 16:28:46.963 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 16:28:46.983 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 20.4893ms
+2024-08-06 16:28:47.024 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.5532ms
+2024-08-06 16:28:47.161 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 16:28:47.358 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 197.4256ms
+2024-08-06 16:30:59.179 +05:30 [DBG] Connection id "0HN5M0QVBJPF6" is closing.
+2024-08-06 16:30:59.185 +05:30 [DBG] Connection id "0HN5M0QVBJPF6" is closed. The last processed stream ID was 9.
+2024-08-06 16:30:59.189 +05:30 [DBG] Connection id "0HN5M0QVBJPF6" received FIN.
+2024-08-06 16:30:59.192 +05:30 [DBG] The connection queue processing loop for 0HN5M0QVBJPF6 completed.
+2024-08-06 16:30:59.195 +05:30 [DBG] Connection id "0HN5M0QVBJPF6" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 16:30:59.202 +05:30 [DBG] Connection id "0HN5M0QVBJPF6" stopped.
+2024-08-06 16:31:50.478 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-06 16:31:50.605 +05:30 [DBG] Hosting starting
+2024-08-06 16:31:50.742 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-06 16:31:50.745 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-06 16:31:50.748 +05:30 [DBG] Loaded hosting startup assembly Bookstore.API
+2024-08-06 16:31:50.750 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-06 16:31:50.751 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-06 16:31:50.754 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-06 16:31:50.755 +05:30 [INF] Hosting environment: Development
+2024-08-06 16:31:50.757 +05:30 [INF] Content root path: D:\Users\preetee\source\repos\Bookstore\Bookstore.API
+2024-08-06 16:31:50.758 +05:30 [DBG] Hosting started
+2024-08-06 16:31:50.966 +05:30 [DBG] Connection id "0HN5M0SMA5JAT" accepted.
+2024-08-06 16:31:50.966 +05:30 [DBG] Connection id "0HN5M0SMA5JAS" accepted.
+2024-08-06 16:31:50.970 +05:30 [DBG] Connection id "0HN5M0SMA5JAT" started.
+2024-08-06 16:31:50.975 +05:30 [DBG] Connection id "0HN5M0SMA5JAS" received FIN.
+2024-08-06 16:31:50.978 +05:30 [DBG] Connection id "0HN5M0SMA5JAS" started.
+2024-08-06 16:31:50.975 +05:30 [DBG] Connection id "0HN5M0SMA5JAT" received FIN.
+2024-08-06 16:31:50.998 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 16:31:51.004 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 16:31:51.014 +05:30 [DBG] Connection id "0HN5M0SMA5JAU" accepted.
+2024-08-06 16:31:51.037 +05:30 [DBG] Connection id "0HN5M0SMA5JAT" stopped.
+2024-08-06 16:31:51.042 +05:30 [DBG] Connection id "0HN5M0SMA5JAS" stopped.
+2024-08-06 16:31:51.044 +05:30 [DBG] Connection id "0HN5M0SMA5JAU" started.
+2024-08-06 16:31:51.063 +05:30 [DBG] Connection id "0HN5M0SMA5JAT" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 16:31:51.063 +05:30 [DBG] Connection id "0HN5M0SMA5JAS" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 16:31:51.123 +05:30 [DBG] Connection 0HN5M0SMA5JAU established using the following protocol: "Tls13"
+2024-08-06 16:31:51.180 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 16:31:51.261 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-06 16:31:51.356 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 16:31:51.360 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 16:31:51.372 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 16:31:51.376 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 16:31:51.384 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 204.7737ms
+2024-08-06 16:31:51.417 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 16:31:51.438 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 20.9615ms
+2024-08-06 16:31:51.448 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 16:31:51.453 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 16:31:51.471 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 18.5996ms
+2024-08-06 16:31:51.521 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 73.289ms
+2024-08-06 16:31:51.740 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 16:31:51.977 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 237.5241ms
+2024-08-06 16:32:03.988 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 16:32:04.025 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 16:32:04.027 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 16:32:04.030 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 16:32:04.037 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 16:32:04.099 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 108.9665ms
+2024-08-06 16:32:04.103 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 16:32:04.131 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 16:32:04.141 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 10.5917ms
+2024-08-06 16:32:04.153 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 50.3894ms
+2024-08-06 16:32:04.140 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 16:32:04.212 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 73.3695ms
+2024-08-06 16:32:04.361 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 16:32:04.442 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 80.7181ms
+2024-08-06 16:34:15.840 +05:30 [DBG] Connection id "0HN5M0SMA5JAU" is closing.
+2024-08-06 16:34:15.847 +05:30 [DBG] Connection id "0HN5M0SMA5JAU" is closed. The last processed stream ID was 19.
+2024-08-06 16:34:15.851 +05:30 [DBG] Connection id "0HN5M0SMA5JAU" received FIN.
+2024-08-06 16:34:15.852 +05:30 [DBG] The connection queue processing loop for 0HN5M0SMA5JAU completed.
+2024-08-06 16:34:15.854 +05:30 [DBG] Connection id "0HN5M0SMA5JAU" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 16:34:15.862 +05:30 [DBG] Connection id "0HN5M0SMA5JAU" stopped.
+2024-08-06 19:44:14.283 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-06 19:44:14.433 +05:30 [DBG] Hosting starting
+2024-08-06 19:44:14.573 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-06 19:44:14.576 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-06 19:44:14.578 +05:30 [DBG] Loaded hosting startup assembly Bookstore.API
+2024-08-06 19:44:14.580 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-06 19:44:14.582 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-06 19:44:14.586 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-06 19:44:14.589 +05:30 [INF] Hosting environment: Development
+2024-08-06 19:44:14.592 +05:30 [INF] Content root path: D:\Users\preetee\source\repos\Bookstore\Bookstore.API
+2024-08-06 19:44:14.594 +05:30 [DBG] Hosting started
+2024-08-06 19:44:14.669 +05:30 [DBG] Connection id "0HN5M486JG5GN" received FIN.
+2024-08-06 19:44:14.669 +05:30 [DBG] Connection id "0HN5M486JG5GO" received FIN.
+2024-08-06 19:44:14.682 +05:30 [DBG] Connection id "0HN5M486JG5GO" accepted.
+2024-08-06 19:44:14.690 +05:30 [DBG] Connection id "0HN5M486JG5GO" started.
+2024-08-06 19:44:14.685 +05:30 [DBG] Connection id "0HN5M486JG5GN" accepted.
+2024-08-06 19:44:14.702 +05:30 [DBG] Connection id "0HN5M486JG5GN" started.
+2024-08-06 19:44:14.707 +05:30 [DBG] Connection id "0HN5M486JG5GP" accepted.
+2024-08-06 19:44:14.709 +05:30 [DBG] Connection id "0HN5M486JG5GP" started.
+2024-08-06 19:44:14.717 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 19:44:14.719 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 19:44:14.751 +05:30 [DBG] Connection id "0HN5M486JG5GO" stopped.
+2024-08-06 19:44:14.772 +05:30 [DBG] Connection id "0HN5M486JG5GN" stopped.
+2024-08-06 19:44:14.788 +05:30 [DBG] Connection id "0HN5M486JG5GN" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 19:44:14.780 +05:30 [DBG] Connection id "0HN5M486JG5GO" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 19:44:14.791 +05:30 [DBG] Connection 0HN5M486JG5GP established using the following protocol: "Tls13"
+2024-08-06 19:44:14.847 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 19:44:14.930 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-06 19:44:15.026 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 19:44:15.029 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 19:44:15.048 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 19:44:15.051 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 19:44:15.056 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 210.1548ms
+2024-08-06 19:44:15.090 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 19:44:15.105 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 14.4098ms
+2024-08-06 19:44:15.126 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 19:44:15.127 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 19:44:15.153 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 26.066ms
+2024-08-06 19:44:15.200 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 74.1395ms
+2024-08-06 19:44:15.705 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 19:44:16.008 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 302.8282ms
+2024-08-06 19:44:50.871 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:7200/api/books/3 - null null
+2024-08-06 19:44:50.885 +05:30 [DBG] DELETE requests are not supported
+2024-08-06 19:44:50.912 +05:30 [DBG] 1 candidate(s) found for the request path '/api/books/3'
+2024-08-06 19:44:50.921 +05:30 [DBG] Endpoint 'Bookstore.API.Controllers.BooksController.DeleteBook (Bookstore.API)' with route pattern 'api/books/{id}' is valid for the request path '/api/books/3'
+2024-08-06 19:44:50.928 +05:30 [DBG] Request matched endpoint 'Bookstore.API.Controllers.BooksController.DeleteBook (Bookstore.API)'
+2024-08-06 19:44:50.934 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.BooksController.DeleteBook (Bookstore.API)'
+2024-08-06 19:44:50.955 +05:30 [INF] Route matched with {action = "DeleteBook", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult DeleteBook(Int32) on controller Bookstore.API.Controllers.BooksController (Bookstore.API).
+2024-08-06 19:44:50.976 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-06 19:44:50.979 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-06 19:44:50.983 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-06 19:44:50.988 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-06 19:44:50.992 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-06 19:44:51.003 +05:30 [DBG] Executing controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 19:44:51.015 +05:30 [DBG] Executed controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 19:44:51.023 +05:30 [DBG] Attempting to bind parameter 'bookID' of type 'System.Int32' ...
+2024-08-06 19:44:51.028 +05:30 [DBG] Attempting to bind parameter 'bookID' of type 'System.Int32' using the name '' in request data ...
+2024-08-06 19:44:51.031 +05:30 [DBG] Could not find a value in the request with name '' for binding parameter 'bookID' of type 'System.Int32'.
+2024-08-06 19:44:51.035 +05:30 [DBG] Done attempting to bind parameter 'bookID' of type 'System.Int32'.
+2024-08-06 19:44:51.049 +05:30 [DBG] Done attempting to bind parameter 'bookID' of type 'System.Int32'.
+2024-08-06 19:44:51.051 +05:30 [DBG] Attempting to validate the bound parameter 'bookID' of type 'System.Int32' ...
+2024-08-06 19:44:51.055 +05:30 [DBG] Done attempting to validate the bound parameter 'bookID' of type 'System.Int32'.
+2024-08-06 19:44:51.062 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2024-08-06 19:44:51.072 +05:30 [DBG] No information found on request to perform content negotiation.
+2024-08-06 19:44:51.074 +05:30 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'.
+2024-08-06 19:44:51.092 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2024-08-06 19:44:51.095 +05:30 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-06 19:44:51.252 +05:30 [INF] Executed action Bookstore.API.Controllers.BooksController.DeleteBook (Bookstore.API) in 239.8468ms
+2024-08-06 19:44:51.257 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.BooksController.DeleteBook (Bookstore.API)'
+2024-08-06 19:44:51.259 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7200/api/books/3 - 404 162 application/problem+json; charset=utf-8 387.669ms
+2024-08-06 19:45:09.209 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:7200/api/books/3?bookID=4 - null null
+2024-08-06 19:45:09.225 +05:30 [DBG] DELETE requests are not supported
+2024-08-06 19:45:09.228 +05:30 [DBG] 1 candidate(s) found for the request path '/api/books/3'
+2024-08-06 19:45:09.230 +05:30 [DBG] Endpoint 'Bookstore.API.Controllers.BooksController.DeleteBook (Bookstore.API)' with route pattern 'api/books/{id}' is valid for the request path '/api/books/3'
+2024-08-06 19:45:09.234 +05:30 [DBG] Request matched endpoint 'Bookstore.API.Controllers.BooksController.DeleteBook (Bookstore.API)'
+2024-08-06 19:45:09.237 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.BooksController.DeleteBook (Bookstore.API)'
+2024-08-06 19:45:09.244 +05:30 [INF] Route matched with {action = "DeleteBook", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult DeleteBook(Int32) on controller Bookstore.API.Controllers.BooksController (Bookstore.API).
+2024-08-06 19:45:09.249 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-06 19:45:09.252 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-06 19:45:09.255 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-06 19:45:09.261 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-06 19:45:09.265 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-06 19:45:09.268 +05:30 [DBG] Executing controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 19:45:09.271 +05:30 [DBG] Executed controller factory for controller Bookstore.API.Controllers.BooksController (Bookstore.API)
+2024-08-06 19:45:09.276 +05:30 [DBG] Attempting to bind parameter 'bookID' of type 'System.Int32' ...
+2024-08-06 19:45:09.296 +05:30 [DBG] Attempting to bind parameter 'bookID' of type 'System.Int32' using the name 'bookID' in request data ...
+2024-08-06 19:45:09.300 +05:30 [DBG] Done attempting to bind parameter 'bookID' of type 'System.Int32'.
+2024-08-06 19:45:09.304 +05:30 [DBG] Done attempting to bind parameter 'bookID' of type 'System.Int32'.
+2024-08-06 19:45:09.306 +05:30 [DBG] Attempting to validate the bound parameter 'bookID' of type 'System.Int32' ...
+2024-08-06 19:45:09.308 +05:30 [DBG] Done attempting to validate the bound parameter 'bookID' of type 'System.Int32'.
+2024-08-06 19:45:09.312 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2024-08-06 19:45:09.325 +05:30 [DBG] No information found on request to perform content negotiation.
+2024-08-06 19:45:09.327 +05:30 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'.
+2024-08-06 19:45:09.332 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2024-08-06 19:45:09.343 +05:30 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-08-06 19:45:09.346 +05:30 [INF] Executed action Bookstore.API.Controllers.BooksController.DeleteBook (Bookstore.API) in 78.058ms
+2024-08-06 19:45:09.349 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.BooksController.DeleteBook (Bookstore.API)'
+2024-08-06 19:45:09.352 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7200/api/books/3?bookID=4 - 404 162 application/problem+json; charset=utf-8 142.4506ms
+2024-08-06 19:46:50.058 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-06 19:46:50.166 +05:30 [DBG] Hosting starting
+2024-08-06 19:46:50.272 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-06 19:46:50.275 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-06 19:46:50.276 +05:30 [DBG] Loaded hosting startup assembly Bookstore.API
+2024-08-06 19:46:50.278 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-06 19:46:50.279 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-06 19:46:50.282 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-06 19:46:50.283 +05:30 [INF] Hosting environment: Development
+2024-08-06 19:46:50.285 +05:30 [INF] Content root path: D:\Users\preetee\source\repos\Bookstore\Bookstore.API
+2024-08-06 19:46:50.288 +05:30 [DBG] Hosting started
+2024-08-06 19:46:50.614 +05:30 [DBG] Connection id "0HN5M49L2MMBH" accepted.
+2024-08-06 19:46:50.614 +05:30 [DBG] Connection id "0HN5M49L2MMBG" accepted.
+2024-08-06 19:46:50.618 +05:30 [DBG] Connection id "0HN5M49L2MMBH" started.
+2024-08-06 19:46:50.618 +05:30 [DBG] Connection id "0HN5M49L2MMBG" started.
+2024-08-06 19:46:50.638 +05:30 [DBG] Connection id "0HN5M49L2MMBH" received FIN.
+2024-08-06 19:46:50.641 +05:30 [DBG] Connection id "0HN5M49L2MMBG" received FIN.
+2024-08-06 19:46:50.655 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 19:46:50.658 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 19:46:50.690 +05:30 [DBG] Connection id "0HN5M49L2MMBG" stopped.
+2024-08-06 19:46:50.674 +05:30 [DBG] Connection id "0HN5M49L2MMBI" accepted.
+2024-08-06 19:46:50.697 +05:30 [DBG] Connection id "0HN5M49L2MMBI" started.
+2024-08-06 19:46:50.701 +05:30 [DBG] Connection id "0HN5M49L2MMBG" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 19:46:50.691 +05:30 [DBG] Connection id "0HN5M49L2MMBH" stopped.
+2024-08-06 19:46:50.709 +05:30 [DBG] Connection id "0HN5M49L2MMBH" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 19:46:50.742 +05:30 [DBG] Connection 0HN5M49L2MMBI established using the following protocol: "Tls13"
+2024-08-06 19:46:50.792 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 19:46:50.864 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-06 19:46:50.946 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 19:46:50.950 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 19:46:50.961 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 19:46:50.965 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 19:46:50.971 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 180.6595ms
+2024-08-06 19:46:50.995 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 19:46:51.006 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 10.3649ms
+2024-08-06 19:46:51.029 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 19:46:51.030 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 19:46:51.052 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 22.6242ms
+2024-08-06 19:46:51.098 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 69.7605ms
+2024-08-06 19:46:51.782 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 19:46:52.080 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 297.1828ms
+2024-08-06 19:46:56.249 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 19:46:56.259 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 19:46:56.262 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 19:46:56.263 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 19:46:56.329 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 19:46:56.338 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 8.1244ms
+2024-08-06 19:46:56.330 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 19:46:56.330 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 19:46:56.373 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 124.2927ms
+2024-08-06 19:46:56.329 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 19:46:56.391 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 61.6372ms
+2024-08-06 19:46:56.414 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 83.7265ms
+2024-08-06 19:46:56.510 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 19:46:56.611 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 100.8127ms
+2024-08-06 19:48:43.340 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-06 19:48:43.453 +05:30 [DBG] Hosting starting
+2024-08-06 19:48:43.571 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-06 19:48:43.575 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-06 19:48:43.577 +05:30 [DBG] Loaded hosting startup assembly Bookstore.API
+2024-08-06 19:48:43.578 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-06 19:48:43.580 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-06 19:48:43.581 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-06 19:48:43.582 +05:30 [INF] Hosting environment: Development
+2024-08-06 19:48:43.584 +05:30 [INF] Content root path: D:\Users\preetee\source\repos\Bookstore\Bookstore.API
+2024-08-06 19:48:43.585 +05:30 [DBG] Hosting started
+2024-08-06 19:48:43.846 +05:30 [DBG] Connection id "0HN5M4AMQIGTT" accepted.
+2024-08-06 19:48:43.846 +05:30 [DBG] Connection id "0HN5M4AMQIGTS" accepted.
+2024-08-06 19:48:43.851 +05:30 [DBG] Connection id "0HN5M4AMQIGTT" started.
+2024-08-06 19:48:43.851 +05:30 [DBG] Connection id "0HN5M4AMQIGTS" started.
+2024-08-06 19:48:43.857 +05:30 [DBG] Connection id "0HN5M4AMQIGTS" received FIN.
+2024-08-06 19:48:43.862 +05:30 [DBG] Connection id "0HN5M4AMQIGTT" received FIN.
+2024-08-06 19:48:43.870 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 19:48:43.880 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 19:48:43.908 +05:30 [DBG] Connection id "0HN5M4AMQIGTS" stopped.
+2024-08-06 19:48:43.911 +05:30 [DBG] Connection id "0HN5M4AMQIGTT" stopped.
+2024-08-06 19:48:43.914 +05:30 [DBG] Connection id "0HN5M4AMQIGTU" accepted.
+2024-08-06 19:48:43.918 +05:30 [DBG] Connection id "0HN5M4AMQIGTU" started.
+2024-08-06 19:48:43.921 +05:30 [DBG] Connection id "0HN5M4AMQIGTS" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 19:48:43.921 +05:30 [DBG] Connection id "0HN5M4AMQIGTT" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 19:48:43.956 +05:30 [DBG] Connection 0HN5M4AMQIGTU established using the following protocol: "Tls13"
+2024-08-06 19:48:44.014 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 19:48:44.085 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-06 19:48:44.163 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 19:48:44.167 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 19:48:44.177 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 19:48:44.180 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 19:48:44.186 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 172.4084ms
+2024-08-06 19:48:44.209 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 19:48:44.221 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 11.7774ms
+2024-08-06 19:48:44.239 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 19:48:44.239 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 19:48:44.268 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 28.9303ms
+2024-08-06 19:48:44.332 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 92.3959ms
+2024-08-06 19:48:44.514 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 19:48:44.719 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 205.2471ms
+2024-08-06 19:50:57.480 +05:30 [DBG] Connection id "0HN5M4AMQIGTU" is closing.
+2024-08-06 19:50:57.487 +05:30 [DBG] Connection id "0HN5M4AMQIGTU" is closed. The last processed stream ID was 9.
+2024-08-06 19:50:57.491 +05:30 [DBG] Connection id "0HN5M4AMQIGTU" received FIN.
+2024-08-06 19:50:57.494 +05:30 [DBG] Connection id "0HN5M4AMQIGTU" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 19:50:57.495 +05:30 [DBG] The connection queue processing loop for 0HN5M4AMQIGTU completed.
+2024-08-06 19:50:57.500 +05:30 [DBG] Connection id "0HN5M4AMQIGTU" stopped.
+2024-08-06 20:31:25.855 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-06 20:31:26.191 +05:30 [DBG] Hosting starting
+2024-08-06 20:31:26.413 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-06 20:31:26.503 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-06 20:31:26.504 +05:30 [DBG] Loaded hosting startup assembly Bookstore.API
+2024-08-06 20:31:26.506 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-06 20:31:26.508 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-06 20:31:26.510 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-06 20:31:26.520 +05:30 [DBG] Connection id "0HN5M52II4GDE" accepted.
+2024-08-06 20:31:26.521 +05:30 [DBG] Connection id "0HN5M52II4GDF" accepted.
+2024-08-06 20:31:26.523 +05:30 [INF] Hosting environment: Development
+2024-08-06 20:31:26.526 +05:30 [DBG] Connection id "0HN5M52II4GDE" started.
+2024-08-06 20:31:26.528 +05:30 [DBG] Connection id "0HN5M52II4GDF" started.
+2024-08-06 20:31:26.530 +05:30 [INF] Content root path: D:\Users\preetee\source\repos\Bookstore\Bookstore.API
+2024-08-06 20:31:26.541 +05:30 [DBG] Connection id "0HN5M52II4GDE" received FIN.
+2024-08-06 20:31:26.553 +05:30 [DBG] Connection id "0HN5M52II4GDF" received FIN.
+2024-08-06 20:31:26.557 +05:30 [DBG] Hosting started
+2024-08-06 20:31:26.576 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 20:31:26.576 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-06 20:31:26.604 +05:30 [DBG] Connection id "0HN5M52II4GDE" stopped.
+2024-08-06 20:31:26.604 +05:30 [DBG] Connection id "0HN5M52II4GDF" stopped.
+2024-08-06 20:31:26.615 +05:30 [DBG] Connection id "0HN5M52II4GDF" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 20:31:26.615 +05:30 [DBG] Connection id "0HN5M52II4GDE" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-06 20:31:26.641 +05:30 [DBG] Connection id "0HN5M52II4GDG" accepted.
+2024-08-06 20:31:26.645 +05:30 [DBG] Connection id "0HN5M52II4GDG" started.
+2024-08-06 20:31:26.692 +05:30 [DBG] Connection 0HN5M52II4GDG established using the following protocol: "Tls13"
+2024-08-06 20:31:26.777 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-06 20:31:26.937 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-06 20:31:27.031 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-06 20:31:27.040 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-06 20:31:27.052 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-06 20:31:27.057 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-06 20:31:27.063 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 287.3848ms
+2024-08-06 20:31:27.084 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/swagger-ui.css - null null
+2024-08-06 20:31:27.107 +05:30 [INF] The file /swagger-ui.css was not modified
+2024-08-06 20:31:27.118 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.css - null null
+2024-08-06 20:31:27.118 +05:30 [DBG] Handled. Status code: 304 File: /swagger-ui.css
+2024-08-06 20:31:27.127 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/swagger-ui.css - 304 null text/css 42.7678ms
+2024-08-06 20:31:27.130 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/swagger-ui-bundle.js - null null
+2024-08-06 20:31:27.137 +05:30 [INF] The file /index.css was not modified
+2024-08-06 20:31:27.138 +05:30 [INF] The file /swagger-ui-bundle.js was not modified
+2024-08-06 20:31:27.141 +05:30 [DBG] Handled. Status code: 304 File: /swagger-ui-bundle.js
+2024-08-06 20:31:27.140 +05:30 [DBG] Handled. Status code: 304 File: /index.css
+2024-08-06 20:31:27.143 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/swagger-ui-bundle.js - 304 null text/javascript 13.0856ms
+2024-08-06 20:31:27.145 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.css - 304 null text/css 27.0792ms
+2024-08-06 20:31:27.170 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/swagger-ui-standalone-preset.js - null null
+2024-08-06 20:31:27.179 +05:30 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2024-08-06 20:31:27.181 +05:30 [DBG] Handled. Status code: 304 File: /swagger-ui-standalone-preset.js
+2024-08-06 20:31:27.184 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-06 20:31:27.184 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/swagger-ui-standalone-preset.js - 304 null text/javascript 13.3035ms
+2024-08-06 20:31:27.192 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-06 20:31:27.193 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 9.5895ms
+2024-08-06 20:31:27.215 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 22.9534ms
+2024-08-06 20:31:27.228 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-06 20:31:27.287 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.5539ms
+2024-08-06 20:31:27.767 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-06 20:31:27.982 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 215.0343ms
