@@ -11,14 +11,16 @@ namespace Bookstore.API.Entities
 
         [Required]
         [MaxLength(50)]
-        public required string GenreName { get; set; }
+        public string GenreName { get; set; } = string.Empty;
 
         public string ImageUrl { get; set; } = "/images/genres/genreimageunavailable.jpg";
 
-        //giving parameterized ctor to avoid empty values for required field
-        //public Genres(string name)
-        //{
-        //    GenreName = name;
-        //}
+        // Parameterized constructor to ensure required fields are initialized
+        public Genres(string name)
+        {
+            GenreName = name;
+        }
+
+        public Genres(){}
     }
 }

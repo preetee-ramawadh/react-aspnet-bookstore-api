@@ -1,9 +1,7 @@
-﻿using Bookstore.API.Models;
+﻿using AutoMapper;
+using Bookstore.API.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Bookstore.API.Entities;
-using System;
-using Bookstore.API.DbContexts;
+using Bookstore.API.Repositories;
 
 namespace Bookstore.API.Controllers
 {
@@ -13,76 +11,61 @@ namespace Bookstore.API.Controllers
     {
         private readonly ILogger<GenresController> _logger;
 
-        private readonly BookstoreDataStore _bookstoreDataStore;
+        private readonly IGenresInfoRepository _genresInfoRepository;
 
-        private readonly BookstoreContext _context;
+        private readonly IMapper _mapper;
+       
 
-        public GenresController(ILogger<GenresController> logger,
-            BookstoreDataStore booksDataStore, BookstoreContext context)
+        public GenresController(ILogger<GenresController> logger, IGenresInfoRepository genresInfoRepository, IMapper mapper)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-            _bookstoreDataStore = booksDataStore ?? throw new ArgumentNullException(nameof(booksDataStore));
-            _context = context ?? throw new ArgumentNullException(nameof(booksDataStore));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
+            _genresInfoRepository = genresInfoRepository ?? throw new ArgumentNullException(nameof(_genresInfoRepository));
+
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<GenresDto>> getGenres()
+        public async Task<ActionResult<IEnumerable<GenresDto>>> GetGenres()
         {
-            return Ok(_bookstoreDataStore.Genres);
+            var genres = await _genresInfoRepository.GetGenresAsync();
+            return Ok(_mapper.Map<IEnumerable<GenresDto>>(genres));
            
         }
 
-        [HttpGet("{id}")]
-        public ActionResult<GenresDto> GetGenreById(int id)
+        [HttpGet("{id}", Name = "GetGenre")]
+        public async Task<IActionResult> GetGenre(int id)
         {
-            var genreToReturn = "";
+            var genre = await _genresInfoRepository.GetGenreAsync(id);
 
-            if(genreToReturn == null)
+            if(genre == null)
             {
                 return NotFound();
             }
 
-            return Ok(genreToReturn);
+            return Ok(_mapper.Map<GenresDto>(genre));
 
         }
 
         [HttpPost]
-        public ActionResult CreateAuthor(GenresForCreationDto genreDto)
+        public async Task<ActionResult<GenresDto>> CreateGenre(GenresForCreationDto genreDto)
         {
-            // Check if the genre already exists
-            var existingGenre =  _bookstoreDataStore.Genres
-                .FirstOrDefault(g => g.Name == genreDto.Name);
-
-            if (existingGenre != null)
+            // Check if the genre exists
+            if (await _genresInfoRepository.GenreExistsAsync(genreDto.Name))
             {
                 return Conflict("Genre already exists.");  // Return 409 Conflict if the genre already exists
             }
 
-            // Create a new genre entity
-            var genreToCreate = new Genres()
-            {
-                GenreName = genreDto.Name,
-                ImageUrl = genreDto.ImageUrl,
-            };
+            var genre = _mapper.Map<Entities.Genres>(genreDto);
 
-            // Add the new genre to the database
-            _context.Genres.Add(genreToCreate);
+            await _genresInfoRepository.AddGenreAsync(genre);
 
+            await _genresInfoRepository.SaveChangesAsync();
 
-            // Map the created genre to DTO
-            var createdGenreDto = new GenresDto
-            {
-                Id = genreToCreate.GenreId,  // Assuming you have an Id property
-                Name = genreToCreate.GenreName,
-                ImageUrl = genreToCreate.ImageUrl,
-            };
+            var createdGenreToReturn =
+                _mapper.Map<GenresForCreationDto>(genre);
 
             // Return a CreatedAtRoute response with the location of the new resource
-            return CreatedAtRoute(
-                "getGenreById",
-                new { id = createdGenreDto.Id },
-                createdGenreDto
-            );
+            return CreatedAtRoute("GetGenre", new { id = genre.GenreId }, createdGenreToReturn);
 
         }
 

@@ -11,18 +11,22 @@ namespace Bookstore.API.Entities
 
         [Required]
         [MaxLength(80)]
-        public string Name {  get; set; }
+        public string Name {  get; set; } = string.Empty;
 
         [Required]
         [MaxLength(200)]
-        public string Biography { get; set; }
+        public string Biography { get; set; } = string.Empty;
 
         public string ImageUrl { get; set; } = "/images/authors/imagesunavailable.jpg";
-       
-        //giving parameterized ctor to avoid empty values for required fields
-        public Authors(string name, string biography ) {
+
+        // Parameterized constructor to ensure required fields are initialized
+        public Authors(string name, string biography)
+        {
             Name = name;
             Biography = biography;
         }
+
+        // Parameterless constructor is required for EF Core
+        public Authors() { }
     }
 }

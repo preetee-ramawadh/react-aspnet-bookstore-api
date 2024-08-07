@@ -1,0 +1,44 @@
+2024-08-08 00:38:33.302 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-08 00:38:33.541 +05:30 [DBG] Hosting starting
+2024-08-08 00:38:33.669 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-08 00:38:33.672 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-08 00:38:33.673 +05:30 [DBG] Loaded hosting startup assembly Bookstore.API
+2024-08-08 00:38:33.675 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-08 00:38:33.676 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-08 00:38:33.678 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-08 00:38:33.680 +05:30 [INF] Hosting environment: Development
+2024-08-08 00:38:33.681 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-08 00:38:33.683 +05:30 [DBG] Hosting started
+2024-08-08 00:38:34.097 +05:30 [DBG] Connection id "0HN5N2HANH6M4" accepted.
+2024-08-08 00:38:34.127 +05:30 [DBG] Connection id "0HN5N2HANH6M4" received FIN.
+2024-08-08 00:38:34.133 +05:30 [DBG] Connection id "0HN5N2HANH6M4" started.
+2024-08-08 00:38:34.183 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-08 00:38:34.303 +05:30 [DBG] Connection id "0HN5N2HANH6M4" stopped.
+2024-08-08 00:38:34.311 +05:30 [DBG] Connection id "0HN5N2HANH6M4" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-08 00:38:34.345 +05:30 [DBG] Connection id "0HN5N2HANH6M5" accepted.
+2024-08-08 00:38:34.376 +05:30 [DBG] Connection id "0HN5N2HANH6M5" started.
+2024-08-08 00:38:34.451 +05:30 [DBG] Connection 0HN5N2HANH6M5 established using the following protocol: "Tls13"
+2024-08-08 00:38:34.522 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-08 00:38:34.700 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-08 00:38:34.830 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-08 00:38:34.843 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-08 00:38:34.855 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-08 00:38:34.868 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-08 00:38:34.873 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 353.4016ms
+2024-08-08 00:38:35.014 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-08 00:38:35.014 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-08 00:38:35.015 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-08 00:38:35.031 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 16.4719ms
+2024-08-08 00:38:35.050 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 34.6117ms
+2024-08-08 00:38:35.105 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 90.669ms
+2024-08-08 00:38:35.984 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-08 00:38:36.142 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 158.6024ms
+2024-08-08 00:38:42.967 +05:30 [DBG] Connection id "0HN5N2HANH6M5" received FIN.
+2024-08-08 00:38:42.973 +05:30 [DBG] The connection queue processing loop for 0HN5N2HANH6M5 completed.
+2024-08-08 00:38:42.976 +05:30 [DBG] Connection id "0HN5N2HANH6M5" is closed. The last processed stream ID was 9.
+2024-08-08 00:38:42.978 +05:30 [DBG] Connection id "0HN5N2HANH6M5" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-08 00:38:42.982 +05:30 [DBG] Connection id "0HN5N2HANH6M5" stopped.

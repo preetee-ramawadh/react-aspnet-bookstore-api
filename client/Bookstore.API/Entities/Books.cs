@@ -10,7 +10,7 @@ namespace Bookstore.API.Entities
         public int BookId { get; set; }
 
         [Required]
-        public string Title { get; set; }
+        public string Title { get; set; } = string.Empty;
 
         [Required]
         public int AuthorId { get; set; }
@@ -33,9 +33,17 @@ namespace Bookstore.API.Entities
         [ForeignKey(nameof(GenreId))]
         public Genres? Genre { get; set; }
 
-        public Books(string title)
+        // Parameterized constructor to initialize required fields
+        public Books(string title, int authorId, int genreId, decimal price, DateOnly publicationDate)
         {
             Title = title;
+            AuthorId = authorId;
+            GenreId = genreId;
+            Price = price;
+            PublicationDate = publicationDate;
         }
+
+        // Parameterless constructor is required for EF Core
+        public Books() { }
     }
 }

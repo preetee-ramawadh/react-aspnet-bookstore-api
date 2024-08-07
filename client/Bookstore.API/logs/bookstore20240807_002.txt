@@ -1,0 +1,197 @@
+2024-08-07 22:14:09.584 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-08-07 22:14:11.067 +05:30 [DBG] Entity Framework Core 8.0.7 initialized 'BookstoreInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.7' with options: None
+2024-08-07 22:14:11.098 +05:30 [DBG] Creating DbConnection.
+2024-08-07 22:14:11.236 +05:30 [DBG] Created DbConnection. (134ms).
+2024-08-07 22:14:11.248 +05:30 [DBG] Migrating using database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:11.255 +05:30 [DBG] Opening connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:11.608 +05:30 [DBG] Opened connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:11.631 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-08-07 22:14:11.647 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (10ms).
+2024-08-07 22:14:11.655 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (21ms).
+2024-08-07 22:14:11.665 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-07 22:14:11.731 +05:30 [INF] Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-07 22:14:11.736 +05:30 [DBG] Closing connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:11.746 +05:30 [DBG] Closed connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM' (6ms).
+2024-08-07 22:14:11.749 +05:30 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2024-08-07 22:14:11.750 +05:30 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2024-08-07 22:14:11.750 +05:30 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2024-08-07 22:14:11.750 +05:30 [DBG] Opening connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:11.751 +05:30 [DBG] Opened connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:11.752 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-07 22:14:11.810 +05:30 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-07 22:14:11.811 +05:30 [DBG] Closing connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:11.812 +05:30 [DBG] Closed connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM' (0ms).
+2024-08-07 22:14:11.812 +05:30 [DBG] Opening connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:11.813 +05:30 [DBG] Opened connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:11.813 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-08-07 22:14:11.813 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-07 22:14:11.813 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-07 22:14:11.813 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-07 22:14:11.815 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-07 22:14:11.815 +05:30 [DBG] Closing connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:11.815 +05:30 [DBG] Closed connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM' (0ms).
+2024-08-07 22:14:11.973 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-08-07 22:14:11.974 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-07 22:14:11.974 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-07 22:14:11.974 +05:30 [DBG] Opening connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:11.974 +05:30 [DBG] Opened connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:11.974 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2024-08-07 22:14:12.022 +05:30 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2024-08-07 22:14:12.022 +05:30 [DBG] Closing connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:12.022 +05:30 [DBG] Closed connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM' (0ms).
+2024-08-07 22:14:12.023 +05:30 [DBG] Opening connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:12.023 +05:30 [DBG] Opened connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:12.023 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-08-07 22:14:12.023 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-07 22:14:12.023 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-07 22:14:12.023 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-07 22:14:12.024 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-07 22:14:12.024 +05:30 [DBG] Closing connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:12.024 +05:30 [DBG] Closed connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM' (0ms).
+2024-08-07 22:14:12.024 +05:30 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2024-08-07 22:14:12.025 +05:30 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2024-08-07 22:14:12.025 +05:30 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2024-08-07 22:14:12.025 +05:30 [DBG] Opening connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:12.025 +05:30 [DBG] Opened connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:12.025 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-07 22:14:12.027 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-07 22:14:12.027 +05:30 [DBG] Closing connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:12.028 +05:30 [DBG] Closed connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM' (0ms).
+2024-08-07 22:14:12.029 +05:30 [DBG] Opening connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:12.030 +05:30 [DBG] Opened connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:12.030 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-07 22:14:12.030 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-07 22:14:12.030 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-07 22:14:12.030 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-08-07 22:14:12.383 +05:30 [INF] Executed DbCommand (352ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-08-07 22:14:12.386 +05:30 [DBG] Closing data reader to 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:12.387 +05:30 [DBG] A data reader for 'BookStore' on server 'WSAMZN-OBI7O9PM' is being disposed after spending 2ms reading results.
+2024-08-07 22:14:12.389 +05:30 [DBG] Closing connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:12.389 +05:30 [DBG] Closed connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM' (1ms).
+2024-08-07 22:14:12.408 +05:30 [INF] Applying migration '20240807164236_FirstMigration'.
+2024-08-07 22:14:12.475 +05:30 [DBG] Opening connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:12.475 +05:30 [DBG] Opened connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:12.480 +05:30 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2024-08-07 22:14:12.491 +05:30 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2024-08-07 22:14:12.503 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-08-07 22:14:12.503 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-07 22:14:12.505 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (1ms).
+2024-08-07 22:14:12.505 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Authors] (
+    [AuthorId] int NOT NULL IDENTITY,
+    [Name] nvarchar(80) NOT NULL,
+    [Biography] nvarchar(200) NOT NULL,
+    [ImageUrl] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Authors] PRIMARY KEY ([AuthorId])
+);
+2024-08-07 22:14:13.729 +05:30 [INF] Executed DbCommand (1,223ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Authors] (
+    [AuthorId] int NOT NULL IDENTITY,
+    [Name] nvarchar(80) NOT NULL,
+    [Biography] nvarchar(200) NOT NULL,
+    [ImageUrl] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Authors] PRIMARY KEY ([AuthorId])
+);
+2024-08-07 22:14:13.730 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-08-07 22:14:13.730 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-07 22:14:13.730 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-07 22:14:13.730 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Genres] (
+    [GenreId] int NOT NULL IDENTITY,
+    [GenreName] nvarchar(50) NOT NULL,
+    [ImageUrl] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Genres] PRIMARY KEY ([GenreId])
+);
+2024-08-07 22:14:13.737 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Genres] (
+    [GenreId] int NOT NULL IDENTITY,
+    [GenreName] nvarchar(50) NOT NULL,
+    [ImageUrl] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Genres] PRIMARY KEY ([GenreId])
+);
+2024-08-07 22:14:13.738 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-08-07 22:14:13.738 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-07 22:14:13.738 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-07 22:14:13.738 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Books] (
+    [BookId] int NOT NULL IDENTITY,
+    [Title] nvarchar(max) NOT NULL,
+    [AuthorId] int NOT NULL,
+    [GenreId] int NOT NULL,
+    [Price] decimal(10,2) NOT NULL,
+    [PublicationDate] date NOT NULL,
+    [ImageUrl] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Books] PRIMARY KEY ([BookId]),
+    CONSTRAINT [FK_Books_Authors_AuthorId] FOREIGN KEY ([AuthorId]) REFERENCES [Authors] ([AuthorId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Books_Genres_GenreId] FOREIGN KEY ([GenreId]) REFERENCES [Genres] ([GenreId]) ON DELETE CASCADE
+);
+2024-08-07 22:14:13.754 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Books] (
+    [BookId] int NOT NULL IDENTITY,
+    [Title] nvarchar(max) NOT NULL,
+    [AuthorId] int NOT NULL,
+    [GenreId] int NOT NULL,
+    [Price] decimal(10,2) NOT NULL,
+    [PublicationDate] date NOT NULL,
+    [ImageUrl] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Books] PRIMARY KEY ([BookId]),
+    CONSTRAINT [FK_Books_Authors_AuthorId] FOREIGN KEY ([AuthorId]) REFERENCES [Authors] ([AuthorId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Books_Genres_GenreId] FOREIGN KEY ([GenreId]) REFERENCES [Genres] ([GenreId]) ON DELETE CASCADE
+);
+2024-08-07 22:14:13.755 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-08-07 22:14:13.755 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-07 22:14:13.755 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-07 22:14:13.755 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Books_AuthorId] ON [Books] ([AuthorId]);
+2024-08-07 22:14:13.774 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Books_AuthorId] ON [Books] ([AuthorId]);
+2024-08-07 22:14:13.775 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-08-07 22:14:13.775 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-07 22:14:13.775 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-07 22:14:13.775 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Books_GenreId] ON [Books] ([GenreId]);
+2024-08-07 22:14:13.777 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Books_GenreId] ON [Books] ([GenreId]);
+2024-08-07 22:14:13.777 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-08-07 22:14:13.778 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-07 22:14:13.778 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-07 22:14:13.778 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240807164236_FirstMigration', N'8.0.7');
+2024-08-07 22:14:13.788 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240807164236_FirstMigration', N'8.0.7');
+2024-08-07 22:14:17.350 +05:30 [DBG] Committing transaction.
+2024-08-07 22:14:17.359 +05:30 [DBG] Committed transaction.
+2024-08-07 22:14:17.360 +05:30 [DBG] Disposing transaction.
+2024-08-07 22:14:17.361 +05:30 [DBG] Closing connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:17.370 +05:30 [DBG] Closed connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM' (2ms).
+2024-08-07 22:14:17.373 +05:30 [DBG] 'BookstoreInfoContext' disposed.
+2024-08-07 22:14:17.377 +05:30 [DBG] Disposing connection to database 'BookStore' on server 'WSAMZN-OBI7O9PM'.
+2024-08-07 22:14:17.379 +05:30 [DBG] Disposed connection to database '' on server '' (2ms).

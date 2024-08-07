@@ -1,6 +1,8 @@
 //using Microsoft.AspNetCore.StaticFiles;
 using Bookstore.API;
 using Bookstore.API.DbContexts;
+using Bookstore.API.Repositories;
+using Bookstore.API.Services;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -38,8 +40,15 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<BookstoreDataStore>();
 
-builder.Services.AddDbContext<BookstoreContext>(options =>
+builder.Services.AddDbContext<BookstoreInfoContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IAuthorsInfoRepository, AuthorsInfoRepositoryService>();
+builder.Services.AddScoped<IGenresInfoRepository, GenresInfoRepositoryService>();
+builder.Services.AddScoped<IBooksInfoRepository, BooksInfoRepositoryService>();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 
 var app = builder.Build();
 

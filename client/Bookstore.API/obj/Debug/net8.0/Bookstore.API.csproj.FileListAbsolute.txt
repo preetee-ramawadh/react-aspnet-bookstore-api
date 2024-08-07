@@ -297,3 +297,5 @@ D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\ob
 D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\obj\Debug\net8.0\Bookstore.API.pdb
 D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\obj\Debug\net8.0\Bookstore.API.genruntimeconfig.cache
 D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\obj\Debug\net8.0\ref\Bookstore.API.dll
+D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\bin\Debug\net8.0\AutoMapper.dll
+D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

@@ -1,6 +1,8 @@
 ﻿
+using AutoMapper;
 using Bookstore.API.Entities;
 using Bookstore.API.Models;
+using Bookstore.API.Repositories;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,34 +14,37 @@ namespace Bookstore.API.Controllers
     {
         private readonly ILogger<AuthorsController> _logger;
 
-        private readonly BookstoreDataStore _bookstoreDataStore;
+        private readonly IAuthorsInfoRepository _authorsInfoRepository;
 
-        public AuthorsController(ILogger<AuthorsController> logger,
-            BookstoreDataStore booksDataStore)
+        private readonly IMapper _mapper;
+
+        public AuthorsController(ILogger<AuthorsController> logger, 
+            IAuthorsInfoRepository authorsInfoRepository, IMapper mapper)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-            _bookstoreDataStore = booksDataStore ?? throw new ArgumentNullException(nameof(booksDataStore));
+            _authorsInfoRepository = authorsInfoRepository ?? throw new ArgumentNullException(nameof(authorsInfoRepository));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<AuthorsDto>> GetAuthors()
+        public async Task<ActionResult<IEnumerable<AuthorsDto>>> GetAuthors()
         {
-            return Ok(_bookstoreDataStore.Authors);
+            var authorEntities = await _authorsInfoRepository.GetAuthorsAsync();
 
+            return Ok(_mapper.Map<IEnumerable<AuthorsDto>>(authorEntities));
         }
 
-        [HttpGet("{id}")]
-        public ActionResult<AuthorsDto> GetAuthorById(int id)
+        [HttpGet("{id}", Name = "GetAuthor")]
+        public async Task<IActionResult> GetAuthor(int id)
         {
-            var authorToReturn = _bookstoreDataStore.Authors
-                 .FirstOrDefault(author => author.Id == id);
+            var author = await _authorsInfoRepository.GetAuthorAsync(id);
 
-            if (authorToReturn == null)
+            if (author == null)
             {
                 return NotFound();
             }
 
-            return Ok(authorToReturn);
+            return Ok(_mapper.Map<AuthorsDto>(author));
 
         }
 
@@ -53,13 +58,39 @@ namespace Bookstore.API.Controllers
                 ImageUrl = author.ImageUrl,
             };
 
-            return CreatedAtRoute("GetAuthorById", authorToCreate);
+            return CreatedAtRoute("GetAuthor", authorToCreate);
         }
 
         [HttpPut("{id}")]
-        public ActionResult UpdateAuthor(int id, AuthorsForUpdateDto author)
+        public async Task<ActionResult> UpdateAuthor(int id, AuthorsForUpdateDto authorDto)
         {
-            return NotFound();
+            if(!await _authorsInfoRepository.AuthorExistsAsync(id))
+            {
+                return NotFound();
+            }
+
+            // Retrieve the existing author entity
+            var existingAuthor = await _authorsInfoRepository.GetAuthorAsync(id);
+
+            if (existingAuthor == null)
+            {
+                return NotFound();  // Return 404 Not Found if the author entity is not found
+            }
+
+            // Map the updated properties from the DTO to the existing entity
+            _mapper.Map(authorDto, existingAuthor);
+
+            // Update the author entity in the repository
+            _authorsInfoRepository.UpdateAuthor(existingAuthor);
+
+            // Save changes to the database
+            await _authorsInfoRepository.SaveChangesAsync();
+
+            // Map the updated entity to DTO
+            var updatedAuthorToReturn = _mapper.Map<AuthorsForUpdateDto>(existingAuthor);
+
+            // Return Ok with the updated resource
+            return Ok(updatedAuthorToReturn);
         }
 
         [HttpPatch("{id}")]
@@ -70,20 +101,31 @@ namespace Bookstore.API.Controllers
 
         [HttpDelete("{id}")]
 
-        public ActionResult DeleteAuthor(int id) 
+        public async Task<ActionResult> DeleteAuthor(int id) 
         {
-            var authorToDelete = _bookstoreDataStore.Authors
-                .FirstOrDefault(author => author.Id == id);
-
-            if (authorToDelete == null)
+            // Check if the author exists
+            if (!await _authorsInfoRepository.AuthorExistsAsync(id))
             {
                 return NotFound();
             }
-            //logic for author bound to book here
 
-            _bookstoreDataStore.Authors.Remove(authorToDelete);
+            // Retrieve the author entity
+            var authorEntity = await _authorsInfoRepository.GetAuthorAsync(id);
 
-            return NoContent(); 
+            // Check if the retrieved author entity is null
+            if (authorEntity == null)
+            {
+                return NotFound();  // Return 404 Not Found if the author entity is not found
+            }
+
+            // Delete the author entity
+            _authorsInfoRepository.DeleteAuthor(authorEntity);
+
+            // Save changes to the database
+            await _authorsInfoRepository.SaveChangesAsync();
+
+            // Return NoContent status to indicate successful deletion
+            return NoContent();
         }
 
 
