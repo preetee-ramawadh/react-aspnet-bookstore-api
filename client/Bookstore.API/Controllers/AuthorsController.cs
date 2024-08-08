@@ -41,6 +41,7 @@ namespace Bookstore.API.Controllers
 
             if (author == null)
             {
+                _logger.LogInformation($"Author with id {id} wasn't found when accessing Author.");
                 return NotFound();
             }
 
@@ -55,17 +56,19 @@ namespace Bookstore.API.Controllers
             {
                 Name = author.Name,
                 Biography = author.Biography,
-                ImageUrl = author.ImageUrl,
+                //ImageUrl = author.ImageUrl,
             };
 
             return CreatedAtRoute("GetAuthor", authorToCreate);
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateAuthor(int id, AuthorsForUpdateDto authorDto)
+        public async Task<ActionResult> UpdateAuthor(int id, AuthorsForUpdateDto authorForUpdateDto)
         {
             if(!await _authorsInfoRepository.AuthorExistsAsync(id))
             {
+                _logger.LogInformation($"Author with id {id} wasn't found when accessing Author.");
+
                 return NotFound();
             }
 
@@ -74,11 +77,13 @@ namespace Bookstore.API.Controllers
 
             if (existingAuthor == null)
             {
+                _logger.LogInformation($"Author with id {id} wasn't found when accessing Author.");
+
                 return NotFound();  // Return 404 Not Found if the author entity is not found
             }
 
             // Map the updated properties from the DTO to the existing entity
-            _mapper.Map(authorDto, existingAuthor);
+            _mapper.Map(authorForUpdateDto, existingAuthor);
 
             // Update the author entity in the repository
             _authorsInfoRepository.UpdateAuthor(existingAuthor);
@@ -94,8 +99,28 @@ namespace Bookstore.API.Controllers
         }
 
         [HttpPatch("{id}")]
-        public ActionResult PartiallyUpdateAuthor(int id, JsonPatchDocument<AuthorsForUpdateDto> patchDocument)
+        public async Task<ActionResult> PartiallyUpdateAuthor(int id, JsonPatchDocument<AuthorsForUpdateDto> patchDocument)
         {
+            // Check if the author exists
+            if (!await _authorsInfoRepository.AuthorExistsAsync(id))
+            {
+                _logger.LogInformation($"Author with id {id} wasn't found when accessing Author.");
+
+                return NotFound();
+            }
+            // Retrieve the existing author entity
+            var existingAuthor = await _authorsInfoRepository.GetAuthorAsync(id);
+
+            if (existingAuthor == null)
+            {
+                _logger.LogInformation($"Author with id {id} wasn't found when accessing Author.");
+
+                return NotFound();  // Return 404 Not Found if the author entity is not found
+            }
+
+            var authorToPatch = _mapper.Map<AuthorsForUpdateDto>(
+                existingAuthor);
+
             return NoContent();
         }
 
@@ -106,6 +131,8 @@ namespace Bookstore.API.Controllers
             // Check if the author exists
             if (!await _authorsInfoRepository.AuthorExistsAsync(id))
             {
+                _logger.LogInformation($"Author with id {id} wasn't found when accessing Author.");
+
                 return NotFound();
             }
 

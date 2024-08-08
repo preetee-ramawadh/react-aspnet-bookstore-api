@@ -39,6 +39,8 @@ namespace Bookstore.API.Controllers
 
             if(genre == null)
             {
+                _logger.LogInformation($"Genre with id {id} wasn't found when accessing genre.");
+               
                 return NotFound();
             }
 
@@ -50,7 +52,7 @@ namespace Bookstore.API.Controllers
         public async Task<ActionResult<GenresDto>> CreateGenre(GenresForCreationDto genreDto)
         {
             // Check if the genre exists
-            if (await _genresInfoRepository.GenreExistsAsync(genreDto.Name))
+            if (await _genresInfoRepository.GenreExistsAsync(genreDto.GenreName))
             {
                 return Conflict("Genre already exists.");  // Return 409 Conflict if the genre already exists
             }

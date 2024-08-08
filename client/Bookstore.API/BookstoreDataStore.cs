@@ -16,7 +16,7 @@ namespace Bookstore.API
             {
                 new BooksDto()
                 {
-                    Id = 1,
+                    BookId = 1,
                     Title = "New York City",
                     Price = 10.99M,
                     PublicationDate = new DateOnly(2024,09,05),
@@ -26,7 +26,7 @@ namespace Bookstore.API
                 },
                  new BooksDto()
                 {
-                    Id = 2,
+                    BookId = 2,
                     Title = "New York City",
                     Price = 100.50M,
                     PublicationDate = new DateOnly(2021,11,05),
@@ -62,17 +62,17 @@ namespace Bookstore.API
             {
                 new GenresDto()
                 {
-                    Name ="Comedy",
+                    GenreName ="Comedy",
                     ImageUrl = "/images/genres/genreimageunavailable.jpg"
                 },
                  new GenresDto()
                 {
-                    Name ="Trajedy",
+                    GenreName ="Trajedy",
                     ImageUrl = "/images/genres/genreimageunavailable.jpg"
                 },
                  new GenresDto()
                 {
-                    Name ="Theatre",
+                    GenreName ="Theatre",
                     ImageUrl = "/images/genres/genreimageunavailable.jpg"
                 }
             };

@@ -2,12 +2,15 @@
 {
     public class GenresDto
     {
-        public int Id { get; set; }
-        public required string Name { get; set; }
+        public int GenreId { get; set; }
+        public required string GenreName { get; set; }
         public required string ImageUrl { get; set; }
 
         // List of books written in the Genre
-        public IEnumerable<BooksDto>? Books { get; set; }
+        public ICollection<BooksTitleDto> Books { get; set; } = new List<BooksTitleDto>();
+
+
+        //public IEnumerable<BooksDto>? Books { get; set; }
     }
 }
     

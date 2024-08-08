@@ -8,7 +8,7 @@ namespace Bookstore.API.Models
         [MaxLength(80)]
         public required string Name { get; set; }
         public required string Biography { get; set; }
-        public required string ImageUrl { get; set; }
+       // public required string ImageUrl { get; set; }
 
     }
 }

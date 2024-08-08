@@ -38,6 +38,8 @@ namespace Bookstore.API.Controllers
 
             if (book == null)
             {
+                _logger.LogInformation($"Book with id {id} wasn't found when accessing Book.");
+
                 return NotFound();
             }
 
@@ -55,7 +57,7 @@ namespace Bookstore.API.Controllers
                 GenreId = book.GenreId,
                 Price = book.Price,
                 PublicationDate = book.PublicationDate,
-                ImageUrl = book.ImageUrl,
+               // ImageUrl = book.ImageUrl,
             };
 
             return CreatedAtRoute("GetBook", bookToCreate);

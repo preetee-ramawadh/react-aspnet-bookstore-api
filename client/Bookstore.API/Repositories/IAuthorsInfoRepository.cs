@@ -15,6 +15,9 @@ namespace Bookstore.API.Repositories
         public Task UpdateAuthor(Authors author);
 
         public void DeleteAuthor(Authors author);
+
         public Task<bool> SaveChangesAsync();
+
+        //public Task<Authors> GetAuthorWithBooksAsync(int authorId);
     }
 }

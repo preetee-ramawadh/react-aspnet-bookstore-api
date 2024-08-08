@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\client",
-    "\\client\\Bookstore.API"
+    "\\client\\Bookstore.API",
+    "\\client\\Bookstore.API\\Models",
+    "\\client\\Bookstore.API\\Properties",
+    "\\client\\Bookstore.API\\Repositories"
   ],
-  "SelectedNode": "\\client\\Bookstore.sln",
+  "SelectedNode": "\\client\\Bookstore.API\\Repositories\\IBooksInfoRepository.cs",
   "PreviewInSolutionExplorer": false
 }

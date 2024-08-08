@@ -12,6 +12,6 @@
 
         public required DateOnly PublicationDate { get; set; }
 
-        public required string ImageUrl { get; set; }
+        //public required string ImageUrl { get; set; }
     }
 }

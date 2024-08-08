@@ -15,6 +15,7 @@ namespace Bookstore.API.Entities
 
         public string ImageUrl { get; set; } = "/images/genres/genreimageunavailable.jpg";
 
+        public virtual ICollection<Books> Books { get; set; } = new List<Books>();// Navigation property
         // Parameterized constructor to ensure required fields are initialized
         public Genres(string name)
         {

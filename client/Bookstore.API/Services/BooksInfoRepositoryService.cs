@@ -16,7 +16,7 @@ namespace Bookstore.API.Services
 
         public async Task<IEnumerable<Books>> GetBooksAsync()
         {
-            return await _bookstoreInfoContext.Books.OrderBy(b => b.Title).ToListAsync();
+            return await _bookstoreInfoContext.Books.ToListAsync();
         }
 
         public async  Task<Books?> GetBookAsync(int bookId)

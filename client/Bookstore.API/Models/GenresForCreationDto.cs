@@ -6,7 +6,7 @@ namespace Bookstore.API.Models
     {
         [Required(ErrorMessage = "You Should Provide a Name Value")]
         [MaxLength(50)]
-        public required string Name { get; set; }
-        public required string ImageUrl { get; set; }
+        public required string GenreName { get; set; }
+        //public required string ImageUrl { get; set; }
     }
 }

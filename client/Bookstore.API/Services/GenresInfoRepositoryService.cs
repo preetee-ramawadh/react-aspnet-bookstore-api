@@ -16,13 +16,17 @@ namespace Bookstore.API.Services
         
         public async Task<IEnumerable<Genres>> GetGenresAsync()
         {
-            return await _bookstoreInfoContext.Genres.OrderBy(g => g.GenreName).ToListAsync();
+            return await _bookstoreInfoContext.Genres
+                .Include(a => a.Books)
+                .ToListAsync();
         }
 
         public async Task<Genres?> GetGenreAsync(int genreId)
         {
             return await _bookstoreInfoContext.Genres
-                  .Where(g => g.GenreId == genreId).FirstOrDefaultAsync();
+                .Include(a => a.Books)
+                .Where(g => g.GenreId == genreId)
+                .FirstOrDefaultAsync();
         }
 
         public async Task<bool> GenreExistsAsync(string genreName)
