@@ -63,47 +63,60 @@ namespace Bookstore.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateBook(int id, BooksForUpdateDto bookDto)
+        public async Task<ActionResult> UpdateBook(int id, BooksForUpdateDto bookForUpdateDto)
         {
-            if (!await _booksInfoRepository.BookExistsAsync(id))
-            {
-                return NotFound();
-            }
-            var bookEntity = _mapper.Map<Books>(bookDto);
-
-            // Check if the retrieved author entity is null
-            if (bookEntity == null)
+            // Check if the book exists
+            var existingBook = await _booksInfoRepository.GetBookAsync(id);
+           
+            if (existingBook == null)
             {
                 return NotFound();  // Return 404 Not Found if the author entity is not found
             }
 
-            await _booksInfoRepository.GetBookAsync(bookEntity.BookId);
+            // Map the updated properties from the DTO to the existing entity
+            _mapper.Map(bookForUpdateDto, existingBook);
 
+            //Save changes to the database
             await _booksInfoRepository.SaveChangesAsync();
-            var updatedBookToReturn =
-                _mapper.Map<BooksForUpdateDto>(bookEntity);
 
-            // Return a CreatedAtRoute response with the location of the new resource
-            return CreatedAtRoute("GetBook", new { id = bookEntity.BookId }, updatedBookToReturn);
+            // Map the updated entity to DTO
+            var updatedBookToReturn =
+                _mapper.Map<BooksForUpdateDto>(existingBook);
+
+            // Return an OK response with the updated data
+            return Ok(updatedBookToReturn);
         }
 
         [HttpPatch("{id}")]
-        public ActionResult PartiallyUpdateBook(int id, JsonPatchDocument<BooksForUpdateDto> patchDocument)
+        public async Task<ActionResult> PartiallyUpdateBook(int id, JsonPatchDocument<BooksForUpdateDto> patchDocument)
         {
+            // Check if the Book exists
+            var existingBook = await _booksInfoRepository.GetBookAsync(id);
+
+            if (existingBook == null)
+            {
+                _logger.LogInformation($"Book with id {id} wasn't found when accessing Book.");
+
+                return NotFound();  // Return 404 Not Found if the book entity is not found
+            }
+
+            var bookToPatch = _mapper.Map<BooksForUpdateDto>(
+                existingBook);
+
+            patchDocument.ApplyTo(bookToPatch, ModelState);
+
+            _mapper.Map(bookToPatch, existingBook);
+            await _booksInfoRepository.SaveChangesAsync();
+
+            // Indicate success with no content
             return NoContent();
         }
 
         [HttpDelete("{id}")]
 
         public async Task<ActionResult> DeleteBook(int id)
-        {
-            // Check if the book exists
-            if (!await _booksInfoRepository.BookExistsAsync(id))
-            {
-                return NotFound();
-            }
-
-            // Retrieve the book entity
+        { 
+            // Retrieve the Book entity
             var bookEntity = await _booksInfoRepository.GetBookAsync(id);
 
             // Check if the retrieved book entity is null

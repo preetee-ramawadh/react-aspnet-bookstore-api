@@ -10,6 +10,7 @@ namespace Bookstore.API.Entities
         public int BookId { get; set; }
 
         [Required]
+        [MaxLength(80)]
         public string Title { get; set; } = string.Empty;
 
         [Required]
@@ -25,6 +26,7 @@ namespace Bookstore.API.Entities
         [Required]
         public DateOnly PublicationDate { get; set; }
 
+        [MaxLength(100)]
         public string ImageUrl { get; set; } = "/images/books/imageunavailable.jpg";
 
         [ForeignKey(nameof(AuthorId))]

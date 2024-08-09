@@ -2,6 +2,7 @@
 using Bookstore.API.Entities;
 using Bookstore.API.Repositories;
 using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
 
 namespace Bookstore.API.Services
 {
@@ -34,14 +35,32 @@ namespace Bookstore.API.Services
             return await _bookstoreInfoContext.Books.AnyAsync(b => b.BookId == bookId);
         }
 
-        public Task AddBookAsync(Books book)
+        public async Task AddBookAsync(Books book)
         {
-            throw new NotImplementedException();
+            // Create a new Book entity
+            var newBook = new Books
+            {
+               Title = book.Title,
+               AuthorId = book.AuthorId,
+               GenreId = book.GenreId,
+               Price = book.Price,
+               PublicationDate = book.PublicationDate
+            };
+
+            // Add the new Book to the database context
+            await _bookstoreInfoContext.Books.AddAsync(newBook);
+
+            // Save changes to the database
+            await _bookstoreInfoContext.SaveChangesAsync();
+
         }
 
         public async Task UpdateBook(Books book)
         {
             _bookstoreInfoContext.Books.Update(book);
+
+            // Save changes to the database
+            await _bookstoreInfoContext.SaveChangesAsync();
         }
 
         public void DeleteBook(Books book)

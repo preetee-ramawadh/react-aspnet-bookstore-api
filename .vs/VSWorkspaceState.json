@@ -6,6 +6,6 @@
     "\\client\\Bookstore.API\\Models",
     "\\client\\Bookstore.API\\Services"
   ],
-  "SelectedNode": "\\client\\Bookstore.API\\Services\\BooksInfoRepositoryService.cs",
+  "SelectedNode": "\\client\\Bookstore.API\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }

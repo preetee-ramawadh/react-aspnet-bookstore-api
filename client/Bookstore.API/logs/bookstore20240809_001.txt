@@ -1,0 +1,6 @@
+2024-08-09 20:29:28.520 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-08-09 20:29:29.855 +05:30 [DBG] Entity Framework Core 8.0.7 initialized 'BookstoreInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.7' with options: None
+2024-08-09 20:29:32.205 +05:30 [DBG] 'BookstoreInfoContext' disposed.
+2024-08-09 20:30:10.705 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-08-09 20:30:12.080 +05:30 [DBG] Entity Framework Core 8.0.7 initialized 'BookstoreInfoContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.7' with options: None
+2024-08-09 20:30:13.277 +05:30 [DBG] 'BookstoreInfoContext' disposed.

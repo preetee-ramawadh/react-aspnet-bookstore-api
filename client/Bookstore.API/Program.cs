@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Debug()
+    .MinimumLevel.Information()
     .WriteTo.Console()
     .WriteTo.File("logs/bookstore.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();

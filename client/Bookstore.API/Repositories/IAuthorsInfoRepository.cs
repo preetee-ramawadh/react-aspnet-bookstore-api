@@ -4,6 +4,7 @@ namespace Bookstore.API.Repositories
 {
     public interface IAuthorsInfoRepository
     {
+        //CRUD
         public Task<IEnumerable<Authors>> GetAuthorsAsync();
 
         public Task<Authors?> GetAuthorAsync(int authorId);
@@ -18,6 +19,5 @@ namespace Bookstore.API.Repositories
 
         public Task<bool> SaveChangesAsync();
 
-        //public Task<Authors> GetAuthorWithBooksAsync(int authorId);
     }
 }
