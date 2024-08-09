@@ -35,80 +35,75 @@ namespace Bookstore.API.Controllers
         }
 
         [HttpGet("{id}", Name = "GetAuthor")]
-        public async Task<IActionResult> GetAuthor(int id)
+        public async Task<ActionResult<AuthorsDto>> GetAuthor(int id)
         {
             var author = await _authorsInfoRepository.GetAuthorAsync(id);
 
             if (author == null)
             {
                 _logger.LogInformation($"Author with id {id} wasn't found when accessing Author.");
+
                 return NotFound();
             }
 
-            return Ok(_mapper.Map<AuthorsDto>(author));
+            var authorToReturn = _mapper.Map<AuthorsDto>(author);
+
+            return Ok(authorToReturn);
 
         }
 
         [HttpPost]
-        public ActionResult<AuthorsDto> CreateAuthor(AuthorsForCreationDto author)
+        public async Task<ActionResult<AuthorsDto>> CreateAuthor(AuthorsForCreationDto authorForCreation)
         {
-            var authorToCreate = new AuthorsDto()
-            {
-                Name = author.Name,
-                Biography = author.Biography,
-                //ImageUrl = author.ImageUrl,
-            };
+            var author = _mapper.Map<Authors>(authorForCreation);
 
-            return CreatedAtRoute("GetAuthor", authorToCreate);
+            await _authorsInfoRepository.AddAuthorAsync(author);
+
+            await _authorsInfoRepository.SaveChangesAsync();
+
+            var createdAuthorToReturn =
+                _mapper.Map<AuthorsDto>(author);
+
+            return CreatedAtRoute
+                (
+                 "GetAuthor",
+                 new { id = createdAuthorToReturn.AuthorId },
+                 createdAuthorToReturn
+                );
         }
 
         [HttpPut("{id}")]
         public async Task<ActionResult> UpdateAuthor(int id, AuthorsForUpdateDto authorForUpdateDto)
         {
-            if(!await _authorsInfoRepository.AuthorExistsAsync(id))
-            {
-                _logger.LogInformation($"Author with id {id} wasn't found when accessing Author.");
-
-                return NotFound();
-            }
-
-            // Retrieve the existing author entity
+            // Check if the Author exists
             var existingAuthor = await _authorsInfoRepository.GetAuthorAsync(id);
 
             if (existingAuthor == null)
             {
-                _logger.LogInformation($"Author with id {id} wasn't found when accessing Author.");
+                _logger.LogInformation($"Author with id {id} wasn't found when accessing Authors.");
 
-                return NotFound();  // Return 404 Not Found if the author entity is not found
+                return NotFound(new { message = "Author not found." });  // Return 404 Not Found if the author entity is not found
             }
 
             // Map the updated properties from the DTO to the existing entity
             _mapper.Map(authorForUpdateDto, existingAuthor);
 
-            // Update the author entity in the repository
-            _authorsInfoRepository.UpdateAuthor(existingAuthor);
-
-            // Save changes to the database
+            //Save changes to the database
             await _authorsInfoRepository.SaveChangesAsync();
 
             // Map the updated entity to DTO
             var updatedAuthorToReturn = _mapper.Map<AuthorsForUpdateDto>(existingAuthor);
 
-            // Return Ok with the updated resource
+            // Indicate success with no content
+           // return NoContent();
+            // return ok with updated data
             return Ok(updatedAuthorToReturn);
         }
 
         [HttpPatch("{id}")]
         public async Task<ActionResult> PartiallyUpdateAuthor(int id, JsonPatchDocument<AuthorsForUpdateDto> patchDocument)
         {
-            // Check if the author exists
-            if (!await _authorsInfoRepository.AuthorExistsAsync(id))
-            {
-                _logger.LogInformation($"Author with id {id} wasn't found when accessing Author.");
-
-                return NotFound();
-            }
-            // Retrieve the existing author entity
+            // Check if the Author exists
             var existingAuthor = await _authorsInfoRepository.GetAuthorAsync(id);
 
             if (existingAuthor == null)
@@ -121,6 +116,12 @@ namespace Bookstore.API.Controllers
             var authorToPatch = _mapper.Map<AuthorsForUpdateDto>(
                 existingAuthor);
 
+            patchDocument.ApplyTo(authorToPatch, ModelState);
+
+            _mapper.Map(authorToPatch, existingAuthor);
+            await _authorsInfoRepository.SaveChangesAsync();
+
+            // Indicate success with no content
             return NoContent();
         }
 
@@ -128,15 +129,7 @@ namespace Bookstore.API.Controllers
 
         public async Task<ActionResult> DeleteAuthor(int id) 
         {
-            // Check if the author exists
-            if (!await _authorsInfoRepository.AuthorExistsAsync(id))
-            {
-                _logger.LogInformation($"Author with id {id} wasn't found when accessing Author.");
-
-                return NotFound();
-            }
-
-            // Retrieve the author entity
+            // Retrieve the Author entity
             var authorEntity = await _authorsInfoRepository.GetAuthorAsync(id);
 
             // Check if the retrieved author entity is null

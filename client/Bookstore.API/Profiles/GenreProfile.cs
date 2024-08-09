@@ -11,8 +11,9 @@ namespace Bookstore.API.Profiles
             CreateMap<Genres, GenresDto>()
             .ForMember(dest => dest.Books, opt => opt.MapFrom(src => src.Books));
 
-           // CreateMap<Entities.Genres, Models.GenresDto>();
-            CreateMap<Models.GenresForCreationDto, Entities.Genres>();
+            CreateMap<Genres, GenresNameDto> ();
+
+            CreateMap<GenresForCreationDto, Genres>();
         }
     }
 }

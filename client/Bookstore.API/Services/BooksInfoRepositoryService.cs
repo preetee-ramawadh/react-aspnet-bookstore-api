@@ -16,20 +16,25 @@ namespace Bookstore.API.Services
 
         public async Task<IEnumerable<Books>> GetBooksAsync()
         {
-            return await _bookstoreInfoContext.Books.ToListAsync();
+            return await _bookstoreInfoContext.Books
+                .Include(b => b.Author) // Eagerly load Author
+                .Include(b => b.Genre).  // Eagerly load Genre
+                ToListAsync();
         }
 
         public async  Task<Books?> GetBookAsync(int bookId)
         {
             return await _bookstoreInfoContext.Books
-                  .Where(b => b.BookId == bookId).FirstOrDefaultAsync();
+                .Include(b => b.Author) // Eagerly load Author
+                .Include(b => b.Genre)  // Eagerly load Genre.
+                .Where(b => b.BookId == bookId).FirstOrDefaultAsync();
         }
         public async Task<bool> BookExistsAsync(int bookId)
         {
             return await _bookstoreInfoContext.Books.AnyAsync(b => b.BookId == bookId);
         }
 
-        public Task AddBookAsync(int bookId)
+        public Task AddBookAsync(Books book)
         {
             throw new NotImplementedException();
         }

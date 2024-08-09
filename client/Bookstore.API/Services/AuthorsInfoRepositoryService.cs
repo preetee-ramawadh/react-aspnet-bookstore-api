@@ -31,7 +31,8 @@ namespace Bookstore.API.Services
 
         public async Task<bool> AuthorExistsAsync(int authorId)
         {
-            return await _bookstoreInfoContext.Authors.AnyAsync(a => a.AuthorId == authorId);
+            return await _bookstoreInfoContext.Authors
+                .AnyAsync(a => a.AuthorId == authorId);
         }
 
         public async Task AddAuthorAsync(Authors author)
@@ -40,11 +41,10 @@ namespace Bookstore.API.Services
             var newAuthor = new Authors
             {
                 Name = author.Name,
-                Biography = author.Biography,
-                // Initialize other properties if needed
+                Biography = author.Biography
             };
 
-            // Add the new genre to the context
+            // Add the new Author to the database context
             await _bookstoreInfoContext.Authors.AddAsync(newAuthor);
 
             // Save changes to the database
@@ -68,11 +68,5 @@ namespace Bookstore.API.Services
             return (await _bookstoreInfoContext.SaveChangesAsync() >= 1);
         }
 
-        //public async Task<Authors> GetAuthorWithBooksAsync(int authorId)
-        //{
-        //    return await _bookstoreInfoContext.Authors
-        //        .Include(a => a.Book)  // Include related books
-        //        .SingleOrDefaultAsync(a => a.Id == authorId);
-        //}
     }
 }

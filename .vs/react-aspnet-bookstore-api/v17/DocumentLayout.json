@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "client\\Bookstore.API\\Models\\AuthorsDto.cs",
               "ToolTip": "D:\\Users\\preetee\\source\\repos\\react-aspnet-bookstore-api\\client\\Bookstore.API\\Models\\AuthorsDto.cs",
               "RelativeToolTip": "client\\Bookstore.API\\Models\\AuthorsDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAALAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-07T20:08:51.814Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "client\\Bookstore.API\\Entities\\Books.cs",
               "ViewState": "AQIAAAUAAADgZGZmZiYwwB4AAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T20:06:34.29Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T20:06:34.29Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "client\\Bookstore.API\\Models\\BooksDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T20:05:11.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T20:05:11.162Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "client\\Bookstore.API\\Controllers\\AuthorsController.cs",
               "ViewState": "AQIAAGQAAAAgATMzMzMbwHEAAABfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T19:20:10.918Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T19:20:10.918Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "client\\Bookstore.API\\Controllers\\BooksController.cs",
               "ViewState": "AQIAAEcAAAAAiJmZmRkmwF8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T19:18:59.892Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T19:18:59.892Z"
             },
             {
               "$type": "Document",
@@ -111,8 +107,7 @@
               "RelativeToolTip": "client\\Bookstore.API\\Controllers\\GenresController.cs",
               "ViewState": "AQIAABIAAACAETMzMzMbwCoAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T19:15:55.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T19:15:55.629Z"
             }
           ]
         }

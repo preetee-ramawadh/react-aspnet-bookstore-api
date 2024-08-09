@@ -8,14 +8,18 @@ namespace Bookstore.API.Profiles
     {
         public BookProfile() 
         {
-            CreateMap<Entities.Books, Models.BooksTitleDto>();
 
-            CreateMap<Models.BooksForCreationDto, Entities.Books>();
-            CreateMap<Models.BooksForUpdateDto, Entities.Books>();
-            CreateMap<Entities.Books, Models.BooksForUpdateDto>();
+            CreateMap<Books, BooksDto>()
+            .ForMember(dest => dest.Author, opt => opt.MapFrom(src => src.Author))
+            .ForMember(dest => dest.Genre, opt => opt.MapFrom(src => src.Genre));
 
-            //CreateMap<Books, BooksDto>()
-            //.ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Title));
+            CreateMap<Books, BooksTitleDto>();
+
+            CreateMap<BooksForCreationDto, Books>();
+
+            CreateMap<BooksForUpdateDto, Books>();
+
+            CreateMap<Books, BooksForUpdateDto>();
 
         }
     }

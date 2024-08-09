@@ -33,7 +33,7 @@ namespace Bookstore.API.Controllers
         }
 
         [HttpGet("{id}", Name = "GetGenre")]
-        public async Task<IActionResult> GetGenre(int id)
+        public async Task<ActionResult<GenresDto>> GetGenre(int id)
         {
             var genre = await _genresInfoRepository.GetGenreAsync(id);
 
@@ -44,30 +44,35 @@ namespace Bookstore.API.Controllers
                 return NotFound();
             }
 
-            return Ok(_mapper.Map<GenresDto>(genre));
+            var genreToReturn = _mapper.Map<GenresDto>(genre);
+
+            return Ok(genreToReturn);
 
         }
 
         [HttpPost]
-        public async Task<ActionResult<GenresDto>> CreateGenre(GenresForCreationDto genreDto)
+        public async Task<ActionResult<GenresDto>> CreateGenre(GenresForCreationDto genreForCreation)
         {
             // Check if the genre exists
-            if (await _genresInfoRepository.GenreExistsAsync(genreDto.GenreName))
+            var genreExists = 
+                await _genresInfoRepository.GenreExistsAsync(genreForCreation.GenreName);
+
+            if (genreExists)
             {
                 return Conflict("Genre already exists.");  // Return 409 Conflict if the genre already exists
             }
 
-            var genre = _mapper.Map<Entities.Genres>(genreDto);
+            var genre = _mapper.Map<Entities.Genres>(genreForCreation);
 
             await _genresInfoRepository.AddGenreAsync(genre);
 
             await _genresInfoRepository.SaveChangesAsync();
 
             var createdGenreToReturn =
-                _mapper.Map<GenresForCreationDto>(genre);
+                _mapper.Map<GenresDto>(genre);
 
             // Return a CreatedAtRoute response with the location of the new resource
-            return CreatedAtRoute("GetGenre", new { id = genre.GenreId }, createdGenreToReturn);
+            return CreatedAtRoute("GetGenre", new { id = createdGenreToReturn.GenreId }, createdGenreToReturn);
 
         }
 

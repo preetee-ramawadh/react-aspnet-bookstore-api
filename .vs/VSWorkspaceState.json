@@ -4,9 +4,8 @@
     "\\client",
     "\\client\\Bookstore.API",
     "\\client\\Bookstore.API\\Models",
-    "\\client\\Bookstore.API\\Properties",
-    "\\client\\Bookstore.API\\Repositories"
+    "\\client\\Bookstore.API\\Services"
   ],
-  "SelectedNode": "\\client\\Bookstore.API\\Repositories\\IBooksInfoRepository.cs",
+  "SelectedNode": "\\client\\Bookstore.API\\Services\\BooksInfoRepositoryService.cs",
   "PreviewInSolutionExplorer": false
 }

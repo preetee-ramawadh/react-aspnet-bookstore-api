@@ -11,11 +11,13 @@ namespace Bookstore.API.Profiles
             CreateMap<Authors, AuthorsDto>()
             .ForMember(dest => dest.Books, opt => opt.MapFrom(src => src.Books));
 
+            CreateMap<Authors, AuthorsNameDto>();
 
-           // CreateMap<Entities.Authors, Models.AuthorsDto>();
-            CreateMap<Models.AuthorsForCreationDto, Entities.Authors>();
-            CreateMap<Models.AuthorsForUpdateDto, Entities.Authors>();
-            CreateMap<Entities.Authors, Models.AuthorsForUpdateDto>();
+            CreateMap<AuthorsForCreationDto, Authors>();
+
+            CreateMap<AuthorsForUpdateDto, Authors>();
+
+            CreateMap<Authors, AuthorsForUpdateDto>();
 
         }
     }

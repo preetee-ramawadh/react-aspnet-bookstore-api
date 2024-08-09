@@ -10,7 +10,7 @@ namespace Bookstore.API.Repositories
 
         public Task<bool> BookExistsAsync(int bookId);
 
-        public Task AddBookAsync(int bookId);
+        public Task AddBookAsync(Books book);
 
         public Task UpdateBook(Books book);
 

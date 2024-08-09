@@ -32,7 +32,7 @@ namespace Bookstore.API.Controllers
         }
 
         [HttpGet("{id}", Name = "GetBook")]
-        public async Task<IActionResult> GetBook(int id)
+        public async Task<ActionResult<BooksDto>> GetBook(int id)
         {
             var book = await _booksInfoRepository.GetBookAsync(id);
 
@@ -48,19 +48,18 @@ namespace Bookstore.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<BooksDto>> CreateBook(BooksForCreationDto book)
+        public async Task<ActionResult<BooksDto>> CreateBook(BooksForCreationDto bookForCreation)
         {
-            var bookToCreate = new BooksDto()
-            {
-                Title = book.Title,
-                AuthorId = book.AuthorId,
-                GenreId = book.GenreId,
-                Price = book.Price,
-                PublicationDate = book.PublicationDate,
-               // ImageUrl = book.ImageUrl,
-            };
+            var book = _mapper.Map<Books>(bookForCreation);
 
-            return CreatedAtRoute("GetBook", bookToCreate);
+            await _booksInfoRepository.AddBookAsync(book);
+
+            await _booksInfoRepository.SaveChangesAsync();
+
+            var createdBookToReturn =
+                _mapper.Map<BooksDto>(book);
+
+            return CreatedAtRoute("GetBook", new { id = createdBookToReturn.BookId }, createdBookToReturn);
         }
 
         [HttpPut("{id}")]
