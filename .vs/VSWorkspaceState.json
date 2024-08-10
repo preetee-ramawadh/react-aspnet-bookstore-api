@@ -3,9 +3,8 @@
     "",
     "\\client",
     "\\client\\Bookstore.API",
-    "\\client\\Bookstore.API\\Models",
-    "\\client\\Bookstore.API\\Services"
+    "\\client\\Bookstore.API\\Controllers"
   ],
-  "SelectedNode": "\\client\\Bookstore.API\\appsettings.json",
+  "SelectedNode": "\\client\\Bookstore.API\\Controllers\\BooksController.cs",
   "PreviewInSolutionExplorer": false
 }

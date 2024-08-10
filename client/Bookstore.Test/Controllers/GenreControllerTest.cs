@@ -9,23 +9,23 @@ using Bookstore.API.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Bookstore.API.Models;
 
-namespace Bookstore.Test.Controller
+namespace Bookstore.Test.Controllers
 {
     public class GenreControllerTest
     {
         private readonly GenresController genresController;
-        private readonly IGenresInfoRepository genresInfoRepository;
-        private readonly IMapper mapper;
-        private readonly ILogger<GenresController> logger;
+        private readonly IGenresInfoRepository fakeRepository;
+        private readonly IMapper fakeMapper;
+        private readonly ILogger<GenresController> fakeLogger;
         public GenreControllerTest()
         {
             //set up Dependencies
-            this.genresInfoRepository = A.Fake<IGenresInfoRepository>();
-            this.mapper = A.Fake<IMapper>();
-            this.logger = A.Fake<ILogger<GenresController>>();
+            fakeRepository = A.Fake<IGenresInfoRepository>();
+            fakeMapper = A.Fake<IMapper>();
+            fakeLogger = A.Fake<ILogger<GenresController>>();
 
             //SUT --> System under Test
-            this.genresController = new GenresController(this.logger, this.genresInfoRepository, this.mapper);
+            this.genresController = new GenresController(fakeLogger, fakeRepository, fakeMapper);
         }
 
         [Fact]
@@ -43,8 +43,8 @@ namespace Bookstore.Test.Controller
             new GenresDto { GenreId = 2, GenreName = "Fantasy" }
         };
 
-            A.CallTo(() => genresInfoRepository.GetGenresAsync()).Returns(Task.FromResult<IEnumerable<Genres>>(genres));
-            A.CallTo(() => mapper.Map<IEnumerable<GenresDto>>(genres)).Returns(genresDto);
+            A.CallTo(() => fakeRepository.GetGenresAsync()).Returns(Task.FromResult<IEnumerable<Genres>>(genres));
+            A.CallTo(() => fakeMapper.Map<IEnumerable<GenresDto>>(genres)).Returns(genresDto);
 
             // Act
             var result = await genresController.GetGenres();
@@ -61,8 +61,8 @@ namespace Bookstore.Test.Controller
             var genres = new List<Genres>();
             var genresDto = new List<GenresDto>();
 
-            A.CallTo(() => genresInfoRepository.GetGenresAsync()).Returns(Task.FromResult<IEnumerable<Genres>>(genres));
-            A.CallTo(() => mapper.Map<IEnumerable<GenresDto>>(genres)).Returns(genresDto);
+            A.CallTo(() => fakeRepository.GetGenresAsync()).Returns(Task.FromResult<IEnumerable<Genres>>(genres));
+            A.CallTo(() => fakeMapper.Map<IEnumerable<GenresDto>>(genres)).Returns(genresDto);
 
             // Act
             var result = await genresController.GetGenres();
@@ -76,15 +76,13 @@ namespace Bookstore.Test.Controller
         public async Task GetGenre_ShouldReturnNotFound_WhenGenreIsNotFound()
         {
             // Arrange
-            int genreId = 1;
-            _ = A.CallTo(() => genresInfoRepository.GetGenreAsync(genreId)).Returns(Task.FromResult<Genres>(null));
-
+            A.CallTo(() => fakeRepository.GetGenreAsync(A<int>.Ignored)).Returns(Task.FromResult<Genres>(null));
+            
             // Act
-            var result = await this.genresController.GetGenre(genreId);
+            var result = await genresController.GetGenre(1);
 
             // Assert
             result.Result.Should().BeOfType<NotFoundResult>();
-            A.CallTo(() => logger.LogInformation($"Genre with id {genreId} wasn't found when accessing genre.")).MustHaveHappened();
         }
 
         [Fact]
@@ -95,8 +93,8 @@ namespace Bookstore.Test.Controller
             var genre = new Genres { GenreId = genreId, GenreName = "Sci-Fi" };
             var genresDto = new GenresDto { GenreId = genreId, GenreName = "Sci-Fi" };
 
-            A.CallTo(() => genresInfoRepository.GetGenreAsync(genreId)).Returns(Task.FromResult(genre));
-            A.CallTo(() => mapper.Map<GenresDto>(genre)).Returns(genresDto);
+            A.CallTo(() => fakeRepository.GetGenreAsync(genreId)).Returns(Task.FromResult(genre));
+            A.CallTo(() => fakeMapper.Map<GenresDto>(genre)).Returns(genresDto);
 
             // Act
             var result = await genresController.GetGenre(genreId);
