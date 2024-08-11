@@ -185,22 +185,24 @@ namespace Bookstore.Test.Controllers
         public async Task UpdateAuthor_ShouldReturnNotFound_WhenAuthorDoesNotExist()
         {
             // Arrange
+            var authorId = 1;
+            var authorForUpdateDto = new AuthorsForUpdateDto
+            {
+                Name = "Updated Author",
+                Biography = "author bio here"
+            };
 
-            A.CallTo(() => fakeRepository.GetAuthorAsync(1)).Returns(Task.FromResult<Authors>(null));
-
-            var authorForUpdateDto = new AuthorsForUpdateDto { Name = "Updated Name", Biography = "" };
+            A.CallTo(() => fakeRepository.GetAuthorAsync(authorId)).Returns(Task.FromResult<Authors>(null));
 
             // Act
-            var result = await _authorsController.UpdateAuthor(1, authorForUpdateDto);
+            var result = await _authorsController.UpdateAuthor(authorId, authorForUpdateDto);
 
             // Assert
+            result.Should().BeOfType<NotFoundObjectResult>();
 
-            var notFoundResult = result.Should().BeOfType<NotFoundObjectResult>().Subject;
-            //var response = notFoundResult.Value.Should().BeOfType<NotFoundObjectResult>().Subject;
-            var response = notFoundResult.Value.Should().BeAssignableTo<Microsoft.AspNetCore.Http.DefaultHttpContext>().Subject;
-           
-            var responseMessage = response.GetType().GetProperty("message")?.GetValue(response, null)?.ToString();
-            responseMessage.Should().Be("Author not found.");
+            var notFoundResult = result as NotFoundObjectResult;
+            notFoundResult.Value.Should().BeEquivalentTo(new { message = "Author not found." });
+
         }
 
         [Fact]

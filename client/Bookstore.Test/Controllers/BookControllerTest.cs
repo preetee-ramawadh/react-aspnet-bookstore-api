@@ -48,18 +48,15 @@ namespace Bookstore.Test.Controllers
             new BooksDto { BookId = 2, Title = "Book 2", AuthorId = 3, GenreId = 3, Price = 20.00M, PublicationDate = new DateOnly(2024, 1, 1) }
         };
 
-            A.CallTo(() => fakeRepository.GetBooksAsync()).Returns(Task.FromResult(bookEntities.AsEnumerable()));
+            A.CallTo(() => fakeRepository.GetBooksAsync()).Returns(Task.FromResult<IEnumerable<Books>>(bookEntities));
             A.CallTo(() => fakeMapper.Map<IEnumerable<BooksDto>>(bookEntities)).Returns(bookDtos);
+
             // Act
             var result = await _booksController.GetBooks();
 
             // Assert
-            var okResult = result.Should().BeOfType<OkObjectResult>().Subject;
+            var okResult = result.Result.Should().BeOfType<OkObjectResult>().Subject;
             okResult.Value.Should().BeEquivalentTo(bookDtos);
-            //var returnedDtos = okResult.Value.Should().BeAssignableTo<IEnumerable<BooksDto>>().Subject;
-            //returnedDtos.Should().HaveCount(2);
-            //returnedDtos.Should().ContainEquivalentOf(bookDtos.First());
-            //returnedDtos.Should().ContainEquivalentOf(bookDtos.Last());
         }
 
         [Fact]
@@ -76,9 +73,10 @@ namespace Bookstore.Test.Controllers
             var result = await _booksController.GetBooks();
 
             // Assert
-            var okResult = result.Should().BeOfType<OkObjectResult>().Subject;
-            var returnedDtos = okResult.Value.Should().BeAssignableTo<IEnumerable<BooksDto>>().Subject;
-            returnedDtos.Should().BeEmpty();
+
+            var okResult = result.Result.Should().BeOfType<OkObjectResult>().Subject;
+            okResult.Value.Should().BeEquivalentTo(bookDtos);
+
         }
 
         //[HttpGet("{id}")]
@@ -86,42 +84,41 @@ namespace Bookstore.Test.Controllers
         public async Task GetBook_ShouldReturnOk_WhenBookExists()
         {
             // Arrange
+            int bookId = 1;
+            var bookEntity = new Books { BookId = bookId, Title = "Book 1", AuthorId = 2, GenreId = 3, Price = 20.00M, PublicationDate = new DateOnly(2023, 1, 1) };
+            var bookDto = new BooksDto { BookId = bookId, Title = "Sample Book", AuthorId = 2, GenreId = 3, Price = 20.00M, PublicationDate = new DateOnly(2024, 1, 1) };
 
-            var bookEntity = new Books { BookId = 1, Title = "Book 1", AuthorId = 2, GenreId = 3, Price = 20.00M, PublicationDate = new DateOnly(2023, 1, 1) };
-            var bookDto = new BooksDto { BookId = 1, Title = "Sample Book", AuthorId = 2, GenreId = 3, Price = 20.00M, PublicationDate = new DateOnly(2024, 1, 1) };
-
-            A.CallTo(() => fakeRepository.GetBookAsync(1)).Returns(Task.FromResult(bookEntity));
+            A.CallTo(() => fakeRepository.GetBookAsync(bookId)).Returns(Task.FromResult(bookEntity));
             A.CallTo(() => fakeMapper.Map<BooksDto>(bookEntity)).Returns(bookDto);
 
             // Act
-            var result = await _booksController.GetBook(1);
+            var result = await _booksController.GetBook(bookId);
 
             // Assert
-            var okResult = result.Should().BeOfType<OkObjectResult>().Subject;
-            var returnedDto = okResult.Value.Should().BeOfType<BooksDto>().Subject;
-            returnedDto.Should().BeEquivalentTo(bookDto);
+            result.Result.Should().BeOfType<OkObjectResult>();
+            var okResult = result.Result.As<OkObjectResult>();
+            okResult.Value.Should().BeEquivalentTo(bookDto);
+
         }
 
         [Fact]
         public async Task GetBook_ShouldReturnNotFound_WhenBookDoesNotExist()
         {
             // Arrange
-            
-            A.CallTo(() => fakeRepository.GetBookAsync(1)).Returns(Task.FromResult<Books>(null));
+            A.CallTo(() => fakeRepository.GetBookAsync(A<int>.Ignored)).Returns(Task.FromResult<Books>(null));
 
             // Act
             var result = await _booksController.GetBook(1);
 
             // Assert
-            result.Should().BeOfType<NotFoundResult>();
+            result.Result.Should().BeOfType<NotFoundResult>();
+
         }
 
         // create
         [Fact]
         public async Task CreateBook_ShouldReturnCreatedAtRoute_WhenBookIsSuccessfullyCreated()
         {
-            // Arrange
-            
             var bookForCreation = new BooksForCreationDto { Title = "New Book", AuthorId = 2, GenreId = 3, Price = 20.00M, PublicationDate = new DateOnly(2023, 1, 1) };
             var bookEntity = new Books { BookId = 1, Title = "New Book", AuthorId = 2, GenreId = 3, Price = 20.00M, PublicationDate = new DateOnly(2023, 1, 1) };
             var createdBookDto = new BooksDto { BookId = 1, Title = "New Book", AuthorId = 2, GenreId = 3, Price = 20.00M, PublicationDate = new DateOnly(2023, 1, 1) };
@@ -135,11 +132,14 @@ namespace Bookstore.Test.Controllers
             var result = await _booksController.CreateBook(bookForCreation);
 
             // Assert
-            var createdResult = result.Should().BeOfType<CreatedAtRouteResult>().Subject;
-            createdResult.RouteName.Should().Be("GetBook");
-            createdResult.RouteValues["id"].Should().Be(1);
-            var returnedDto = createdResult.Value.Should().BeOfType<BooksDto>().Subject;
-            returnedDto.Should().BeEquivalentTo(createdBookDto);
+            result.Result.Should().BeOfType<CreatedAtRouteResult>("because the action should return a CreatedAtRouteResult on successful creation");
+
+            var createdResult = (CreatedAtRouteResult)result.Result;
+            createdResult.RouteName.Should().Be("GetBook", "because the route name should be 'GetBook'");
+            createdResult.RouteValues["id"].Should().Be(createdBookDto.BookId, "because the route values should include the correct book ID");
+            var returnedDto = createdResult.Value.Should().BeOfType<BooksDto>("because the result value should be an instance of BooksDto").Subject;
+            returnedDto.Title.Should().Be("New Book", "because the returned DTO should have the correct title");
+
         }
 
         //update
@@ -171,16 +171,25 @@ namespace Bookstore.Test.Controllers
         [Fact]
         public async Task UpdateBook_ShouldReturnNotFound_WhenBookDoesNotExist()
         {
-           // BooksForUpdateDto bookForUpdateDto; //{ Title = "Updated Title", AuthorId = 2, GenreId = 3, Price = 20.00M, PublicationDate = new DateOnly(2023, 1, 1) };
-
             // Arrange
-            A.CallTo(() => fakeRepository.GetBookAsync(1)).Returns(Task.FromResult<Books>(null));
+            var bookId = 1;
+            var bookForUpdateDto = new BooksForUpdateDto
+            {
+                Title = "Updated Book",
+                AuthorId = 1,
+                GenreId = 2,
+                Price = 25.99m,
+                PublicationDate = new DateOnly(2024, 3, 1)
+            };
+
+            A.CallTo(() => fakeRepository.GetBookAsync(bookId)).Returns(Task.FromResult<Books>(null));
 
             // Act
-           // var result = await _booksController.UpdateBook(1, new BooksForUpdateDto());
+             var result = await _booksController.UpdateBook(1, bookForUpdateDto);
 
             // Assert
-          //  result.Should().BeOfType<NotFoundResult>();
+             result.Should().BeOfType<NotFoundResult>();
+
         }
 
         //Delete

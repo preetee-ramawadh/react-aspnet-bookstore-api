@@ -1,0 +1,27 @@
+2024-08-11 13:15:45.737 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-11 13:15:45.799 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-11 13:15:45.802 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 13:15:45.804 +05:30 [INF] Hosting environment: Development
+2024-08-11 13:15:45.805 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-11 13:15:49.846 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 13:15:50.427 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 584.4353ms
+2024-08-11 13:15:50.538 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 13:15:50.559 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 13:15:50.587 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 27.4644ms
+2024-08-11 13:15:50.588 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 50.2932ms
+2024-08-11 13:15:50.595 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/swagger-ui.css - null null
+2024-08-11 13:15:50.598 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.css - null null
+2024-08-11 13:15:50.608 +05:30 [INF] The file /swagger-ui.css was not modified
+2024-08-11 13:15:50.608 +05:30 [INF] The file /index.css was not modified
+2024-08-11 13:15:50.609 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/swagger-ui.css - 304 null text/css 14.058ms
+2024-08-11 13:15:50.610 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.css - 304 null text/css 12.1459ms
+2024-08-11 13:15:50.614 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/swagger-ui-standalone-preset.js - null null
+2024-08-11 13:15:50.617 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/swagger-ui-bundle.js - null null
+2024-08-11 13:15:50.621 +05:30 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2024-08-11 13:15:50.624 +05:30 [INF] The file /swagger-ui-bundle.js was not modified
+2024-08-11 13:15:50.624 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/swagger-ui-standalone-preset.js - 304 null text/javascript 9.8949ms
+2024-08-11 13:15:50.625 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/swagger-ui-bundle.js - 304 null text/javascript 8.0441ms
+2024-08-11 13:15:50.628 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 13:15:51.763 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1134.4079ms
+2024-08-11 13:15:51.929 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 13:15:52.424 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 494.3357ms
