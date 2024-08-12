@@ -25,3 +25,463 @@
 2024-08-11 13:15:51.763 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1134.4079ms
 2024-08-11 13:15:51.929 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
 2024-08-11 13:15:52.424 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 494.3357ms
+2024-08-11 14:04:29.230 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-11 14:04:29.290 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-11 14:04:29.294 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 14:04:29.295 +05:30 [INF] Hosting environment: Development
+2024-08-11 14:04:29.296 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-11 14:04:31.267 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 14:04:32.522 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 1256.6925ms
+2024-08-11 14:04:32.605 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:04:32.605 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 14:04:32.652 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 14:04:32.699 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 94.1386ms
+2024-08-11 14:04:32.678 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 72.7066ms
+2024-08-11 14:04:32.924 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 271.666ms
+2024-08-11 14:04:33.266 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 14:04:33.557 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 291.2038ms
+2024-08-11 14:05:12.295 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres/10 - null null
+2024-08-11 14:05:12.325 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:05:12.361 +05:30 [INF] Route matched with {action = "GetGenre", controller = "Genres"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.GenresDto]] GetGenre(Int32) on controller Bookstore.API.Controllers.GenresController (Bookstore.API).
+2024-08-11 14:05:16.014 +05:30 [INF] Executed DbCommand (119ms) [Parameters=[@__genreId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[GenreId], [t].[GenreName], [t].[ImageUrl], [b].[BookId], [b].[AuthorId], [b].[GenreId], [b].[ImageUrl], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM (
+    SELECT TOP(1) [g].[GenreId], [g].[GenreName], [g].[ImageUrl]
+    FROM [Genres] AS [g]
+    WHERE [g].[GenreId] = @__genreId_0
+) AS [t]
+LEFT JOIN [Books] AS [b] ON [t].[GenreId] = [b].[GenreId]
+ORDER BY [t].[GenreId]
+2024-08-11 14:05:16.046 +05:30 [INF] Genre with id 10 wasn't found when accessing genre.
+2024-08-11 14:05:16.055 +05:30 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType1`1[[Microsoft.Extensions.Localization.LocalizedString, Microsoft.Extensions.Localization.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2024-08-11 14:05:16.153 +05:30 [INF] Executed action Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API) in 3785.0323ms
+2024-08-11 14:05:16.155 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:05:16.178 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres/10 - 404 148 application/json; charset=utf-8 3883.0672ms
+2024-08-11 14:14:03.078 +05:30 [INF] User profile is available. Using 'D:\Users\preetee\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-11 14:14:03.169 +05:30 [INF] Creating key {ae135612-11f7-4533-aedd-9a756ba19ca6} with creation date 2024-08-11 08:44:03Z, activation date 2024-08-11 08:44:03Z, and expiration date 2024-11-09 08:44:03Z.
+2024-08-11 14:14:03.202 +05:30 [INF] Writing data to file 'D:\Users\preetee\AppData\Local\ASP.NET\DataProtection-Keys\key-ae135612-11f7-4533-aedd-9a756ba19ca6.xml'.
+2024-08-11 14:14:03.494 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-11 14:14:03.512 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-11 14:14:03.517 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 14:14:03.518 +05:30 [INF] Hosting environment: Development
+2024-08-11 14:14:03.519 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-11 14:14:03.994 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 14:14:04.155 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 162.2095ms
+2024-08-11 14:14:04.274 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 14:14:04.279 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 5.1035ms
+2024-08-11 14:14:04.301 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:14:04.313 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 14:14:04.315 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 14.6394ms
+2024-08-11 14:14:04.363 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.5777ms
+2024-08-11 14:14:04.805 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 14:14:04.907 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/favicon-32x32.png - null null
+2024-08-11 14:14:04.921 +05:30 [INF] The file /favicon-32x32.png was not modified
+2024-08-11 14:14:04.923 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/favicon-32x32.png - 304 null image/png 16.1559ms
+2024-08-11 14:14:05.023 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 217.1421ms
+2024-08-11 14:14:09.680 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 14:14:09.692 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 11.8662ms
+2024-08-11 14:14:09.767 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:14:09.782 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 14:14:09.785 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 2.7489ms
+2024-08-11 14:14:09.788 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 14:14:09.794 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 27.308ms
+2024-08-11 14:14:09.810 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.8259ms
+2024-08-11 14:14:09.968 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 14:14:10.030 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 61.9105ms
+2024-08-11 14:14:26.559 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres/10 - null null
+2024-08-11 14:14:26.603 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:14:26.631 +05:30 [INF] Route matched with {action = "GetGenre", controller = "Genres"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.GenresDto]] GetGenre(Int32) on controller Bookstore.API.Controllers.GenresController (Bookstore.API).
+2024-08-11 14:14:28.415 +05:30 [INF] Executed DbCommand (49ms) [Parameters=[@__genreId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[GenreId], [t].[GenreName], [t].[ImageUrl], [b].[BookId], [b].[AuthorId], [b].[GenreId], [b].[ImageUrl], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM (
+    SELECT TOP(1) [g].[GenreId], [g].[GenreName], [g].[ImageUrl]
+    FROM [Genres] AS [g]
+    WHERE [g].[GenreId] = @__genreId_0
+) AS [t]
+LEFT JOIN [Books] AS [b] ON [t].[GenreId] = [b].[GenreId]
+ORDER BY [t].[GenreId]
+2024-08-11 14:14:28.465 +05:30 [INF] Genre with id 10 wasn't found when accessing genre.
+2024-08-11 14:14:28.472 +05:30 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType1`1[[Microsoft.Extensions.Localization.LocalizedString, Microsoft.Extensions.Localization.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2024-08-11 14:14:28.569 +05:30 [INF] Executed action Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API) in 1930.0194ms
+2024-08-11 14:14:28.571 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:14:28.583 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres/10 - 404 148 application/json; charset=utf-8 2024.2769ms
+2024-08-11 14:17:12.585 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-11 14:17:12.681 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-11 14:17:12.689 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 14:17:12.750 +05:30 [INF] Hosting environment: Development
+2024-08-11 14:17:12.752 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-11 14:17:12.845 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 14:17:13.013 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 168.9994ms
+2024-08-11 14:17:13.272 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 14:17:13.278 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 6.0851ms
+2024-08-11 14:17:13.286 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 14:17:13.287 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:17:13.302 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 14.5904ms
+2024-08-11 14:17:13.356 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 70.6489ms
+2024-08-11 14:17:13.474 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 14:17:13.703 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 228.8151ms
+2024-08-11 14:17:19.942 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 14:17:19.955 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 12.6543ms
+2024-08-11 14:17:20.021 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:17:20.028 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 7.3073ms
+2024-08-11 14:17:20.023 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 14:17:20.022 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 14:17:20.056 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 34.2821ms
+2024-08-11 14:17:20.059 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.5304ms
+2024-08-11 14:17:20.278 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 14:17:20.350 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 72.4346ms
+2024-08-11 14:17:36.396 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres/11 - null null
+2024-08-11 14:17:36.440 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:17:36.467 +05:30 [INF] Route matched with {action = "GetGenre", controller = "Genres"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.GenresDto]] GetGenre(Int32) on controller Bookstore.API.Controllers.GenresController (Bookstore.API).
+2024-08-11 14:17:38.413 +05:30 [INF] Executed DbCommand (48ms) [Parameters=[@__genreId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[GenreId], [t].[GenreName], [t].[ImageUrl], [b].[BookId], [b].[AuthorId], [b].[GenreId], [b].[ImageUrl], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM (
+    SELECT TOP(1) [g].[GenreId], [g].[GenreName], [g].[ImageUrl]
+    FROM [Genres] AS [g]
+    WHERE [g].[GenreId] = @__genreId_0
+) AS [t]
+LEFT JOIN [Books] AS [b] ON [t].[GenreId] = [b].[GenreId]
+ORDER BY [t].[GenreId]
+2024-08-11 14:17:38.451 +05:30 [INF] Genre with id 11 wasn't found when accessing genre.
+2024-08-11 14:17:38.466 +05:30 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType1`1[[Microsoft.Extensions.Localization.LocalizedString, Microsoft.Extensions.Localization.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2024-08-11 14:17:38.549 +05:30 [INF] Executed action Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API) in 2072.5358ms
+2024-08-11 14:17:38.552 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:17:38.588 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres/11 - 404 148 application/json; charset=utf-8 2191.9367ms
+2024-08-11 14:19:11.398 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-11 14:19:11.492 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-11 14:19:11.563 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 14:19:11.566 +05:30 [INF] Hosting environment: Development
+2024-08-11 14:19:11.567 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-11 14:19:13.148 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 14:19:13.890 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 754.5264ms
+2024-08-11 14:19:13.909 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:19:14.047 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 138.1251ms
+2024-08-11 14:19:14.026 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 14:19:13.911 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 14:19:14.128 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 217.4712ms
+2024-08-11 14:19:14.187 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 161.5159ms
+2024-08-11 14:19:14.279 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 14:19:14.572 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 293.44ms
+2024-08-11 14:19:33.560 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres/22 - null null
+2024-08-11 14:19:33.586 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:19:33.612 +05:30 [INF] Route matched with {action = "GetGenre", controller = "Genres"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.GenresDto]] GetGenre(Int32) on controller Bookstore.API.Controllers.GenresController (Bookstore.API).
+2024-08-11 14:19:35.393 +05:30 [INF] Executed DbCommand (53ms) [Parameters=[@__genreId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[GenreId], [t].[GenreName], [t].[ImageUrl], [b].[BookId], [b].[AuthorId], [b].[GenreId], [b].[ImageUrl], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM (
+    SELECT TOP(1) [g].[GenreId], [g].[GenreName], [g].[ImageUrl]
+    FROM [Genres] AS [g]
+    WHERE [g].[GenreId] = @__genreId_0
+) AS [t]
+LEFT JOIN [Books] AS [b] ON [t].[GenreId] = [b].[GenreId]
+ORDER BY [t].[GenreId]
+2024-08-11 14:19:35.428 +05:30 [INF] GenreNotFound
+2024-08-11 14:19:35.439 +05:30 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType1`1[[Microsoft.Extensions.Localization.LocalizedString, Microsoft.Extensions.Localization.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2024-08-11 14:19:35.544 +05:30 [INF] Executed action Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API) in 1922.9229ms
+2024-08-11 14:19:35.548 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:19:35.608 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres/22 - 404 148 application/json; charset=utf-8 2048.0079ms
+2024-08-11 14:19:49.028 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres/22 - null null
+2024-08-11 14:19:49.128 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:19:49.150 +05:30 [INF] Route matched with {action = "GetGenre", controller = "Genres"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.GenresDto]] GetGenre(Int32) on controller Bookstore.API.Controllers.GenresController (Bookstore.API).
+2024-08-11 14:19:49.273 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@__genreId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[GenreId], [t].[GenreName], [t].[ImageUrl], [b].[BookId], [b].[AuthorId], [b].[GenreId], [b].[ImageUrl], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM (
+    SELECT TOP(1) [g].[GenreId], [g].[GenreName], [g].[ImageUrl]
+    FROM [Genres] AS [g]
+    WHERE [g].[GenreId] = @__genreId_0
+) AS [t]
+LEFT JOIN [Books] AS [b] ON [t].[GenreId] = [b].[GenreId]
+ORDER BY [t].[GenreId]
+2024-08-11 14:19:49.286 +05:30 [INF] GenreNotFound
+2024-08-11 14:19:49.355 +05:30 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType1`1[[Microsoft.Extensions.Localization.LocalizedString, Microsoft.Extensions.Localization.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2024-08-11 14:19:49.888 +05:30 [INF] Executed action Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API) in 734.2177ms
+2024-08-11 14:19:49.974 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:19:49.979 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres/22 - 404 148 application/json; charset=utf-8 950.6875ms
+2024-08-11 14:22:22.891 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-11 14:22:22.953 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-11 14:22:22.956 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 14:22:22.957 +05:30 [INF] Hosting environment: Development
+2024-08-11 14:22:22.958 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-11 14:22:23.083 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 14:22:23.304 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 223.2602ms
+2024-08-11 14:22:23.324 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 14:22:23.327 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 14:22:23.331 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 6.8302ms
+2024-08-11 14:22:23.369 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:22:23.387 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 18.0683ms
+2024-08-11 14:22:23.394 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 66.7161ms
+2024-08-11 14:22:23.567 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 14:22:23.802 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 234.881ms
+2024-08-11 14:26:49.189 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-11 14:26:49.259 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-11 14:26:49.440 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 14:26:49.441 +05:30 [INF] Hosting environment: Development
+2024-08-11 14:26:49.442 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-11 14:26:49.646 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 14:26:49.982 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 334.0186ms
+2024-08-11 14:26:50.213 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 14:26:50.224 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 10.9637ms
+2024-08-11 14:26:50.245 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 14:26:50.327 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 81.3424ms
+2024-08-11 14:26:50.350 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:26:50.360 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 9.5786ms
+2024-08-11 14:26:50.777 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 14:26:51.016 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 239.6684ms
+2024-08-11 14:29:14.367 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-11 14:29:14.495 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-11 14:29:14.498 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 14:29:14.500 +05:30 [INF] Hosting environment: Development
+2024-08-11 14:29:14.504 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-11 14:29:14.870 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 14:29:15.448 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 579.4808ms
+2024-08-11 14:29:16.996 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:29:16.996 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 14:29:17.009 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 12.501ms
+2024-08-11 14:29:17.020 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 14:29:17.167 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 171.1244ms
+2024-08-11 14:29:17.266 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 246.4416ms
+2024-08-11 14:29:17.750 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 14:29:17.958 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 208.1941ms
+2024-08-11 14:48:55.013 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-11 14:48:55.098 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-11 14:48:55.103 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 14:48:55.105 +05:30 [INF] Hosting environment: Development
+2024-08-11 14:48:55.106 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-11 14:48:55.217 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 14:48:55.420 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 203.8259ms
+2024-08-11 14:48:55.453 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 14:48:55.459 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 5.3775ms
+2024-08-11 14:48:55.470 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 14:48:55.473 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:48:55.487 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 13.8026ms
+2024-08-11 14:48:55.528 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.4035ms
+2024-08-11 14:48:55.677 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 14:48:55.851 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 173.3981ms
+2024-08-11 14:49:13.250 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres/12 - null null
+2024-08-11 14:49:13.283 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:49:13.306 +05:30 [INF] Route matched with {action = "GetGenre", controller = "Genres"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.GenresDto]] GetGenre(Int32) on controller Bookstore.API.Controllers.GenresController (Bookstore.API).
+2024-08-11 14:49:16.284 +05:30 [INF] Executed DbCommand (113ms) [Parameters=[@__genreId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[GenreId], [t].[GenreName], [t].[ImageUrl], [b].[BookId], [b].[AuthorId], [b].[GenreId], [b].[ImageUrl], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM (
+    SELECT TOP(1) [g].[GenreId], [g].[GenreName], [g].[ImageUrl]
+    FROM [Genres] AS [g]
+    WHERE [g].[GenreId] = @__genreId_0
+) AS [t]
+LEFT JOIN [Books] AS [b] ON [t].[GenreId] = [b].[GenreId]
+ORDER BY [t].[GenreId]
+2024-08-11 14:49:16.319 +05:30 [INF] GenreNotFound Id: 12 
+2024-08-11 14:49:16.326 +05:30 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-08-11 14:49:16.402 +05:30 [INF] Executed action Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API) in 3074.5079ms
+2024-08-11 14:49:16.411 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:49:16.492 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres/12 - 404 25 application/json; charset=utf-8 3242.0565ms
+2024-08-11 14:49:58.712 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-11 14:49:58.760 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-11 14:49:58.763 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 14:49:58.765 +05:30 [INF] Hosting environment: Development
+2024-08-11 14:49:58.766 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-11 14:49:59.087 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 14:49:59.245 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 159.5285ms
+2024-08-11 14:49:59.261 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 14:49:59.264 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 14:49:59.268 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 6.9089ms
+2024-08-11 14:49:59.302 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:49:59.315 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 13.9042ms
+2024-08-11 14:49:59.327 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.4294ms
+2024-08-11 14:49:59.502 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 14:49:59.722 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 220.1461ms
+2024-08-11 14:50:03.171 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 14:50:03.181 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 9.8997ms
+2024-08-11 14:50:03.253 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:50:03.258 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 14:50:03.263 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 9.8857ms
+2024-08-11 14:50:03.255 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 14:50:03.289 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.7122ms
+2024-08-11 14:50:03.291 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 36.3255ms
+2024-08-11 14:50:03.378 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 14:50:03.457 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 79.4796ms
+2024-08-11 14:50:15.713 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres/12 - null null
+2024-08-11 14:50:15.777 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:50:15.806 +05:30 [INF] Route matched with {action = "GetGenre", controller = "Genres"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.GenresDto]] GetGenre(Int32) on controller Bookstore.API.Controllers.GenresController (Bookstore.API).
+2024-08-11 14:50:17.758 +05:30 [INF] Executed DbCommand (54ms) [Parameters=[@__genreId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[GenreId], [t].[GenreName], [t].[ImageUrl], [b].[BookId], [b].[AuthorId], [b].[GenreId], [b].[ImageUrl], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM (
+    SELECT TOP(1) [g].[GenreId], [g].[GenreName], [g].[ImageUrl]
+    FROM [Genres] AS [g]
+    WHERE [g].[GenreId] = @__genreId_0
+) AS [t]
+LEFT JOIN [Books] AS [b] ON [t].[GenreId] = [b].[GenreId]
+ORDER BY [t].[GenreId]
+2024-08-11 14:50:17.787 +05:30 [INF] GenreNotFound Id: 12 
+2024-08-11 14:50:17.802 +05:30 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType1`1[[Microsoft.Extensions.Localization.LocalizedString, Microsoft.Extensions.Localization.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2024-08-11 14:50:17.889 +05:30 [INF] Executed action Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API) in 2074.2449ms
+2024-08-11 14:50:17.891 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:50:17.943 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres/12 - 404 148 application/json; charset=utf-8 2230.7676ms
+2024-08-11 14:51:48.753 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-11 14:51:48.849 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-11 14:51:48.851 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 14:51:48.853 +05:30 [INF] Hosting environment: Development
+2024-08-11 14:51:48.854 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-11 14:51:49.022 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 14:51:49.195 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 173.8112ms
+2024-08-11 14:51:49.218 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 14:51:49.226 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 7.8037ms
+2024-08-11 14:51:49.248 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 14:51:49.253 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:51:49.268 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 14.4571ms
+2024-08-11 14:51:49.298 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.6537ms
+2024-08-11 14:51:49.425 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 14:51:49.690 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 265.3962ms
+2024-08-11 14:52:03.841 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres/22 - null null
+2024-08-11 14:52:03.884 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:52:03.908 +05:30 [INF] Route matched with {action = "GetGenre", controller = "Genres"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.GenresDto]] GetGenre(Int32) on controller Bookstore.API.Controllers.GenresController (Bookstore.API).
+2024-08-11 14:52:05.774 +05:30 [INF] Executed DbCommand (58ms) [Parameters=[@__genreId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[GenreId], [t].[GenreName], [t].[ImageUrl], [b].[BookId], [b].[AuthorId], [b].[GenreId], [b].[ImageUrl], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM (
+    SELECT TOP(1) [g].[GenreId], [g].[GenreName], [g].[ImageUrl]
+    FROM [Genres] AS [g]
+    WHERE [g].[GenreId] = @__genreId_0
+) AS [t]
+LEFT JOIN [Books] AS [b] ON [t].[GenreId] = [b].[GenreId]
+ORDER BY [t].[GenreId]
+2024-08-11 14:52:05.812 +05:30 [INF] GenreNotFound Id: 22 
+2024-08-11 14:52:05.819 +05:30 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType1`1[[Microsoft.Extensions.Localization.LocalizedString, Microsoft.Extensions.Localization.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2024-08-11 14:52:05.915 +05:30 [INF] Executed action Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API) in 1982.9358ms
+2024-08-11 14:52:05.918 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:52:05.970 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres/22 - 404 148 application/json; charset=utf-8 2134.1762ms
+2024-08-11 14:54:59.962 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-11 14:55:00.007 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-11 14:55:00.014 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 14:55:00.015 +05:30 [INF] Hosting environment: Development
+2024-08-11 14:55:00.017 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-11 14:55:00.253 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 14:55:00.407 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 155.7647ms
+2024-08-11 14:55:00.442 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 14:55:00.450 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 7.2768ms
+2024-08-11 14:55:00.464 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 14:55:00.466 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:55:00.504 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 38.1788ms
+2024-08-11 14:55:00.655 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 191.326ms
+2024-08-11 14:55:00.768 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 14:55:01.016 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 247.4108ms
+2024-08-11 14:55:13.553 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres/33 - null null
+2024-08-11 14:55:13.582 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:55:13.609 +05:30 [INF] Route matched with {action = "GetGenre", controller = "Genres"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.GenresDto]] GetGenre(Int32) on controller Bookstore.API.Controllers.GenresController (Bookstore.API).
+2024-08-11 14:55:15.432 +05:30 [INF] Executed DbCommand (48ms) [Parameters=[@__genreId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[GenreId], [t].[GenreName], [t].[ImageUrl], [b].[BookId], [b].[AuthorId], [b].[GenreId], [b].[ImageUrl], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM (
+    SELECT TOP(1) [g].[GenreId], [g].[GenreName], [g].[ImageUrl]
+    FROM [Genres] AS [g]
+    WHERE [g].[GenreId] = @__genreId_0
+) AS [t]
+LEFT JOIN [Books] AS [b] ON [t].[GenreId] = [b].[GenreId]
+ORDER BY [t].[GenreId]
+2024-08-11 14:55:15.475 +05:30 [INF] GenreNotFound Id: 33 
+2024-08-11 14:55:15.483 +05:30 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-08-11 14:55:15.580 +05:30 [INF] Executed action Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API) in 1963.6283ms
+2024-08-11 14:55:15.588 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:55:15.611 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres/33 - 404 25 application/json; charset=utf-8 2057.4963ms
+2024-08-11 14:57:33.613 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-11 14:57:33.761 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-11 14:57:33.765 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 14:57:33.766 +05:30 [INF] Hosting environment: Development
+2024-08-11 14:57:33.767 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-11 14:57:35.512 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 14:57:36.058 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 550.0936ms
+2024-08-11 14:57:36.131 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 14:57:36.132 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 14:57:36.232 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 14:57:36.254 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 123.1435ms
+2024-08-11 14:57:36.262 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 129.76ms
+2024-08-11 14:57:36.383 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 151.3383ms
+2024-08-11 14:57:36.464 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 14:57:36.854 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 389.6911ms
+2024-08-11 14:58:12.242 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres/22 - null null
+2024-08-11 14:58:12.272 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:58:12.304 +05:30 [INF] Route matched with {action = "GetGenre", controller = "Genres"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.GenresDto]] GetGenre(Int32) on controller Bookstore.API.Controllers.GenresController (Bookstore.API).
+2024-08-11 14:58:14.247 +05:30 [INF] Executed DbCommand (62ms) [Parameters=[@__genreId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[GenreId], [t].[GenreName], [t].[ImageUrl], [b].[BookId], [b].[AuthorId], [b].[GenreId], [b].[ImageUrl], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM (
+    SELECT TOP(1) [g].[GenreId], [g].[GenreName], [g].[ImageUrl]
+    FROM [Genres] AS [g]
+    WHERE [g].[GenreId] = @__genreId_0
+) AS [t]
+LEFT JOIN [Books] AS [b] ON [t].[GenreId] = [b].[GenreId]
+ORDER BY [t].[GenreId]
+2024-08-11 14:58:14.276 +05:30 [INF] GenreNotFound Id: 22 
+2024-08-11 14:58:14.283 +05:30 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType1`1[[Microsoft.Extensions.Localization.LocalizedString, Microsoft.Extensions.Localization.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2024-08-11 14:58:14.374 +05:30 [INF] Executed action Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API) in 2064.3006ms
+2024-08-11 14:58:14.377 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 14:58:14.443 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres/22 - 404 148 application/json; charset=utf-8 2201.3811ms
+2024-08-11 15:06:27.814 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-11 15:06:28.113 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-11 15:06:28.139 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 15:06:28.141 +05:30 [INF] Hosting environment: Development
+2024-08-11 15:06:28.142 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-11 15:06:28.768 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 15:06:29.070 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 303.2774ms
+2024-08-11 15:06:29.120 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 15:06:29.125 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 4.7442ms
+2024-08-11 15:06:29.182 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 15:06:29.282 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 99.9794ms
+2024-08-11 15:06:29.294 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 15:06:29.304 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 9.6965ms
+2024-08-11 15:06:29.591 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 15:06:29.839 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 248.7647ms
+2024-08-11 15:06:57.996 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 15:06:58.003 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 6.8481ms
+2024-08-11 15:06:58.059 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 15:06:58.067 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 8.0039ms
+2024-08-11 15:06:58.060 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 15:06:58.059 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 15:06:58.093 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 34.5575ms
+2024-08-11 15:06:58.102 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.7342ms
+2024-08-11 15:06:58.216 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 15:06:58.304 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 88.7873ms
+2024-08-11 15:07:10.490 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres/44 - null null
+2024-08-11 15:07:10.522 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 15:07:10.546 +05:30 [INF] Route matched with {action = "GetGenre", controller = "Genres"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.GenresDto]] GetGenre(Int32) on controller Bookstore.API.Controllers.GenresController (Bookstore.API).
+2024-08-11 15:07:12.902 +05:30 [INF] Executed DbCommand (107ms) [Parameters=[@__genreId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[GenreId], [t].[GenreName], [t].[ImageUrl], [b].[BookId], [b].[AuthorId], [b].[GenreId], [b].[ImageUrl], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM (
+    SELECT TOP(1) [g].[GenreId], [g].[GenreName], [g].[ImageUrl]
+    FROM [Genres] AS [g]
+    WHERE [g].[GenreId] = @__genreId_0
+) AS [t]
+LEFT JOIN [Books] AS [b] ON [t].[GenreId] = [b].[GenreId]
+ORDER BY [t].[GenreId]
+2024-08-11 15:07:12.945 +05:30 [INF] GenreNotFound Id: 44 
+2024-08-11 15:07:12.952 +05:30 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType1`1[[Microsoft.Extensions.Localization.LocalizedString, Microsoft.Extensions.Localization.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2024-08-11 15:07:13.079 +05:30 [INF] Executed action Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API) in 2519.8531ms
+2024-08-11 15:07:13.087 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 15:07:13.100 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres/44 - 404 148 application/json; charset=utf-8 2610.7045ms
+2024-08-11 15:17:20.926 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-11 15:17:21.637 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-11 15:17:21.719 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-11 15:17:21.765 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 15:17:21.766 +05:30 [INF] Hosting environment: Development
+2024-08-11 15:17:21.767 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-11 15:17:21.972 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 336.0292ms
+2024-08-11 15:17:22.000 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-11 15:17:22.027 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-11 15:17:22.042 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 42.5179ms
+2024-08-11 15:17:22.016 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-11 15:17:22.084 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 68.0389ms
+2024-08-11 15:17:22.106 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 79.2849ms
+2024-08-11 15:17:22.236 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-11 15:17:22.829 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 593.4586ms
+2024-08-11 15:17:35.895 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres/33 - null null
+2024-08-11 15:17:35.940 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 15:17:35.976 +05:30 [INF] Route matched with {action = "GetGenre", controller = "Genres"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.GenresDto]] GetGenre(Int32) on controller Bookstore.API.Controllers.GenresController (Bookstore.API).
+2024-08-11 15:17:37.980 +05:30 [INF] Executed DbCommand (104ms) [Parameters=[@__genreId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[GenreId], [t].[GenreName], [t].[ImageUrl], [b].[BookId], [b].[AuthorId], [b].[GenreId], [b].[ImageUrl], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM (
+    SELECT TOP(1) [g].[GenreId], [g].[GenreName], [g].[ImageUrl]
+    FROM [Genres] AS [g]
+    WHERE [g].[GenreId] = @__genreId_0
+) AS [t]
+LEFT JOIN [Books] AS [b] ON [t].[GenreId] = [b].[GenreId]
+ORDER BY [t].[GenreId]
+2024-08-11 15:17:38.008 +05:30 [INF] GenreNotFound Id: 33 
+2024-08-11 15:17:38.016 +05:30 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-08-11 15:17:38.139 +05:30 [INF] Executed action Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API) in 2155.7948ms
+2024-08-11 15:17:38.165 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-11 15:17:38.179 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres/33 - 404 25 application/json; charset=utf-8 2283.2003ms

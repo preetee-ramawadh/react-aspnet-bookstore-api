@@ -299,3 +299,11 @@ D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\ob
 D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\obj\Debug\net8.0\ref\Bookstore.API.dll
 D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\bin\Debug\net8.0\AutoMapper.dll
 D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\obj\Debug\net8.0\Bookstore.API.csproj.GenerateResource.cache
+D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\obj\Debug\net8.0\Bookstore.API.Resources.Messages.resources
+D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\bin\Debug\net8.0\Microsoft.Extensions.Localization.dll
+D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\bin\Debug\net8.0\Microsoft.Extensions.Localization.Abstractions.dll
+D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

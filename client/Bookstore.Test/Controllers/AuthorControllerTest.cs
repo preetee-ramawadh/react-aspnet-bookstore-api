@@ -3,10 +3,12 @@ using Bookstore.API.Controllers;
 using Bookstore.API.Entities;
 using Bookstore.API.Models;
 using Bookstore.API.Repositories;
+using Bookstore.API.Resources;
 using FakeItEasy;
 using FluentAssertions;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 using System.Text.Json.Serialization;
 
@@ -18,6 +20,7 @@ namespace Bookstore.Test.Controllers
         private readonly IAuthorsInfoRepository fakeRepository;
         private readonly IMapper fakeMapper;
         private readonly ILogger<AuthorsController> fakeLogger;
+        private readonly IStringLocalizer<Messages> fakeLocalizer;
 
         public AuthorControllerTest()
         {
@@ -25,9 +28,10 @@ namespace Bookstore.Test.Controllers
             fakeRepository = A.Fake<IAuthorsInfoRepository>();
             fakeMapper = A.Fake<IMapper>();
             fakeLogger = A.Fake<ILogger<AuthorsController>>();
+            fakeLocalizer = A.Fake<IStringLocalizer<Messages>>();
 
             //SUT --> System under Test
-            _authorsController = new AuthorsController(fakeLogger, fakeRepository, fakeMapper);
+            _authorsController = new AuthorsController(fakeLogger, fakeRepository, fakeMapper, fakeLocalizer);
         }
 
         // [HttpGet]
@@ -87,7 +91,8 @@ namespace Bookstore.Test.Controllers
             var result = await _authorsController.GetAuthor(1);
 
             // Assert
-            result.Result.Should().BeOfType<NotFoundResult>();
+            //result.Result.Should().BeOfType<NotFoundResult>();
+            result.Result.Should().BeOfType<NotFoundObjectResult>();
         }
 
         // [HttpGet("{id}", Name = "GetAuthor")]
@@ -199,10 +204,6 @@ namespace Bookstore.Test.Controllers
 
             // Assert
             result.Should().BeOfType<NotFoundObjectResult>();
-
-            var notFoundResult = result as NotFoundObjectResult;
-            notFoundResult.Value.Should().BeEquivalentTo(new { message = "Author not found." });
-
         }
 
         [Fact]
@@ -241,7 +242,8 @@ namespace Bookstore.Test.Controllers
             var result = await _authorsController.PartiallyUpdateAuthor(1, patchDocument);
 
             // Assert
-            result.Should().BeOfType<NotFoundResult>("because the author does not exist and should return NotFound");
+            //result.Should().BeOfType<NotFoundResult>("because the author does not exist and should return NotFound");
+            result.Should().BeOfType<NotFoundObjectResult>("because the author does not exist and should return NotFound");
         }
 
     }

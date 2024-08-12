@@ -2,10 +2,14 @@
 using Bookstore.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Bookstore.API.Repositories;
+using Microsoft.Extensions.Localization;
+using Bookstore.API.Resources;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Bookstore.API.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/genres")]
     public class GenresController : ControllerBase
     {
@@ -14,14 +18,16 @@ namespace Bookstore.API.Controllers
         private readonly IGenresInfoRepository _genresInfoRepository;
 
         private readonly IMapper _mapper;
+
+        private readonly IStringLocalizer<Messages> _localizer;
        
 
-        public GenresController(ILogger<GenresController> logger, IGenresInfoRepository genresInfoRepository, IMapper mapper)
+        public GenresController(ILogger<GenresController> logger, IGenresInfoRepository genresInfoRepository, IMapper mapper, IStringLocalizer<Messages> localizer)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
             _genresInfoRepository = genresInfoRepository ?? throw new ArgumentNullException(nameof(_genresInfoRepository));
-
+            _localizer = localizer ?? throw new ArgumentNullException(nameof(localizer));
         }
 
         [HttpGet]
@@ -39,9 +45,11 @@ namespace Bookstore.API.Controllers
 
             if(genre == null)
             {
-                _logger.LogInformation($"Genre with id {id} wasn't found when accessing genre.");
-               
-                return NotFound();
+                var message = _localizer["GenreNotFound"];
+               // _logger.LogInformation($"Genre with id {id} wasn't found when accessing genre.");
+                _logger.LogInformation($"{ message } Id: {id} ");
+
+                return NotFound(new { message });
             }
 
             var genreToReturn = _mapper.Map<GenresDto>(genre);

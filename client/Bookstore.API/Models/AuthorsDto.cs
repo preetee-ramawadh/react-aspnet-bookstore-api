@@ -12,16 +12,5 @@
         // List of books written by the author
         public ICollection<BooksTitleDto> Books { get; set; } = new List<BooksTitleDto>();
 
-        //public ICollection<BooksDto> Books { get; set; } = new List<BooksDto>();
-
-        //public AuthorsDto(string name, string biography)
-        //{
-        //    Name = name;
-        //    Biography = biography;
-        //}
-
-        //public AuthorsDto() { }
-
-        //public IEnumerable<BooksDto> Books { get; set; }
     }
 }

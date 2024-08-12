@@ -47,6 +47,22 @@ namespace Bookstore.API.Migrations
                     b.HasKey("AuthorId");
 
                     b.ToTable("Authors");
+
+                    b.HasData(
+                        new
+                        {
+                            AuthorId = 9,
+                            Biography = "biography to be written",
+                            ImageUrl = "/images/authors/imagesunavailable.jpg",
+                            Name = "Author 2024"
+                        },
+                        new
+                        {
+                            AuthorId = 16,
+                            Biography = "coming soon",
+                            ImageUrl = "/images/authors/imagesunavailable.jpg",
+                            Name = "Author 2025"
+                        });
                 });
 
             modelBuilder.Entity("Bookstore.API.Entities.Books", b =>
@@ -86,6 +102,28 @@ namespace Bookstore.API.Migrations
                     b.HasIndex("GenreId");
 
                     b.ToTable("Books");
+
+                    b.HasData(
+                        new
+                        {
+                            BookId = 6,
+                            AuthorId = 4,
+                            GenreId = 7,
+                            ImageUrl = "/images/books/imageunavailable.jpg",
+                            Price = 899.99m,
+                            PublicationDate = new DateOnly(2008, 1, 1),
+                            Title = "Book title"
+                        },
+                        new
+                        {
+                            BookId = 7,
+                            AuthorId = 5,
+                            GenreId = 3,
+                            ImageUrl = "/images/books/imageunavailable.jpg",
+                            Price = 99.99m,
+                            PublicationDate = new DateOnly(2022, 1, 1),
+                            Title = "Book Title2"
+                        });
                 });
 
             modelBuilder.Entity("Bookstore.API.Entities.Genres", b =>
@@ -109,6 +147,20 @@ namespace Bookstore.API.Migrations
                     b.HasKey("GenreId");
 
                     b.ToTable("Genres");
+
+                    b.HasData(
+                        new
+                        {
+                            GenreId = 9,
+                            GenreName = "Tragedy",
+                            ImageUrl = "/images/genres/genreimageunavailable.jpg"
+                        },
+                        new
+                        {
+                            GenreId = 10,
+                            GenreName = "Theatre",
+                            ImageUrl = "/images/genres/genreimageunavailable.jpg"
+                        });
                 });
 
             modelBuilder.Entity("Bookstore.API.Entities.Books", b =>

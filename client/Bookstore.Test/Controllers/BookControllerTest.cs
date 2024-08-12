@@ -3,10 +3,12 @@ using Bookstore.API.Controllers;
 using Bookstore.API.Entities;
 using Bookstore.API.Models;
 using Bookstore.API.Repositories;
+using Bookstore.API.Resources;
 using FakeItEasy;
 using FluentAssertions;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 using System.Net;
 
@@ -18,15 +20,17 @@ namespace Bookstore.Test.Controllers
         private readonly IBooksInfoRepository fakeRepository;
         private readonly IMapper fakeMapper;
         private readonly ILogger<BooksController> fakeLogger;
+        private readonly IStringLocalizer<Messages> fakeLocalizer;
         public BookControllerTest()
         {
             //set up Dependencies
             fakeRepository = A.Fake<IBooksInfoRepository>();
             fakeMapper = A.Fake<IMapper>();
             fakeLogger = A.Fake<ILogger<BooksController>>();
+            fakeLocalizer = A.Fake<IStringLocalizer<Messages>>();
 
             //SUT --> System under Test
-            _booksController = new BooksController(fakeLogger, fakeRepository, fakeMapper);
+            _booksController = new BooksController(fakeLogger, fakeRepository, fakeMapper, fakeLocalizer);
 
         }
 
@@ -111,7 +115,7 @@ namespace Bookstore.Test.Controllers
             var result = await _booksController.GetBook(1);
 
             // Assert
-            result.Result.Should().BeOfType<NotFoundResult>();
+            result.Result.Should().BeOfType<NotFoundObjectResult>();
 
         }
 
@@ -188,7 +192,7 @@ namespace Bookstore.Test.Controllers
              var result = await _booksController.UpdateBook(1, bookForUpdateDto);
 
             // Assert
-             result.Should().BeOfType<NotFoundResult>();
+             result.Should().BeOfType<NotFoundObjectResult>();
 
         }
 
@@ -220,7 +224,7 @@ namespace Bookstore.Test.Controllers
             var result = await _booksController.DeleteBook(1);
 
             // Assert
-            result.Should().BeOfType<NotFoundResult>();
+            result.Should().BeOfType<NotFoundObjectResult>();
         }
 
         //Partial update
@@ -261,7 +265,7 @@ namespace Bookstore.Test.Controllers
             var result = await _booksController.PartiallyUpdateBook(1, patchDoc);
 
             // Assert
-            result.Should().BeOfType<NotFoundResult>();
+            result.Should().BeOfType<NotFoundObjectResult>();
         }
 
 

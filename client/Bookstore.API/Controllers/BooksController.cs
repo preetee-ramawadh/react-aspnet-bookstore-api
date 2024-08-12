@@ -2,12 +2,16 @@
 using Bookstore.API.Entities;
 using Bookstore.API.Models;
 using Bookstore.API.Repositories;
+using Bookstore.API.Resources;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 
 namespace Bookstore.API.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/books")]
     public class BooksController : ControllerBase
     {
@@ -17,11 +21,14 @@ namespace Bookstore.API.Controllers
 
         private readonly IMapper _mapper;
 
-        public BooksController(ILogger<BooksController> logger, IBooksInfoRepository booksInfoRepository, IMapper mapper)
+        private readonly IStringLocalizer<Messages> _localizer;
+
+        public BooksController(ILogger<BooksController> logger, IBooksInfoRepository booksInfoRepository, IMapper mapper, IStringLocalizer<Messages> localizer)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _booksInfoRepository = booksInfoRepository ?? throw new ArgumentNullException(nameof(booksInfoRepository));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
+            _localizer = localizer ?? throw new ArgumentNullException(nameof(localizer));
         }
 
         [HttpGet]
@@ -38,9 +45,11 @@ namespace Bookstore.API.Controllers
 
             if (book == null)
             {
-                _logger.LogInformation($"Book with id {id} wasn't found when accessing Book.");
+                var message = _localizer["BookNotFound"];
+                //_logger.LogInformation($"Book with id {id} wasn't found when accessing Book.");
+                _logger.LogInformation($"{message} Id: {id} ");
 
-                return NotFound();
+                return NotFound(new { message });
             }
 
             return Ok(_mapper.Map<BooksDto>(book));
@@ -70,7 +79,9 @@ namespace Bookstore.API.Controllers
            
             if (existingBook == null)
             {
-                return NotFound();  // Return 404 Not Found if the author entity is not found
+                var message = _localizer["BookNotFound"];
+                _logger.LogInformation($"{message} Id: {id} ");
+                return NotFound(new { message });  // Return 404 Not Found if the author entity is not found
             }
 
             // Map the updated properties from the DTO to the existing entity
@@ -95,9 +106,11 @@ namespace Bookstore.API.Controllers
 
             if (existingBook == null)
             {
-                _logger.LogInformation($"Book with id {id} wasn't found when accessing Book.");
+                var message = _localizer["BookNotFound"];
+                // _logger.LogInformation($"Book with id {id} wasn't found when accessing Book.");
+                _logger.LogInformation($"{message} Id: {id} ");
 
-                return NotFound();  // Return 404 Not Found if the book entity is not found
+                return NotFound(new { message });  // Return 404 Not Found if the book entity is not found
             }
 
             var bookToPatch = _mapper.Map<BooksForUpdateDto>(
@@ -122,7 +135,11 @@ namespace Bookstore.API.Controllers
             // Check if the retrieved book entity is null
             if (bookEntity == null)
             {
-                return NotFound();  // Return 404 Not Found if the book entity is not found
+                var message = _localizer["BookNotFound"];
+                // _logger.LogInformation($"Book with id {id} wasn't found when accessing Book.");
+                _logger.LogInformation($"{message} Id: {id} ");
+
+                return NotFound(new { message });  // Return 404 Not Found if the book entity is not found
             }
 
             // Delete the book entity

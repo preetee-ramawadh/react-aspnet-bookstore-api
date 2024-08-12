@@ -1,0 +1,377 @@
+2024-08-12 13:05:50.917 +05:30 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-12 13:05:51.037 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-12 13:05:51.159 +05:30 [INF] Executed DbCommand (120ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-12 13:05:51.168 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-12 13:05:51.521 +05:30 [INF] Executed DbCommand (306ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-08-12 13:05:51.555 +05:30 [INF] Applying migration '20240812073516_SeedingData'.
+2024-08-12 13:05:52.068 +05:30 [INF] Executed DbCommand (255ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'AuthorId', N'Biography', N'ImageUrl', N'Name') AND [object_id] = OBJECT_ID(N'[Authors]'))
+    SET IDENTITY_INSERT [Authors] ON;
+INSERT INTO [Authors] ([AuthorId], [Biography], [ImageUrl], [Name])
+VALUES (9, N'biography to be written', N'/images/authors/imagesunavailable.jpg', N'Author 2024'),
+(16, N'coming soon', N'/images/authors/imagesunavailable.jpg', N'Author 2025');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'AuthorId', N'Biography', N'ImageUrl', N'Name') AND [object_id] = OBJECT_ID(N'[Authors]'))
+    SET IDENTITY_INSERT [Authors] OFF;
+2024-08-12 13:05:52.314 +05:30 [INF] Executed DbCommand (245ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'BookId', N'AuthorId', N'GenreId', N'ImageUrl', N'Price', N'PublicationDate', N'Title') AND [object_id] = OBJECT_ID(N'[Books]'))
+    SET IDENTITY_INSERT [Books] ON;
+INSERT INTO [Books] ([BookId], [AuthorId], [GenreId], [ImageUrl], [Price], [PublicationDate], [Title])
+VALUES (6, 4, 7, N'/images/books/imageunavailable.jpg', 899.99, '2008-01-01', N'Book title'),
+(7, 5, 3, N'/images/books/imageunavailable.jpg', 99.99, '2022-01-01', N'Book Title2');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'BookId', N'AuthorId', N'GenreId', N'ImageUrl', N'Price', N'PublicationDate', N'Title') AND [object_id] = OBJECT_ID(N'[Books]'))
+    SET IDENTITY_INSERT [Books] OFF;
+2024-08-12 13:05:52.567 +05:30 [INF] Executed DbCommand (253ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'GenreId', N'GenreName', N'ImageUrl') AND [object_id] = OBJECT_ID(N'[Genres]'))
+    SET IDENTITY_INSERT [Genres] ON;
+INSERT INTO [Genres] ([GenreId], [GenreName], [ImageUrl])
+VALUES (9, N'Tragedy', N'/images/genres/genreimageunavailable.jpg'),
+(10, N'Theatre', N'/images/genres/genreimageunavailable.jpg');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'GenreId', N'GenreName', N'ImageUrl') AND [object_id] = OBJECT_ID(N'[Genres]'))
+    SET IDENTITY_INSERT [Genres] OFF;
+2024-08-12 13:05:52.570 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240812073516_SeedingData', N'8.0.7');
+2024-08-12 14:22:35.026 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-12 14:22:35.080 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-12 14:22:35.084 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-12 14:22:35.085 +05:30 [INF] Hosting environment: Development
+2024-08-12 14:22:35.087 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-12 14:22:35.280 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-12 14:22:35.518 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 243.2124ms
+2024-08-12 14:22:35.601 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-12 14:22:35.609 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 7.392ms
+2024-08-12 14:22:35.624 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-12 14:22:35.799 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 174.9872ms
+2024-08-12 14:22:36.010 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-12 14:22:36.020 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 9.8635ms
+2024-08-12 14:22:36.583 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-12 14:22:36.598 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/favicon-32x32.png - null null
+2024-08-12 14:22:36.609 +05:30 [INF] The file /favicon-32x32.png was not modified
+2024-08-12 14:22:36.611 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/favicon-32x32.png - 304 null image/png 12.2082ms
+2024-08-12 14:22:36.827 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 243.3187ms
+2024-08-12 14:23:21.795 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7200/api/authentication/authenticate - application/json-patch+json 53
+2024-08-12 14:23:21.829 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.AuthenticationController.Authenticate (Bookstore.API)'
+2024-08-12 14:23:21.871 +05:30 [INF] Route matched with {action = "Authenticate", controller = "Authentication"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Authenticate(AuthenticationRequestBody) on controller Bookstore.API.Controllers.AuthenticationController (Bookstore.API).
+2024-08-12 14:23:23.934 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-08-12 14:23:23.982 +05:30 [INF] Executed action Bookstore.API.Controllers.AuthenticationController.Authenticate (Bookstore.API) in 2103.7071ms
+2024-08-12 14:23:23.986 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.AuthenticationController.Authenticate (Bookstore.API)'
+2024-08-12 14:23:23.987 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7200/api/authentication/authenticate - 200 275 application/json; charset=utf-8 2192.1154ms
+2024-08-12 14:27:30.975 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-12 14:27:30.987 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 11.9182ms
+2024-08-12 14:27:31.062 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-12 14:27:31.069 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 7.1454ms
+2024-08-12 14:27:31.079 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-12 14:27:31.102 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.5971ms
+2024-08-12 14:27:31.162 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-12 14:27:31.167 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 5.473ms
+2024-08-12 14:27:32.109 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-12 14:27:32.152 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 42.8709ms
+2024-08-12 14:28:21.420 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7200/api/authentication/authenticate - application/json-patch+json 53
+2024-08-12 14:28:21.454 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.AuthenticationController.Authenticate (Bookstore.API)'
+2024-08-12 14:28:21.458 +05:30 [INF] Route matched with {action = "Authenticate", controller = "Authentication"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Authenticate(AuthenticationRequestBody) on controller Bookstore.API.Controllers.AuthenticationController (Bookstore.API).
+2024-08-12 14:28:21.465 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-08-12 14:28:21.468 +05:30 [INF] Executed action Bookstore.API.Controllers.AuthenticationController.Authenticate (Bookstore.API) in 6.1571ms
+2024-08-12 14:28:21.474 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.AuthenticationController.Authenticate (Bookstore.API)'
+2024-08-12 14:28:21.476 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7200/api/authentication/authenticate - 200 282 application/json; charset=utf-8 56.0737ms
+2024-08-12 14:35:52.216 +05:30 [INF] User profile is available. Using 'D:\Users\preetee\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-12 14:35:52.866 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-12 14:35:52.868 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-12 14:35:52.870 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-12 14:35:52.872 +05:30 [INF] Hosting environment: Development
+2024-08-12 14:35:52.873 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-12 14:35:53.175 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-12 14:35:53.485 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 311.5154ms
+2024-08-12 14:35:53.533 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-12 14:35:53.538 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 5.4656ms
+2024-08-12 14:35:53.552 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-12 14:35:53.566 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 14.1725ms
+2024-08-12 14:35:53.578 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-12 14:35:53.645 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.4015ms
+2024-08-12 14:35:55.212 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-12 14:35:55.437 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 225.6409ms
+2024-08-12 14:36:22.823 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres - null null
+2024-08-12 14:36:23.105 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-08-12 14:36:23.113 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-08-12 14:36:23.115 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres - 401 0 null 292.0811ms
+2024-08-12 14:37:09.190 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7200/api/authentication/authenticate - application/json-patch+json 53
+2024-08-12 14:37:09.204 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.AuthenticationController.Authenticate (Bookstore.API)'
+2024-08-12 14:37:09.226 +05:30 [INF] Route matched with {action = "Authenticate", controller = "Authentication"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Authenticate(AuthenticationRequestBody) on controller Bookstore.API.Controllers.AuthenticationController (Bookstore.API).
+2024-08-12 14:37:09.418 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-08-12 14:37:09.467 +05:30 [INF] Executed action Bookstore.API.Controllers.AuthenticationController.Authenticate (Bookstore.API) in 233.4775ms
+2024-08-12 14:37:09.469 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.AuthenticationController.Authenticate (Bookstore.API)'
+2024-08-12 14:37:09.471 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7200/api/authentication/authenticate - 200 282 application/json; charset=utf-8 280.3943ms
+2024-08-12 14:47:53.584 +05:30 [INF] User profile is available. Using 'D:\Users\preetee\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-12 14:47:53.852 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-12 14:47:53.870 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-12 14:47:53.876 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-12 14:47:53.879 +05:30 [INF] Hosting environment: Development
+2024-08-12 14:47:53.880 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-12 14:47:54.158 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-12 14:47:54.780 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 623.8012ms
+2024-08-12 14:47:54.802 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-12 14:47:54.814 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 11.22ms
+2024-08-12 14:47:54.835 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-12 14:47:54.845 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-12 14:47:54.857 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 21.492ms
+2024-08-12 14:47:54.915 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 69.7331ms
+2024-08-12 14:47:55.676 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-12 14:47:55.967 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 290.68ms
+2024-08-12 14:48:01.717 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-12 14:48:01.832 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 114.6583ms
+2024-08-12 14:48:02.102 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-12 14:48:02.172 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 70.0136ms
+2024-08-12 14:48:02.162 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-12 14:48:02.145 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-12 14:48:02.187 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 41.998ms
+2024-08-12 14:48:02.221 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.2917ms
+2024-08-12 14:48:02.297 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-12 14:48:02.396 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 99.4558ms
+2024-08-12 14:48:27.733 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres - null null
+2024-08-12 14:48:27.833 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-08-12 14:48:27.864 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-08-12 14:48:27.866 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres - 401 0 null 133.404ms
+2024-08-12 14:49:12.090 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7200/api/authentication/authenticate - application/json-patch+json 53
+2024-08-12 14:49:12.106 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.AuthenticationController.Authenticate (Bookstore.API)'
+2024-08-12 14:49:12.136 +05:30 [INF] Route matched with {action = "Authenticate", controller = "Authentication"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Authenticate(AuthenticationRequestBody) on controller Bookstore.API.Controllers.AuthenticationController (Bookstore.API).
+2024-08-12 14:49:12.339 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-08-12 14:49:12.405 +05:30 [INF] Executed action Bookstore.API.Controllers.AuthenticationController.Authenticate (Bookstore.API) in 260.4267ms
+2024-08-12 14:49:12.436 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.AuthenticationController.Authenticate (Bookstore.API)'
+2024-08-12 14:49:12.438 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7200/api/authentication/authenticate - 200 282 application/json; charset=utf-8 347.4489ms
+2024-08-12 14:50:11.166 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres - null null
+2024-08-12 14:50:11.200 +05:30 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output, Boolean needReplace, Int32 decodedLength)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-08-12 14:50:11.228 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-08-12 14:50:11.233 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-08-12 14:50:11.236 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-08-12 14:50:11.238 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres - 401 0 null 71.4352ms
+2024-08-12 14:51:19.000 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres - null null
+2024-08-12 14:51:19.023 +05:30 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output, Boolean needReplace, Int32 decodedLength)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-08-12 14:51:19.032 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-08-12 14:51:19.036 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-08-12 14:51:19.038 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-08-12 14:51:19.040 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres - 401 0 null 40.142ms
+2024-08-12 14:52:11.686 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7200/api/authentication/authenticate - application/json-patch+json 53
+2024-08-12 14:52:11.725 +05:30 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output, Boolean needReplace, Int32 decodedLength)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-08-12 14:52:11.735 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-08-12 14:52:11.736 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.AuthenticationController.Authenticate (Bookstore.API)'
+2024-08-12 14:52:11.738 +05:30 [INF] Route matched with {action = "Authenticate", controller = "Authentication"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Authenticate(AuthenticationRequestBody) on controller Bookstore.API.Controllers.AuthenticationController (Bookstore.API).
+2024-08-12 14:52:11.743 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-08-12 14:52:11.749 +05:30 [INF] Executed action Bookstore.API.Controllers.AuthenticationController.Authenticate (Bookstore.API) in 7.1257ms
+2024-08-12 14:52:11.752 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.AuthenticationController.Authenticate (Bookstore.API)'
+2024-08-12 14:52:11.753 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7200/api/authentication/authenticate - 200 282 application/json; charset=utf-8 67.1001ms
+2024-08-12 14:53:46.601 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres - null null
+2024-08-12 14:53:46.630 +05:30 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output, Boolean needReplace, Int32 decodedLength)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-08-12 14:53:46.639 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-08-12 14:53:46.642 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-08-12 14:53:46.645 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-08-12 14:53:46.652 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres - 401 0 null 51.1801ms
+2024-08-12 14:54:28.810 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres - null null
+2024-08-12 14:54:28.909 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.GenresController.GetGenres (Bookstore.API)'
+2024-08-12 14:54:28.921 +05:30 [INF] Route matched with {action = "GetGenres", controller = "Genres"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Bookstore.API.Models.GenresDto]]] GetGenres() on controller Bookstore.API.Controllers.GenresController (Bookstore.API).
+2024-08-12 14:54:31.466 +05:30 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[GenreId], [g].[GenreName], [g].[ImageUrl], [b].[BookId], [b].[AuthorId], [b].[GenreId], [b].[ImageUrl], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM [Genres] AS [g]
+LEFT JOIN [Books] AS [b] ON [g].[GenreId] = [b].[GenreId]
+ORDER BY [g].[GenreId]
+2024-08-12 14:54:31.592 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Bookstore.API.Models.GenresDto, Bookstore.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-12 14:54:31.620 +05:30 [INF] Executed action Bookstore.API.Controllers.GenresController.GetGenres (Bookstore.API) in 2695.612ms
+2024-08-12 14:54:31.622 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.GenresController.GetGenres (Bookstore.API)'
+2024-08-12 14:54:31.633 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres - 200 1201 application/json; charset=utf-8 2822.9952ms
+2024-08-12 14:56:15.857 +05:30 [INF] User profile is available. Using 'D:\Users\preetee\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-12 14:56:16.077 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-12 14:56:16.079 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-12 14:56:16.082 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-12 14:56:16.083 +05:30 [INF] Hosting environment: Development
+2024-08-12 14:56:16.085 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-12 14:56:16.368 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-12 14:56:16.617 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 251.9061ms
+2024-08-12 14:56:16.638 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-12 14:56:16.651 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 12.92ms
+2024-08-12 14:56:16.661 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-12 14:56:16.677 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-12 14:56:16.692 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 15.3445ms
+2024-08-12 14:56:16.706 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.2496ms
+2024-08-12 14:56:17.057 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-12 14:56:17.223 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 166.2179ms
+2024-08-12 14:56:23.398 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-12 14:56:23.421 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 11.1299ms
+2024-08-12 14:56:23.534 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-12 14:56:23.536 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-12 14:56:23.537 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-12 14:56:23.542 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 8.1167ms
+2024-08-12 14:56:23.548 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 12.3886ms
+2024-08-12 14:56:23.604 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.1302ms
+2024-08-12 14:56:23.815 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-12 14:56:24.680 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 864.9371ms
+2024-08-12 14:56:40.627 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/books - null null
+2024-08-12 14:56:40.708 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.BooksController.GetBooks (Bookstore.API)'
+2024-08-12 14:56:40.748 +05:30 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Bookstore.API.Models.BooksDto]]] GetBooks() on controller Bookstore.API.Controllers.BooksController (Bookstore.API).
+2024-08-12 14:56:42.991 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookId], [b].[AuthorId], [b].[GenreId], [b].[ImageUrl], [b].[Price], [b].[PublicationDate], [b].[Title], [a].[AuthorId], [a].[Biography], [a].[ImageUrl], [a].[Name], [g].[GenreId], [g].[GenreName], [g].[ImageUrl]
+FROM [Books] AS [b]
+INNER JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[AuthorId]
+INNER JOIN [Genres] AS [g] ON [b].[GenreId] = [g].[GenreId]
+2024-08-12 14:56:43.236 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Bookstore.API.Models.BooksDto, Bookstore.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-12 14:56:43.360 +05:30 [INF] Executed action Bookstore.API.Controllers.BooksController.GetBooks (Bookstore.API) in 2589.4315ms
+2024-08-12 14:56:43.366 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.BooksController.GetBooks (Bookstore.API)'
+2024-08-12 14:56:43.385 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/books - 200 1782 application/json; charset=utf-8 2758.0415ms
+2024-08-12 14:57:27.613 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres - null null
+2024-08-12 14:57:27.675 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-08-12 14:57:27.680 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-08-12 14:57:27.682 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres - 401 0 null 68.5277ms
+2024-08-12 14:58:03.438 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7200/api/authentication/authenticate - application/json-patch+json 53
+2024-08-12 14:58:03.459 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.AuthenticationController.Authenticate (Bookstore.API)'
+2024-08-12 14:58:03.476 +05:30 [INF] Route matched with {action = "Authenticate", controller = "Authentication"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Authenticate(AuthenticationRequestBody) on controller Bookstore.API.Controllers.AuthenticationController (Bookstore.API).
+2024-08-12 14:58:03.646 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-08-12 14:58:03.659 +05:30 [INF] Executed action Bookstore.API.Controllers.AuthenticationController.Authenticate (Bookstore.API) in 133.2331ms
+2024-08-12 14:58:03.663 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.AuthenticationController.Authenticate (Bookstore.API)'
+2024-08-12 14:58:03.666 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7200/api/authentication/authenticate - 200 282 application/json; charset=utf-8 227.2519ms
+2024-08-12 14:58:35.378 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres - null null
+2024-08-12 14:58:35.484 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.GenresController.GetGenres (Bookstore.API)'
+2024-08-12 14:58:35.507 +05:30 [INF] Route matched with {action = "GetGenres", controller = "Genres"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Bookstore.API.Models.GenresDto]]] GetGenres() on controller Bookstore.API.Controllers.GenresController (Bookstore.API).
+2024-08-12 14:58:35.688 +05:30 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[GenreId], [g].[GenreName], [g].[ImageUrl], [b].[BookId], [b].[AuthorId], [b].[GenreId], [b].[ImageUrl], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM [Genres] AS [g]
+LEFT JOIN [Books] AS [b] ON [g].[GenreId] = [b].[GenreId]
+ORDER BY [g].[GenreId]
+2024-08-12 14:58:35.718 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Bookstore.API.Models.GenresDto, Bookstore.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-12 14:58:35.724 +05:30 [INF] Executed action Bookstore.API.Controllers.GenresController.GetGenres (Bookstore.API) in 211.6427ms
+2024-08-12 14:58:35.727 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.GenresController.GetGenres (Bookstore.API)'
+2024-08-12 14:58:35.730 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres - 200 1201 application/json; charset=utf-8 351.6548ms
+2024-08-12 14:58:56.516 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres/33 - null null
+2024-08-12 14:58:56.588 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-12 14:58:56.595 +05:30 [INF] Route matched with {action = "GetGenre", controller = "Genres"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.GenresDto]] GetGenre(Int32) on controller Bookstore.API.Controllers.GenresController (Bookstore.API).
+2024-08-12 14:58:56.784 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@__genreId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[GenreId], [t].[GenreName], [t].[ImageUrl], [b].[BookId], [b].[AuthorId], [b].[GenreId], [b].[ImageUrl], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM (
+    SELECT TOP(1) [g].[GenreId], [g].[GenreName], [g].[ImageUrl]
+    FROM [Genres] AS [g]
+    WHERE [g].[GenreId] = @__genreId_0
+) AS [t]
+LEFT JOIN [Books] AS [b] ON [t].[GenreId] = [b].[GenreId]
+ORDER BY [t].[GenreId]
+2024-08-12 14:58:56.797 +05:30 [INF] GenreNotFound Id: 33 
+2024-08-12 14:58:56.800 +05:30 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[Microsoft.Extensions.Localization.LocalizedString, Microsoft.Extensions.Localization.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2024-08-12 14:58:56.816 +05:30 [INF] Executed action Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API) in 218.2854ms
+2024-08-12 14:58:56.817 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-12 14:58:56.819 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres/33 - 404 148 application/json; charset=utf-8 303.0908ms
+2024-08-12 14:59:05.430 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/api/genres/3 - null null
+2024-08-12 14:59:05.523 +05:30 [INF] Executing endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-12 14:59:05.551 +05:30 [INF] Route matched with {action = "GetGenre", controller = "Genres"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Bookstore.API.Models.GenresDto]] GetGenre(Int32) on controller Bookstore.API.Controllers.GenresController (Bookstore.API).
+2024-08-12 14:59:05.580 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__genreId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[GenreId], [t].[GenreName], [t].[ImageUrl], [b].[BookId], [b].[AuthorId], [b].[GenreId], [b].[ImageUrl], [b].[Price], [b].[PublicationDate], [b].[Title]
+FROM (
+    SELECT TOP(1) [g].[GenreId], [g].[GenreName], [g].[ImageUrl]
+    FROM [Genres] AS [g]
+    WHERE [g].[GenreId] = @__genreId_0
+) AS [t]
+LEFT JOIN [Books] AS [b] ON [t].[GenreId] = [b].[GenreId]
+ORDER BY [t].[GenreId]
+2024-08-12 14:59:05.600 +05:30 [INF] Executing OkObjectResult, writing value of type 'Bookstore.API.Models.GenresDto'.
+2024-08-12 14:59:05.603 +05:30 [INF] Executed action Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API) in 47.2064ms
+2024-08-12 14:59:05.605 +05:30 [INF] Executed endpoint 'Bookstore.API.Controllers.GenresController.GetGenre (Bookstore.API)'
+2024-08-12 14:59:05.607 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/api/genres/3 - 200 124 application/json; charset=utf-8 177.4627ms
+2024-08-12 15:03:31.594 +05:30 [INF] User profile is available. Using 'D:\Users\preetee\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-12 15:03:31.806 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-12 15:03:31.811 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-12 15:03:31.813 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-12 15:03:31.814 +05:30 [INF] Hosting environment: Development
+2024-08-12 15:03:31.815 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-12 15:03:32.009 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-12 15:03:32.249 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 241.7026ms
+2024-08-12 15:03:32.273 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-12 15:03:32.279 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 5.6876ms
+2024-08-12 15:03:32.290 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-12 15:03:32.344 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.6501ms
+2024-08-12 15:03:32.349 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-12 15:03:32.358 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 8.4087ms
+2024-08-12 15:03:32.945 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-12 15:03:33.184 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 238.7209ms
+2024-08-12 15:03:38.537 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-12 15:03:38.597 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 59.7154ms
+2024-08-12 15:03:38.686 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-12 15:03:38.727 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-12 15:03:39.407 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-12 15:03:39.416 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 688.1021ms
+2024-08-12 15:03:39.436 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 749.0745ms
+2024-08-12 15:03:39.705 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 298.3068ms
+2024-08-12 15:03:39.836 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-12 15:03:40.650 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 814.5003ms
+2024-08-12 15:05:03.311 +05:30 [INF] User profile is available. Using 'D:\Users\preetee\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-12 15:05:03.488 +05:30 [INF] Now listening on: https://localhost:7200
+2024-08-12 15:05:03.498 +05:30 [INF] Now listening on: http://localhost:5189
+2024-08-12 15:05:03.502 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-12 15:05:03.504 +05:30 [INF] Hosting environment: Development
+2024-08-12 15:05:03.505 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API
+2024-08-12 15:05:03.693 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-12 15:05:03.880 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 188.9322ms
+2024-08-12 15:05:03.907 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-12 15:05:03.913 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 5.9068ms
+2024-08-12 15:05:03.922 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-12 15:05:03.943 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-12 15:05:03.959 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 16.2087ms
+2024-08-12 15:05:03.972 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.7379ms
+2024-08-12 15:05:04.402 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-12 15:05:04.663 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 260.4041ms
+2024-08-12 15:05:34.577 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null
+2024-08-12 15:05:34.585 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 7.8159ms
+2024-08-12 15:05:34.703 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-12 15:05:34.707 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.js - null null
+2024-08-12 15:05:34.710 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null
+2024-08-12 15:05:34.713 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.js - 200 null application/javascript;charset=utf-8 5.9385ms
+2024-08-12 15:05:34.717 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 13.3173ms
+2024-08-12 15:05:34.763 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.141ms
+2024-08-12 15:05:34.883 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null
+2024-08-12 15:05:34.959 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 75.8956ms

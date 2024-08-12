@@ -166,3 +166,8 @@ D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.Test\o
 D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.Test\obj\Debug\net8.0\Bookstore.Test.pdb
 D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.Test\obj\Debug\net8.0\Bookstore.Test.genruntimeconfig.cache
 D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.Test\obj\Debug\net8.0\ref\Bookstore.Test.dll
+D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.Test\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.Test\bin\Debug\net8.0\Microsoft.Extensions.Localization.dll
+D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.Test\bin\Debug\net8.0\Microsoft.Extensions.Localization.Abstractions.dll
+D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.Test\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.Test\bin\Debug\net8.0\Microsoft.Extensions.Options.dll

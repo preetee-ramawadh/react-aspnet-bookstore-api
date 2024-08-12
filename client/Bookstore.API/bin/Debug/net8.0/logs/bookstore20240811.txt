@@ -1,0 +1,4 @@
+2024-08-11 14:56:53.650 +05:30 [INF] Now listening on: http://localhost:5000
+2024-08-11 14:56:53.692 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-11 14:56:53.694 +05:30 [INF] Hosting environment: Production
+2024-08-11 14:56:53.696 +05:30 [INF] Content root path: D:\Users\preetee\Source\Repos\react-aspnet-bookstore-api\client\Bookstore.API\bin\Debug\net8.0

@@ -8,6 +8,8 @@ using Microsoft.Extensions.Logging;
 using Bookstore.API.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Bookstore.API.Models;
+using Bookstore.API.Resources;
+using Microsoft.Extensions.Localization;
 
 namespace Bookstore.Test.Controllers
 {
@@ -17,15 +19,17 @@ namespace Bookstore.Test.Controllers
         private readonly IGenresInfoRepository fakeRepository;
         private readonly IMapper fakeMapper;
         private readonly ILogger<GenresController> fakeLogger;
+        private readonly IStringLocalizer<Messages> fakeLocalizer;
         public GenreControllerTest()
         {
             //set up Dependencies
             fakeRepository = A.Fake<IGenresInfoRepository>();
             fakeMapper = A.Fake<IMapper>();
             fakeLogger = A.Fake<ILogger<GenresController>>();
+            fakeLocalizer = A.Fake<IStringLocalizer<Messages>>();
 
             //SUT --> System under Test
-            this.genresController = new GenresController(fakeLogger, fakeRepository, fakeMapper);
+            this.genresController = new GenresController(fakeLogger, fakeRepository, fakeMapper, fakeLocalizer);
         }
 
         [Fact]
@@ -82,7 +86,8 @@ namespace Bookstore.Test.Controllers
             var result = await genresController.GetGenre(1);
 
             // Assert
-            result.Result.Should().BeOfType<NotFoundResult>();
+            //result.Result.Should().BeOfType<NotFoundResult>();
+            result.Result.Should().BeOfType<NotFoundObjectResult>();
         }
 
         [Fact]
