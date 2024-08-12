@@ -11,7 +11,7 @@ using Microsoft.Extensions.Localization;
 namespace Bookstore.API.Controllers
 {
     [ApiController]
-    [Authorize]
+    //[Authorize]
     [Route("api/books")]
     public class BooksController : ControllerBase
     {

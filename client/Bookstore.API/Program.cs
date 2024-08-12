@@ -108,6 +108,20 @@ builder.Services.AddSwaggerGen(c =>
 
 ///
 
+//adding cors for UI integration
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalhost3000",
+      builder =>
+      {
+          builder.WithOrigins("http://localhost:3000") // URL of your React app
+         .AllowAnyHeader()
+         .AllowAnyMethod();
+          // builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+      });
+});
+///
 
 var app = builder.Build();
 
@@ -127,6 +141,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseRouting();
+
+app.UseCors("AllowLocalhost3000"); // Apply the CORS policy
 
 app.UseAuthentication();
 

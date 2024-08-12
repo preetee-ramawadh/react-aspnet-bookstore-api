@@ -12,7 +12,7 @@ using Microsoft.Extensions.Localization;
 namespace Bookstore.API.Controllers
 {
     [ApiController]
-    [Authorize]
+    //[Authorize]
     [Route("api/authors")]
     public class AuthorsController : ControllerBase
     {

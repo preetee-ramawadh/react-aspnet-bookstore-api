@@ -3,8 +3,11 @@
     "",
     "\\client",
     "\\client\\Bookstore.API",
-    "\\client\\Bookstore.API\\Controllers"
+    "\\client\\Bookstore.API\\Controllers",
+    "\\client\\Bookstore.API\\Services",
+    "\\client\\Bookstore.Test",
+    "\\client\\Bookstore.Test\\Controllers"
   ],
-  "SelectedNode": "\\client\\Bookstore.sln",
+  "SelectedNode": "\\client\\Bookstore.API\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

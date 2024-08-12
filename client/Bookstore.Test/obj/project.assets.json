@@ -9501,7 +9501,7 @@
       "projectName": "Bookstore.Test",
       "projectPath": "D:\\Users\\preetee\\Source\\Repos\\react-aspnet-bookstore-api\\client\\Bookstore.Test\\Bookstore.Test.csproj",
       "packagesPath": "D:\\Users\\preetee\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\preetee\\Source\\Repos\\react-aspnet-bookstore-api\\client\\Bookstore.Test\\obj\\",
+      "outputPath": "D:\\Users\\preetee\\source\\repos\\react-aspnet-bookstore-api\\client\\Bookstore.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "D:\\Users\\preetee\\AppData\\Roaming\\NuGet\\NuGet.Config",
