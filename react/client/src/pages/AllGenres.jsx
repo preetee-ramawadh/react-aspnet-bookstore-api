@@ -162,7 +162,7 @@ export default function AllGenres({
                   setSearch(e.target.value);
                 }}
                 placeholder="Search a Genre by Name"
-                aria-label="Search an Genre by Name"
+                aria-label="Search a Genre by Name"
               />
             </Nav.Link>
           </Nav.Item>

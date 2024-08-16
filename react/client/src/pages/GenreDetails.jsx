@@ -20,16 +20,16 @@ export default function GenreDetails(props) {
           id="contained-modal-title-vcenter"
         >
           <Placeholder bg="info">
-            <strong>{props.selectedgenre.genre_name}</strong>
+            <strong>{props.selectedgenre.genreName}</strong>
           </Placeholder>
         </Placeholder>
       </Modal.Header>
       <Modal.Body className="bg-info bg-opacity-25">
         <ol className="text-dark text-capitalize">
           <strong>
-            {props.selectedgenre.Books?.length > 0 ? (
-              props.selectedgenre.Books?.map((book) => (
-                <li key={book.book_id}>
+            {props.selectedgenre.books?.length > 0 ? (
+              props.selectedgenre.books?.map((book) => (
+                <li key={book.bookId}>
                   <h5>{book.title}</h5>
                 </li>
               ))

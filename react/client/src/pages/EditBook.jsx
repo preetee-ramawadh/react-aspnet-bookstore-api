@@ -4,6 +4,7 @@ import { Form, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Spinner from "./Spinner";
+import { getAPIToken } from "../config";
 
 export default function EditBook(props) {
   const [loading, setLoading] = useState(true);
@@ -50,7 +51,18 @@ export default function EditBook(props) {
   useEffect(() => {
     const fetchGenresData = async () => {
       try {
-        const response = await fetch("https://localhost:7200/api/genres");
+        //const response = await fetch("https://localhost:7200/api/genres");
+
+        const token = getAPIToken(); // Retrieve the token
+        console.log("token::",token);
+        const response = await fetch('https://localhost:7200/api/genres', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`, // Include the token in the Authorization header
+          },
+        });
+
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
