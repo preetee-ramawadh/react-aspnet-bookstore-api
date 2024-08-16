@@ -8,6 +8,7 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import { useEffect, useState } from "react";
 import Spinner from "./Spinner";
+import { getAPIToken } from "../config";
 
 export default function AddBook({
   addShow,
@@ -65,7 +66,15 @@ export default function AddBook({
   useEffect(() => {
     const fetchGenresData = async () => {
       try {
-        const response = await fetch("https://localhost:7200/api/genres");
+        //const response = await fetch("https://localhost:7200/api/genres");
+        const token = getAPIToken(); // Retrieve the token
+        const response = await fetch('https://localhost:7200/api/genres', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`, // Include the token in the Authorization header
+          },
+        });
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
